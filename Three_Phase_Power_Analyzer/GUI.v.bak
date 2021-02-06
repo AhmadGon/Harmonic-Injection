@@ -1,0 +1,12 @@
+module GUI(
+	input VGA_CLK, reset,
+	//Input counters
+	input [10:1] H_counter, V_counter,
+	//Input Data coming from DATA_Store module
+	input [9:0] PhaseA_Analog_Stored, PhaseB_Analog_Stored, PhaseC_Tri_Analog_Stored,
+	//Output Read enable signals to DATA_Store module
+	output PhaseA_Analog_Read_Enable, PhaseB_Analog_Read_Enable, PhaseC_Tri_Analog_Read_Enable,
+	//Output Red, Green and Blue
+	output reg [7:0] Red, Green, Blue
+);
+endmodule 

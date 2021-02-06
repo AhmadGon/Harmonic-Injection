@@ -1,0 +1,37 @@
+module DATA_Store(
+	input Sample_Pulse, VGA_CLK,
+	input [7:0] Sampled_Signal,
+	output [7:0] PhaseA_Out,
+	//Read Flags
+	input PhaseA_Read_Flag
+);
+
+//=========================================================
+//Phase A analog store
+PhaseA_Store	PhaseA_Store_inst (
+	.data ( Sampled_Signal ),
+	.rdaddress ( Read_Counter ),
+	.rdclock ( VGA_CLK ),
+	.wraddress ( Write_Counter ),
+	.wrclock ( Sample_Pulse ),
+	.wren ( 1 ),
+	.q ( PhaseA_Out )
+	);
+
+reg [7:0] Write_Counter;
+reg [7:0] Read_Counter;
+always @(posedge Sample_Pulse)
+	begin
+	Write_Counter <= Write_Counter + 1;
+	if (Write_Counter == 243) Write_Counter <= 0;
+	end
+always @(posedge VGA_CLK)
+	begin
+	if (PhaseA_Read_Flag)
+		begin
+		Read_Counter <= Read_Counter + 1;
+		if (Read_Counter == 243) Read_Counter <= 0;
+		end
+	end
+
+endmodule 

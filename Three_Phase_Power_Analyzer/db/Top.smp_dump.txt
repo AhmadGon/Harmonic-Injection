@@ -1,0 +1,16 @@
+
+State Machine - |Top|NiosII_Controlled_Section:u0|NiosII_Controlled_Section_Pixel_Buffer:pixel_buffer|s_pixel_buffer
+Name s_pixel_buffer.STATE_3_MAX_PENDING_READS_STALL s_pixel_buffer.STATE_2_READ_BUFFER s_pixel_buffer.STATE_1_WAIT_FOR_LAST_PIXEL s_pixel_buffer.STATE_0_IDLE 
+s_pixel_buffer.STATE_0_IDLE 0 0 0 0 
+s_pixel_buffer.STATE_1_WAIT_FOR_LAST_PIXEL 0 0 1 1 
+s_pixel_buffer.STATE_2_READ_BUFFER 0 1 0 1 
+s_pixel_buffer.STATE_3_MAX_PENDING_READS_STALL 1 0 0 1 
+
+State Machine - |Top|NiosII_Controlled_Section:u0|NiosII_Controlled_Section_NiosII:niosii|NiosII_Controlled_Section_NiosII_cpu:cpu|NiosII_Controlled_Section_NiosII_cpu_nios2_oci:the_NiosII_Controlled_Section_NiosII_cpu_nios2_oci|NiosII_Controlled_Section_NiosII_cpu_debug_slave_wrapper:the_NiosII_Controlled_Section_NiosII_cpu_debug_slave_wrapper|NiosII_Controlled_Section_NiosII_cpu_debug_slave_tck:the_NiosII_Controlled_Section_NiosII_cpu_debug_slave_tck|DRsize
+Name DRsize.101 DRsize.100 DRsize.011 DRsize.010 DRsize.001 DRsize.000 
+DRsize.000 0 0 0 0 0 0 
+DRsize.001 0 0 0 0 1 1 
+DRsize.010 0 0 0 1 0 1 
+DRsize.011 0 0 1 0 0 1 
+DRsize.100 0 1 0 0 0 1 
+DRsize.101 1 0 0 0 0 1 

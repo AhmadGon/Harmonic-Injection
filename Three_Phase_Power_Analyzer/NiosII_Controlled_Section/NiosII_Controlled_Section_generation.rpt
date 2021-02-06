@@ -1,0 +1,273 @@
+Info: Starting: Create block symbol file (.bsf)
+Info: qsys-generate T:\FPGA_Projects\Qsys_Projects\ClosedLoop_System\NiosII_Controlled_Section.qsys --block-symbol-file --output-directory=T:\FPGA_Projects\Qsys_Projects\ClosedLoop_System\NiosII_Controlled_Section --family="Cyclone IV E" --part=EP4CE115F29C7
+Progress: Loading ClosedLoop_System/NiosII_Controlled_Section.qsys
+Progress: Reading input file
+Progress: Adding Alpha_Blender [altera_up_avalon_video_alpha_blender 17.0]
+Progress: Parameterizing module Alpha_Blender
+Progress: Adding Channel1_Analog [altera_avalon_pio 17.0]
+Progress: Parameterizing module Channel1_Analog
+Progress: Adding Channel2_Analog [altera_avalon_pio 17.0]
+Progress: Parameterizing module Channel2_Analog
+Progress: Adding Channel3_Analog [altera_avalon_pio 17.0]
+Progress: Parameterizing module Channel3_Analog
+Progress: Adding Channel4_Analog [altera_avalon_pio 17.0]
+Progress: Parameterizing module Channel4_Analog
+Progress: Adding Channel5_Analog [altera_avalon_pio 17.0]
+Progress: Parameterizing module Channel5_Analog
+Progress: Adding Channel6_Analog [altera_avalon_pio 17.0]
+Progress: Parameterizing module Channel6_Analog
+Progress: Adding Character_Buffer [altera_up_avalon_video_character_buffer_with_dma 17.0]
+Progress: Parameterizing module Character_Buffer
+Progress: Adding FIFO [altera_up_avalon_video_dual_clock_buffer 17.0]
+Progress: Parameterizing module FIFO
+Progress: Adding JTAG [altera_avalon_jtag_uart 17.0]
+Progress: Parameterizing module JTAG
+Progress: Adding NiosII [altera_nios2_gen2 17.0]
+Progress: Parameterizing module NiosII
+Progress: Adding OnChip_Memory [altera_avalon_onchip_memory2 17.0]
+Progress: Parameterizing module OnChip_Memory
+Progress: Adding Pixel_Buffer [altera_up_avalon_video_pixel_buffer_dma 17.0]
+Progress: Parameterizing module Pixel_Buffer
+Progress: Adding RGB_Resampler [altera_up_avalon_video_rgb_resampler 17.0]
+Progress: Parameterizing module RGB_Resampler
+Progress: Adding Read_Address [altera_avalon_pio 17.0]
+Progress: Parameterizing module Read_Address
+Progress: Adding Read_New_Sample [altera_avalon_pio 17.0]
+Progress: Parameterizing module Read_New_Sample
+Progress: Adding SRAM [altera_up_avalon_sram 17.0]
+Progress: Parameterizing module SRAM
+Progress: Adding System_ID [altera_avalon_sysid_qsys 17.0]
+Progress: Parameterizing module System_ID
+Progress: Adding Timer [altera_avalon_timer 17.0]
+Progress: Parameterizing module Timer
+Progress: Adding VGA_Controller [altera_up_avalon_video_vga_controller 17.0]
+Progress: Parameterizing module VGA_Controller
+Progress: Adding VGA_PLL [altera_up_avalon_video_pll 17.0]
+Progress: Parameterizing module VGA_PLL
+Progress: Adding Writing_Finish_Flag [altera_avalon_pio 17.0]
+Progress: Parameterizing module Writing_Finish_Flag
+Progress: Adding clk_0 [clock_source 17.0]
+Progress: Parameterizing module clk_0
+Progress: Building connections
+Progress: Parameterizing connections
+Progress: Validating
+Progress: Done reading input file
+Info: NiosII_Controlled_Section.Channel1_Analog: PIO inputs are not hardwired in test bench. Undefined values will be read from PIO inputs during simulation.
+Info: NiosII_Controlled_Section.Channel2_Analog: PIO inputs are not hardwired in test bench. Undefined values will be read from PIO inputs during simulation.
+Info: NiosII_Controlled_Section.Channel3_Analog: PIO inputs are not hardwired in test bench. Undefined values will be read from PIO inputs during simulation.
+Info: NiosII_Controlled_Section.Channel4_Analog: PIO inputs are not hardwired in test bench. Undefined values will be read from PIO inputs during simulation.
+Info: NiosII_Controlled_Section.Channel5_Analog: PIO inputs are not hardwired in test bench. Undefined values will be read from PIO inputs during simulation.
+Info: NiosII_Controlled_Section.Channel6_Analog: PIO inputs are not hardwired in test bench. Undefined values will be read from PIO inputs during simulation.
+Info: NiosII_Controlled_Section.Character_Buffer: Character Resolution: 80 x 60
+Info: NiosII_Controlled_Section.JTAG: JTAG UART IP input clock need to be at least double (2x) the operating frequency of JTAG TCK on board
+Info: NiosII_Controlled_Section.RGB_Resampler: RGB Resampling: 8 (bits) x 3 (planes) -> 10 (bits) x 3 (planes)
+Info: NiosII_Controlled_Section.Read_New_Sample: PIO inputs are not hardwired in test bench. Undefined values will be read from PIO inputs during simulation.
+Info: NiosII_Controlled_Section.System_ID: System ID is not assigned automatically. Edit the System ID parameter to provide a unique ID
+Info: NiosII_Controlled_Section.System_ID: Time stamp will be automatically updated when this component is generated.
+Info: NiosII_Controlled_Section.VGA_Controller: Video Output Stream: Format: 640 x 480 with Color: 10 (bits) x 3 (planes) converted to 8 (bits) per color plane
+Info: NiosII_Controlled_Section.Writing_Finish_Flag: PIO inputs are not hardwired in test bench. Undefined values will be read from PIO inputs during simulation.
+Info: qsys-generate succeeded.
+Info: Finished: Create block symbol file (.bsf)
+Info: 
+Info: Starting: Create HDL design files for synthesis
+Info: qsys-generate T:\FPGA_Projects\Qsys_Projects\ClosedLoop_System\NiosII_Controlled_Section.qsys --synthesis=VERILOG --output-directory=T:\FPGA_Projects\Qsys_Projects\ClosedLoop_System\NiosII_Controlled_Section\synthesis --family="Cyclone IV E" --part=EP4CE115F29C7
+Progress: Loading ClosedLoop_System/NiosII_Controlled_Section.qsys
+Progress: Reading input file
+Progress: Adding Alpha_Blender [altera_up_avalon_video_alpha_blender 17.0]
+Progress: Parameterizing module Alpha_Blender
+Progress: Adding Channel1_Analog [altera_avalon_pio 17.0]
+Progress: Parameterizing module Channel1_Analog
+Progress: Adding Channel2_Analog [altera_avalon_pio 17.0]
+Progress: Parameterizing module Channel2_Analog
+Progress: Adding Channel3_Analog [altera_avalon_pio 17.0]
+Progress: Parameterizing module Channel3_Analog
+Progress: Adding Channel4_Analog [altera_avalon_pio 17.0]
+Progress: Parameterizing module Channel4_Analog
+Progress: Adding Channel5_Analog [altera_avalon_pio 17.0]
+Progress: Parameterizing module Channel5_Analog
+Progress: Adding Channel6_Analog [altera_avalon_pio 17.0]
+Progress: Parameterizing module Channel6_Analog
+Progress: Adding Character_Buffer [altera_up_avalon_video_character_buffer_with_dma 17.0]
+Progress: Parameterizing module Character_Buffer
+Progress: Adding FIFO [altera_up_avalon_video_dual_clock_buffer 17.0]
+Progress: Parameterizing module FIFO
+Progress: Adding JTAG [altera_avalon_jtag_uart 17.0]
+Progress: Parameterizing module JTAG
+Progress: Adding NiosII [altera_nios2_gen2 17.0]
+Progress: Parameterizing module NiosII
+Progress: Adding OnChip_Memory [altera_avalon_onchip_memory2 17.0]
+Progress: Parameterizing module OnChip_Memory
+Progress: Adding Pixel_Buffer [altera_up_avalon_video_pixel_buffer_dma 17.0]
+Progress: Parameterizing module Pixel_Buffer
+Progress: Adding RGB_Resampler [altera_up_avalon_video_rgb_resampler 17.0]
+Progress: Parameterizing module RGB_Resampler
+Progress: Adding Read_Address [altera_avalon_pio 17.0]
+Progress: Parameterizing module Read_Address
+Progress: Adding Read_New_Sample [altera_avalon_pio 17.0]
+Progress: Parameterizing module Read_New_Sample
+Progress: Adding SRAM [altera_up_avalon_sram 17.0]
+Progress: Parameterizing module SRAM
+Progress: Adding System_ID [altera_avalon_sysid_qsys 17.0]
+Progress: Parameterizing module System_ID
+Progress: Adding Timer [altera_avalon_timer 17.0]
+Progress: Parameterizing module Timer
+Progress: Adding VGA_Controller [altera_up_avalon_video_vga_controller 17.0]
+Progress: Parameterizing module VGA_Controller
+Progress: Adding VGA_PLL [altera_up_avalon_video_pll 17.0]
+Progress: Parameterizing module VGA_PLL
+Progress: Adding Writing_Finish_Flag [altera_avalon_pio 17.0]
+Progress: Parameterizing module Writing_Finish_Flag
+Progress: Adding clk_0 [clock_source 17.0]
+Progress: Parameterizing module clk_0
+Progress: Building connections
+Progress: Parameterizing connections
+Progress: Validating
+Progress: Done reading input file
+Info: NiosII_Controlled_Section.Channel1_Analog: PIO inputs are not hardwired in test bench. Undefined values will be read from PIO inputs during simulation.
+Info: NiosII_Controlled_Section.Channel2_Analog: PIO inputs are not hardwired in test bench. Undefined values will be read from PIO inputs during simulation.
+Info: NiosII_Controlled_Section.Channel3_Analog: PIO inputs are not hardwired in test bench. Undefined values will be read from PIO inputs during simulation.
+Info: NiosII_Controlled_Section.Channel4_Analog: PIO inputs are not hardwired in test bench. Undefined values will be read from PIO inputs during simulation.
+Info: NiosII_Controlled_Section.Channel5_Analog: PIO inputs are not hardwired in test bench. Undefined values will be read from PIO inputs during simulation.
+Info: NiosII_Controlled_Section.Channel6_Analog: PIO inputs are not hardwired in test bench. Undefined values will be read from PIO inputs during simulation.
+Info: NiosII_Controlled_Section.Character_Buffer: Character Resolution: 80 x 60
+Info: NiosII_Controlled_Section.JTAG: JTAG UART IP input clock need to be at least double (2x) the operating frequency of JTAG TCK on board
+Info: NiosII_Controlled_Section.RGB_Resampler: RGB Resampling: 8 (bits) x 3 (planes) -> 10 (bits) x 3 (planes)
+Info: NiosII_Controlled_Section.Read_New_Sample: PIO inputs are not hardwired in test bench. Undefined values will be read from PIO inputs during simulation.
+Info: NiosII_Controlled_Section.System_ID: System ID is not assigned automatically. Edit the System ID parameter to provide a unique ID
+Info: NiosII_Controlled_Section.System_ID: Time stamp will be automatically updated when this component is generated.
+Info: NiosII_Controlled_Section.VGA_Controller: Video Output Stream: Format: 640 x 480 with Color: 10 (bits) x 3 (planes) converted to 8 (bits) per color plane
+Info: NiosII_Controlled_Section.Writing_Finish_Flag: PIO inputs are not hardwired in test bench. Undefined values will be read from PIO inputs during simulation.
+Info: NiosII_Controlled_Section: Generating NiosII_Controlled_Section "NiosII_Controlled_Section" for QUARTUS_SYNTH
+Info: Alpha_Blender: Starting Generation of the Alpha Blender
+Info: Alpha_Blender: "NiosII_Controlled_Section" instantiated altera_up_avalon_video_alpha_blender "Alpha_Blender"
+Info: Channel1_Analog: Starting RTL generation for module 'NiosII_Controlled_Section_Channel1_Analog'
+Info: Channel1_Analog:   Generation command is [exec C:/intelfpga_lite/17.0/quartus/bin64/perl/bin/perl.exe -I C:/intelfpga_lite/17.0/quartus/bin64/perl/lib -I C:/intelfpga_lite/17.0/quartus/sopc_builder/bin/europa -I C:/intelfpga_lite/17.0/quartus/sopc_builder/bin/perl_lib -I C:/intelfpga_lite/17.0/quartus/sopc_builder/bin -I C:/intelfpga_lite/17.0/quartus/../ip/altera/sopc_builder_ip/common -I C:/intelfpga_lite/17.0/quartus/../ip/altera/sopc_builder_ip/altera_avalon_pio -- C:/intelfpga_lite/17.0/quartus/../ip/altera/sopc_builder_ip/altera_avalon_pio/generate_rtl.pl --name=NiosII_Controlled_Section_Channel1_Analog --dir=C:/Users/aaala/AppData/Local/Temp/alt8312_6341570219247949470.dir/0002_Channel1_Analog_gen/ --quartus_dir=C:/intelfpga_lite/17.0/quartus --verilog --config=C:/Users/aaala/AppData/Local/Temp/alt8312_6341570219247949470.dir/0002_Channel1_Analog_gen//NiosII_Controlled_Section_Channel1_Analog_component_configuration.pl  --do_build_sim=0  ]
+Info: Channel1_Analog: Done RTL generation for module 'NiosII_Controlled_Section_Channel1_Analog'
+Info: Channel1_Analog: "NiosII_Controlled_Section" instantiated altera_avalon_pio "Channel1_Analog"
+Info: Character_Buffer: Starting Generation of Character Buffer
+Info: Character_Buffer: "NiosII_Controlled_Section" instantiated altera_up_avalon_video_character_buffer_with_dma "Character_Buffer"
+Info: FIFO: Starting Generation of the Dual Clock Buffer
+Info: FIFO: "NiosII_Controlled_Section" instantiated altera_up_avalon_video_dual_clock_buffer "FIFO"
+Info: JTAG: Starting RTL generation for module 'NiosII_Controlled_Section_JTAG'
+Info: JTAG:   Generation command is [exec C:/intelfpga_lite/17.0/quartus/bin64/perl/bin/perl.exe -I C:/intelfpga_lite/17.0/quartus/bin64/perl/lib -I C:/intelfpga_lite/17.0/quartus/sopc_builder/bin/europa -I C:/intelfpga_lite/17.0/quartus/sopc_builder/bin/perl_lib -I C:/intelfpga_lite/17.0/quartus/sopc_builder/bin -I C:/intelfpga_lite/17.0/quartus/../ip/altera/sopc_builder_ip/common -I C:/intelfpga_lite/17.0/quartus/../ip/altera/sopc_builder_ip/altera_avalon_jtag_uart -- C:/intelfpga_lite/17.0/quartus/../ip/altera/sopc_builder_ip/altera_avalon_jtag_uart/generate_rtl.pl --name=NiosII_Controlled_Section_JTAG --dir=C:/Users/aaala/AppData/Local/Temp/alt8312_6341570219247949470.dir/0005_JTAG_gen/ --quartus_dir=C:/intelfpga_lite/17.0/quartus --verilog --config=C:/Users/aaala/AppData/Local/Temp/alt8312_6341570219247949470.dir/0005_JTAG_gen//NiosII_Controlled_Section_JTAG_component_configuration.pl  --do_build_sim=0  ]
+Info: JTAG: Done RTL generation for module 'NiosII_Controlled_Section_JTAG'
+Info: JTAG: "NiosII_Controlled_Section" instantiated altera_avalon_jtag_uart "JTAG"
+Info: NiosII: "NiosII_Controlled_Section" instantiated altera_nios2_gen2 "NiosII"
+Info: OnChip_Memory: Starting RTL generation for module 'NiosII_Controlled_Section_OnChip_Memory'
+Info: OnChip_Memory:   Generation command is [exec C:/intelfpga_lite/17.0/quartus/bin64/perl/bin/perl.exe -I C:/intelfpga_lite/17.0/quartus/bin64/perl/lib -I C:/intelfpga_lite/17.0/quartus/sopc_builder/bin/europa -I C:/intelfpga_lite/17.0/quartus/sopc_builder/bin/perl_lib -I C:/intelfpga_lite/17.0/quartus/sopc_builder/bin -I C:/intelfpga_lite/17.0/quartus/../ip/altera/sopc_builder_ip/common -I C:/intelfpga_lite/17.0/quartus/../ip/altera/sopc_builder_ip/altera_avalon_onchip_memory2 -- C:/intelfpga_lite/17.0/quartus/../ip/altera/sopc_builder_ip/altera_avalon_onchip_memory2/generate_rtl.pl --name=NiosII_Controlled_Section_OnChip_Memory --dir=C:/Users/aaala/AppData/Local/Temp/alt8312_6341570219247949470.dir/0006_OnChip_Memory_gen/ --quartus_dir=C:/intelfpga_lite/17.0/quartus --verilog --config=C:/Users/aaala/AppData/Local/Temp/alt8312_6341570219247949470.dir/0006_OnChip_Memory_gen//NiosII_Controlled_Section_OnChip_Memory_component_configuration.pl  --do_build_sim=0  ]
+Info: OnChip_Memory: Done RTL generation for module 'NiosII_Controlled_Section_OnChip_Memory'
+Info: OnChip_Memory: "NiosII_Controlled_Section" instantiated altera_avalon_onchip_memory2 "OnChip_Memory"
+Info: Pixel_Buffer: Starting Generation of VGA Pixel Buffer
+Info: Pixel_Buffer: "NiosII_Controlled_Section" instantiated altera_up_avalon_video_pixel_buffer_dma "Pixel_Buffer"
+Info: RGB_Resampler: Starting Generation of Video RGB Resampler
+Info: RGB_Resampler: "NiosII_Controlled_Section" instantiated altera_up_avalon_video_rgb_resampler "RGB_Resampler"
+Info: Read_Address: Starting RTL generation for module 'NiosII_Controlled_Section_Read_Address'
+Info: Read_Address:   Generation command is [exec C:/intelfpga_lite/17.0/quartus/bin64/perl/bin/perl.exe -I C:/intelfpga_lite/17.0/quartus/bin64/perl/lib -I C:/intelfpga_lite/17.0/quartus/sopc_builder/bin/europa -I C:/intelfpga_lite/17.0/quartus/sopc_builder/bin/perl_lib -I C:/intelfpga_lite/17.0/quartus/sopc_builder/bin -I C:/intelfpga_lite/17.0/quartus/../ip/altera/sopc_builder_ip/common -I C:/intelfpga_lite/17.0/quartus/../ip/altera/sopc_builder_ip/altera_avalon_pio -- C:/intelfpga_lite/17.0/quartus/../ip/altera/sopc_builder_ip/altera_avalon_pio/generate_rtl.pl --name=NiosII_Controlled_Section_Read_Address --dir=C:/Users/aaala/AppData/Local/Temp/alt8312_6341570219247949470.dir/0009_Read_Address_gen/ --quartus_dir=C:/intelfpga_lite/17.0/quartus --verilog --config=C:/Users/aaala/AppData/Local/Temp/alt8312_6341570219247949470.dir/0009_Read_Address_gen//NiosII_Controlled_Section_Read_Address_component_configuration.pl  --do_build_sim=0  ]
+Info: Read_Address: Done RTL generation for module 'NiosII_Controlled_Section_Read_Address'
+Info: Read_Address: "NiosII_Controlled_Section" instantiated altera_avalon_pio "Read_Address"
+Info: Read_New_Sample: Starting RTL generation for module 'NiosII_Controlled_Section_Read_New_Sample'
+Info: Read_New_Sample:   Generation command is [exec C:/intelfpga_lite/17.0/quartus/bin64/perl/bin/perl.exe -I C:/intelfpga_lite/17.0/quartus/bin64/perl/lib -I C:/intelfpga_lite/17.0/quartus/sopc_builder/bin/europa -I C:/intelfpga_lite/17.0/quartus/sopc_builder/bin/perl_lib -I C:/intelfpga_lite/17.0/quartus/sopc_builder/bin -I C:/intelfpga_lite/17.0/quartus/../ip/altera/sopc_builder_ip/common -I C:/intelfpga_lite/17.0/quartus/../ip/altera/sopc_builder_ip/altera_avalon_pio -- C:/intelfpga_lite/17.0/quartus/../ip/altera/sopc_builder_ip/altera_avalon_pio/generate_rtl.pl --name=NiosII_Controlled_Section_Read_New_Sample --dir=C:/Users/aaala/AppData/Local/Temp/alt8312_6341570219247949470.dir/0010_Read_New_Sample_gen/ --quartus_dir=C:/intelfpga_lite/17.0/quartus --verilog --config=C:/Users/aaala/AppData/Local/Temp/alt8312_6341570219247949470.dir/0010_Read_New_Sample_gen//NiosII_Controlled_Section_Read_New_Sample_component_configuration.pl  --do_build_sim=0  ]
+Info: Read_New_Sample: Done RTL generation for module 'NiosII_Controlled_Section_Read_New_Sample'
+Info: Read_New_Sample: "NiosII_Controlled_Section" instantiated altera_avalon_pio "Read_New_Sample"
+Info: SRAM: Starting Generation of the SRAM Controller
+Info: SRAM: "NiosII_Controlled_Section" instantiated altera_up_avalon_sram "SRAM"
+Info: System_ID: "NiosII_Controlled_Section" instantiated altera_avalon_sysid_qsys "System_ID"
+Info: Timer: Starting RTL generation for module 'NiosII_Controlled_Section_Timer'
+Info: Timer:   Generation command is [exec C:/intelFPGA_lite/17.0/quartus/bin64//perl/bin/perl.exe -I C:/intelFPGA_lite/17.0/quartus/bin64//perl/lib -I C:/intelfpga_lite/17.0/quartus/sopc_builder/bin/europa -I C:/intelfpga_lite/17.0/quartus/sopc_builder/bin/perl_lib -I C:/intelfpga_lite/17.0/quartus/sopc_builder/bin -I C:/intelfpga_lite/17.0/quartus/../ip/altera/sopc_builder_ip/common -I C:/intelfpga_lite/17.0/quartus/../ip/altera/sopc_builder_ip/altera_avalon_timer -- C:/intelfpga_lite/17.0/quartus/../ip/altera/sopc_builder_ip/altera_avalon_timer/generate_rtl.pl --name=NiosII_Controlled_Section_Timer --dir=C:/Users/aaala/AppData/Local/Temp/alt8312_6341570219247949470.dir/0013_Timer_gen/ --quartus_dir=C:/intelfpga_lite/17.0/quartus --verilog --config=C:/Users/aaala/AppData/Local/Temp/alt8312_6341570219247949470.dir/0013_Timer_gen//NiosII_Controlled_Section_Timer_component_configuration.pl  --do_build_sim=0  ]
+Info: Timer: Done RTL generation for module 'NiosII_Controlled_Section_Timer'
+Info: Timer: "NiosII_Controlled_Section" instantiated altera_avalon_timer "Timer"
+Info: VGA_Controller: Starting Generation of VGA Controller
+Info: VGA_Controller: "NiosII_Controlled_Section" instantiated altera_up_avalon_video_vga_controller "VGA_Controller"
+Info: VGA_PLL: "NiosII_Controlled_Section" instantiated altera_up_avalon_video_pll "VGA_PLL"
+Info: avalon_st_adapter: Inserting error_adapter: error_adapter_0
+Info: avalon_st_adapter_001: Inserting error_adapter: error_adapter_0
+Info: avalon_st_adapter_002: Inserting error_adapter: error_adapter_0
+Info: avalon_st_adapter_003: Inserting error_adapter: error_adapter_0
+Info: avalon_st_adapter_004: Inserting error_adapter: error_adapter_0
+Info: avalon_st_adapter_005: Inserting error_adapter: error_adapter_0
+Info: avalon_st_adapter_006: Inserting error_adapter: error_adapter_0
+Info: avalon_st_adapter_007: Inserting error_adapter: error_adapter_0
+Info: avalon_st_adapter_008: Inserting error_adapter: error_adapter_0
+Info: avalon_st_adapter_009: Inserting error_adapter: error_adapter_0
+Info: avalon_st_adapter_010: Inserting error_adapter: error_adapter_0
+Info: avalon_st_adapter_011: Inserting error_adapter: error_adapter_0
+Info: avalon_st_adapter_012: Inserting error_adapter: error_adapter_0
+Info: avalon_st_adapter_013: Inserting error_adapter: error_adapter_0
+Info: avalon_st_adapter_014: Inserting error_adapter: error_adapter_0
+Info: avalon_st_adapter_015: Inserting error_adapter: error_adapter_0
+Info: avalon_st_adapter_016: Inserting error_adapter: error_adapter_0
+Info: avalon_st_adapter_017: Inserting error_adapter: error_adapter_0
+Info: mm_interconnect_0: "NiosII_Controlled_Section" instantiated altera_mm_interconnect "mm_interconnect_0"
+Info: irq_mapper: "NiosII_Controlled_Section" instantiated altera_irq_mapper "irq_mapper"
+Info: rst_controller: "NiosII_Controlled_Section" instantiated altera_reset_controller "rst_controller"
+Info: cpu: Starting RTL generation for module 'NiosII_Controlled_Section_NiosII_cpu'
+Info: cpu:   Generation command is [exec C:/intelFPGA_lite/17.0/quartus/bin64//eperlcmd.exe -I C:/intelFPGA_lite/17.0/quartus/bin64//perl/lib -I C:/intelfpga_lite/17.0/quartus/sopc_builder/bin/europa -I C:/intelfpga_lite/17.0/quartus/sopc_builder/bin/perl_lib -I C:/intelfpga_lite/17.0/quartus/sopc_builder/bin -I C:/intelfpga_lite/17.0/quartus/../ip/altera/nios2_ip/altera_nios2_gen2/cpu_lib -I C:/intelfpga_lite/17.0/quartus/../ip/altera/nios2_ip/altera_nios2_gen2/nios_lib -I C:/intelfpga_lite/17.0/quartus/../ip/altera/nios2_ip/altera_nios2_gen2 -I C:/intelfpga_lite/17.0/quartus/../ip/altera/nios2_ip/altera_nios2_gen2 -- C:/intelfpga_lite/17.0/quartus/../ip/altera/nios2_ip/altera_nios2_gen2/generate_rtl.epl --name=NiosII_Controlled_Section_NiosII_cpu --dir=C:/Users/aaala/AppData/Local/Temp/alt8312_6341570219247949470.dir/0017_cpu_gen/ --quartus_bindir=C:/intelFPGA_lite/17.0/quartus/bin64/ --verilog --config=C:/Users/aaala/AppData/Local/Temp/alt8312_6341570219247949470.dir/0017_cpu_gen//NiosII_Controlled_Section_NiosII_cpu_processor_configuration.pl  --do_build_sim=0  ]
+Info: cpu: # 2020.02.20 23:18:02 (*) Starting Nios II generation
+Info: cpu: # 2020.02.20 23:18:02 (*)   Checking for plaintext license.
+Info: cpu: # 2020.02.20 23:18:03 (*)   Couldn't query license setup in Quartus directory C:/intelFPGA_lite/17.0/quartus/bin64/
+Info: cpu: # 2020.02.20 23:18:03 (*)   Defaulting to contents of LM_LICENSE_FILE environment variable
+Info: cpu: # 2020.02.20 23:18:03 (*)   LM_LICENSE_FILE environment variable is empty
+Info: cpu: # 2020.02.20 23:18:03 (*)   Plaintext license not found.
+Info: cpu: # 2020.02.20 23:18:03 (*)   Checking for encrypted license (non-evaluation).
+Info: cpu: # 2020.02.20 23:18:03 (*)   Couldn't query license setup in Quartus directory C:/intelFPGA_lite/17.0/quartus/bin64/
+Info: cpu: # 2020.02.20 23:18:03 (*)   Defaulting to contents of LM_LICENSE_FILE environment variable
+Info: cpu: # 2020.02.20 23:18:03 (*)   LM_LICENSE_FILE environment variable is empty
+Info: cpu: # 2020.02.20 23:18:03 (*)   Encrypted license not found.  Defaulting to OCP evaluation license (produces a time-limited SOF)
+Info: cpu: # 2020.02.20 23:18:03 (*)   Elaborating CPU configuration settings
+Info: cpu: # 2020.02.20 23:18:03 (*)   Creating all objects for CPU
+Info: cpu: # 2020.02.20 23:18:03 (*)     Testbench
+Info: cpu: # 2020.02.20 23:18:03 (*)     Instruction decoding
+Info: cpu: # 2020.02.20 23:18:03 (*)       Instruction fields
+Info: cpu: # 2020.02.20 23:18:03 (*)       Instruction decodes
+Info: cpu: # 2020.02.20 23:18:04 (*)       Signals for RTL simulation waveforms
+Info: cpu: # 2020.02.20 23:18:04 (*)       Instruction controls
+Info: cpu: # 2020.02.20 23:18:04 (*)     Pipeline frontend
+Info: cpu: # 2020.02.20 23:18:04 (*)     Pipeline backend
+Info: cpu: # 2020.02.20 23:18:06 (*)   Generating RTL from CPU objects
+Info: cpu: # 2020.02.20 23:18:07 (*)   Creating encrypted RTL
+Info: cpu: # 2020.02.20 23:18:08 (*) Done Nios II generation
+Info: cpu: Done RTL generation for module 'NiosII_Controlled_Section_NiosII_cpu'
+Info: cpu: "NiosII" instantiated altera_nios2_gen2_unit "cpu"
+Info: video_pll: "VGA_PLL" instantiated altera_up_altpll "video_pll"
+Info: reset_from_locked: "VGA_PLL" instantiated altera_up_avalon_reset_from_locked_signal "reset_from_locked"
+Info: Pixel_Buffer_avalon_pixel_dma_master_translator: "mm_interconnect_0" instantiated altera_merlin_master_translator "Pixel_Buffer_avalon_pixel_dma_master_translator"
+Info: SRAM_avalon_sram_slave_translator: "mm_interconnect_0" instantiated altera_merlin_slave_translator "SRAM_avalon_sram_slave_translator"
+Info: Pixel_Buffer_avalon_pixel_dma_master_agent: "mm_interconnect_0" instantiated altera_merlin_master_agent "Pixel_Buffer_avalon_pixel_dma_master_agent"
+Info: SRAM_avalon_sram_slave_agent: "mm_interconnect_0" instantiated altera_merlin_slave_agent "SRAM_avalon_sram_slave_agent"
+Info: SRAM_avalon_sram_slave_agent_rsp_fifo: "mm_interconnect_0" instantiated altera_avalon_sc_fifo "SRAM_avalon_sram_slave_agent_rsp_fifo"
+Info: router: "mm_interconnect_0" instantiated altera_merlin_router "router"
+Info: router_001: "mm_interconnect_0" instantiated altera_merlin_router "router_001"
+Info: router_002: "mm_interconnect_0" instantiated altera_merlin_router "router_002"
+Info: router_003: "mm_interconnect_0" instantiated altera_merlin_router "router_003"
+Info: router_004: "mm_interconnect_0" instantiated altera_merlin_router "router_004"
+Info: router_005: "mm_interconnect_0" instantiated altera_merlin_router "router_005"
+Info: router_009: "mm_interconnect_0" instantiated altera_merlin_router "router_009"
+Info: NiosII_data_master_limiter: "mm_interconnect_0" instantiated altera_merlin_traffic_limiter "NiosII_data_master_limiter"
+Info: Reusing file T:/FPGA_Projects/Qsys_Projects/ClosedLoop_System/NiosII_Controlled_Section/synthesis/submodules/altera_avalon_sc_fifo.v
+Info: SRAM_avalon_sram_slave_burst_adapter: "mm_interconnect_0" instantiated altera_merlin_burst_adapter "SRAM_avalon_sram_slave_burst_adapter"
+Info: Reusing file T:/FPGA_Projects/Qsys_Projects/ClosedLoop_System/NiosII_Controlled_Section/synthesis/submodules/altera_avalon_st_pipeline_base.v
+Info: cmd_demux: "mm_interconnect_0" instantiated altera_merlin_demultiplexer "cmd_demux"
+Info: cmd_demux_001: "mm_interconnect_0" instantiated altera_merlin_demultiplexer "cmd_demux_001"
+Info: cmd_demux_002: "mm_interconnect_0" instantiated altera_merlin_demultiplexer "cmd_demux_002"
+Info: cmd_mux: "mm_interconnect_0" instantiated altera_merlin_multiplexer "cmd_mux"
+Info: cmd_mux_001: "mm_interconnect_0" instantiated altera_merlin_multiplexer "cmd_mux_001"
+Info: Reusing file T:/FPGA_Projects/Qsys_Projects/ClosedLoop_System/NiosII_Controlled_Section/synthesis/submodules/altera_merlin_arbitrator.sv
+Info: rsp_demux: "mm_interconnect_0" instantiated altera_merlin_demultiplexer "rsp_demux"
+Info: rsp_mux: "mm_interconnect_0" instantiated altera_merlin_multiplexer "rsp_mux"
+Info: Reusing file T:/FPGA_Projects/Qsys_Projects/ClosedLoop_System/NiosII_Controlled_Section/synthesis/submodules/altera_merlin_arbitrator.sv
+Info: rsp_mux_001: "mm_interconnect_0" instantiated altera_merlin_multiplexer "rsp_mux_001"
+Info: Reusing file T:/FPGA_Projects/Qsys_Projects/ClosedLoop_System/NiosII_Controlled_Section/synthesis/submodules/altera_merlin_arbitrator.sv
+Info: rsp_mux_002: "mm_interconnect_0" instantiated altera_merlin_multiplexer "rsp_mux_002"
+Info: Reusing file T:/FPGA_Projects/Qsys_Projects/ClosedLoop_System/NiosII_Controlled_Section/synthesis/submodules/altera_merlin_arbitrator.sv
+Info: SRAM_avalon_sram_slave_rsp_width_adapter: "mm_interconnect_0" instantiated altera_merlin_width_adapter "SRAM_avalon_sram_slave_rsp_width_adapter"
+Info: Reusing file T:/FPGA_Projects/Qsys_Projects/ClosedLoop_System/NiosII_Controlled_Section/synthesis/submodules/altera_merlin_address_alignment.sv
+Info: Reusing file T:/FPGA_Projects/Qsys_Projects/ClosedLoop_System/NiosII_Controlled_Section/synthesis/submodules/altera_merlin_burst_uncompressor.sv
+Info: avalon_st_adapter: "mm_interconnect_0" instantiated altera_avalon_st_adapter "avalon_st_adapter"
+Info: avalon_st_adapter_001: "mm_interconnect_0" instantiated altera_avalon_st_adapter "avalon_st_adapter_001"
+Info: avalon_st_adapter_002: "mm_interconnect_0" instantiated altera_avalon_st_adapter "avalon_st_adapter_002"
+Info: error_adapter_0: "avalon_st_adapter" instantiated error_adapter "error_adapter_0"
+Info: error_adapter_0: "avalon_st_adapter_001" instantiated error_adapter "error_adapter_0"
+Info: error_adapter_0: "avalon_st_adapter_002" instantiated error_adapter "error_adapter_0"
+Info: NiosII_Controlled_Section: Done "NiosII_Controlled_Section" with 53 modules, 88 files
+Info: qsys-generate succeeded.
+Info: Finished: Create HDL design files for synthesis

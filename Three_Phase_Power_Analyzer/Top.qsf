@@ -1,0 +1,369 @@
+# -------------------------------------------------------------------------- #
+#
+# Copyright (C) 2017  Intel Corporation. All rights reserved.
+# Your use of Intel Corporation's design tools, logic functions 
+# and other software and tools, and its AMPP partner logic 
+# functions, and any output files from any of the foregoing 
+# (including device programming or simulation files), and any 
+# associated documentation or information are expressly subject 
+# to the terms and conditions of the Intel Program License 
+# Subscription Agreement, the Intel Quartus Prime License Agreement,
+# the Intel MegaCore Function License Agreement, or other 
+# applicable license agreement, including, without limitation, 
+# that your use is for the sole purpose of programming logic 
+# devices manufactured by Intel and sold by Intel or its 
+# authorized distributors.  Please refer to the applicable 
+# agreement for further details.
+#
+# -------------------------------------------------------------------------- #
+#
+# Quartus Prime
+# Version 17.0.0 Build 595 04/25/2017 SJ Lite Edition
+# Date created = 15:48:59  January 11, 2020
+#
+# -------------------------------------------------------------------------- #
+#
+# Notes:
+#
+# 1) The default values for assignments are stored in the file:
+#		Top_assignment_defaults.qdf
+#    If this file doesn't exist, see file:
+#		assignment_defaults.qdf
+#
+# 2) Altera recommends that you do not modify this file. This
+#    file is updated automatically by the Quartus Prime software
+#    and any changes you make may be lost or overwritten.
+#
+# -------------------------------------------------------------------------- #
+
+
+set_global_assignment -name FAMILY "Cyclone IV E"
+set_global_assignment -name DEVICE EP4CE115F29C7
+set_global_assignment -name TOP_LEVEL_ENTITY Top
+set_global_assignment -name ORIGINAL_QUARTUS_VERSION 17.0.0
+set_global_assignment -name PROJECT_CREATION_TIME_DATE "15:48:59  JANUARY 11, 2020"
+set_global_assignment -name LAST_QUARTUS_VERSION "18.0.0 Lite Edition"
+set_global_assignment -name PROJECT_OUTPUT_DIRECTORY output_files
+set_global_assignment -name MIN_CORE_JUNCTION_TEMP 0
+set_global_assignment -name MAX_CORE_JUNCTION_TEMP 85
+set_global_assignment -name ERROR_CHECK_FREQUENCY_DIVISOR 1
+set_global_assignment -name NOMINAL_CORE_SUPPLY_VOLTAGE 1.2V
+set_global_assignment -name POWER_PRESET_COOLING_SOLUTION "23 MM HEAT SINK WITH 200 LFPM AIRFLOW"
+set_global_assignment -name POWER_BOARD_THERMAL_MODEL "NONE (CONSERVATIVE)"
+set_location_assignment PIN_Y2 -to clk
+set_global_assignment -name PARTITION_NETLIST_TYPE SOURCE -section_id Top
+set_global_assignment -name PARTITION_FITTER_PRESERVATION_LEVEL PLACEMENT_AND_ROUTING -section_id Top
+set_global_assignment -name PARTITION_COLOR 16764057 -section_id Top
+set_location_assignment PIN_F11 -to Blank_n
+set_location_assignment PIN_D12 -to Blue[7]
+set_location_assignment PIN_D11 -to Blue[6]
+set_location_assignment PIN_C12 -to Blue[5]
+set_location_assignment PIN_A11 -to Blue[4]
+set_location_assignment PIN_B11 -to Blue[3]
+set_location_assignment PIN_C11 -to Blue[2]
+set_location_assignment PIN_A10 -to Blue[1]
+set_location_assignment PIN_B10 -to Blue[0]
+set_location_assignment PIN_C9 -to Green[7]
+set_location_assignment PIN_F10 -to Green[6]
+set_location_assignment PIN_B8 -to Green[5]
+set_location_assignment PIN_C8 -to Green[4]
+set_location_assignment PIN_H12 -to Green[3]
+set_location_assignment PIN_F8 -to Green[2]
+set_location_assignment PIN_G11 -to Green[1]
+set_location_assignment PIN_G8 -to Green[0]
+set_location_assignment PIN_H10 -to Red[7]
+set_location_assignment PIN_H8 -to Red[6]
+set_location_assignment PIN_J12 -to Red[5]
+set_location_assignment PIN_G10 -to Red[4]
+set_location_assignment PIN_F12 -to Red[3]
+set_location_assignment PIN_D10 -to Red[2]
+set_location_assignment PIN_E11 -to Red[1]
+set_location_assignment PIN_E12 -to Red[0]
+set_location_assignment PIN_A12 -to VGA_CLK
+set_location_assignment PIN_C13 -to Vsync
+set_location_assignment PIN_C10 -to Sync_n
+set_location_assignment PIN_G13 -to Hsync
+set_location_assignment PIN_H22 -to HEX0[6]
+set_location_assignment PIN_J22 -to HEX0[5]
+set_location_assignment PIN_L25 -to HEX0[4]
+set_location_assignment PIN_L26 -to HEX0[3]
+set_location_assignment PIN_E17 -to HEX0[2]
+set_location_assignment PIN_F22 -to HEX0[1]
+set_location_assignment PIN_G18 -to HEX0[0]
+set_location_assignment PIN_U24 -to HEX1[6]
+set_location_assignment PIN_U23 -to HEX1[5]
+set_location_assignment PIN_W25 -to HEX1[4]
+set_location_assignment PIN_W22 -to HEX1[3]
+set_location_assignment PIN_W21 -to HEX1[2]
+set_location_assignment PIN_Y22 -to HEX1[1]
+set_location_assignment PIN_M24 -to HEX1[0]
+set_location_assignment PIN_W28 -to HEX2[6]
+set_location_assignment PIN_W27 -to HEX2[5]
+set_location_assignment PIN_Y26 -to HEX2[4]
+set_location_assignment PIN_W26 -to HEX2[3]
+set_location_assignment PIN_Y25 -to HEX2[2]
+set_location_assignment PIN_AA26 -to HEX2[1]
+set_location_assignment PIN_AA25 -to HEX2[0]
+set_location_assignment PIN_Y19 -to HEX3[6]
+set_location_assignment PIN_AF23 -to HEX3[5]
+set_location_assignment PIN_AD24 -to HEX3[4]
+set_location_assignment PIN_AA21 -to HEX3[3]
+set_location_assignment PIN_AB20 -to HEX3[2]
+set_location_assignment PIN_U21 -to HEX3[1]
+set_location_assignment PIN_V21 -to HEX3[0]
+set_location_assignment PIN_AE18 -to HEX4[6]
+set_location_assignment PIN_AF19 -to HEX4[5]
+set_location_assignment PIN_AE19 -to HEX4[4]
+set_location_assignment PIN_AH21 -to HEX4[3]
+set_location_assignment PIN_AG21 -to HEX4[2]
+set_location_assignment PIN_AA19 -to HEX4[1]
+set_location_assignment PIN_AB19 -to HEX4[0]
+set_location_assignment PIN_AH18 -to HEX5[6]
+set_location_assignment PIN_AF18 -to HEX5[5]
+set_location_assignment PIN_AG19 -to HEX5[4]
+set_location_assignment PIN_AH19 -to HEX5[3]
+set_location_assignment PIN_AB18 -to HEX5[2]
+set_location_assignment PIN_AC18 -to HEX5[1]
+set_location_assignment PIN_AD18 -to HEX5[0]
+set_location_assignment PIN_E21 -to LEDG[0]
+set_location_assignment PIN_E22 -to LEDG[1]
+set_location_assignment PIN_E25 -to LEDG[2]
+set_location_assignment PIN_T8 -to SRAM_Address[19]
+set_location_assignment PIN_AB8 -to SRAM_Address[18]
+set_location_assignment PIN_AB9 -to SRAM_Address[17]
+set_location_assignment PIN_AC11 -to SRAM_Address[16]
+set_location_assignment PIN_AB11 -to SRAM_Address[15]
+set_location_assignment PIN_AA4 -to SRAM_Address[14]
+set_location_assignment PIN_AC3 -to SRAM_Address[13]
+set_location_assignment PIN_AB4 -to SRAM_Address[12]
+set_location_assignment PIN_AD3 -to SRAM_Address[11]
+set_location_assignment PIN_AF2 -to SRAM_Address[10]
+set_location_assignment PIN_T7 -to SRAM_Address[9]
+set_location_assignment PIN_AF5 -to SRAM_Address[8]
+set_location_assignment PIN_AC5 -to SRAM_Address[7]
+set_location_assignment PIN_AB5 -to SRAM_Address[6]
+set_location_assignment PIN_AE6 -to SRAM_Address[5]
+set_location_assignment PIN_AB6 -to SRAM_Address[4]
+set_location_assignment PIN_AC7 -to SRAM_Address[3]
+set_location_assignment PIN_AE7 -to SRAM_Address[2]
+set_location_assignment PIN_AD7 -to SRAM_Address[1]
+set_location_assignment PIN_AB7 -to SRAM_Address[0]
+set_location_assignment PIN_AF8 -to SRAM_CE_N
+set_location_assignment PIN_AG3 -to SRAM_DQ[15]
+set_location_assignment PIN_AF3 -to SRAM_DQ[14]
+set_location_assignment PIN_AE4 -to SRAM_DQ[13]
+set_location_assignment PIN_AE3 -to SRAM_DQ[12]
+set_location_assignment PIN_AE1 -to SRAM_DQ[11]
+set_location_assignment PIN_AE2 -to SRAM_DQ[10]
+set_location_assignment PIN_AD2 -to SRAM_DQ[9]
+set_location_assignment PIN_AD1 -to SRAM_DQ[8]
+set_location_assignment PIN_AF7 -to SRAM_DQ[7]
+set_location_assignment PIN_AH6 -to SRAM_DQ[6]
+set_location_assignment PIN_AG6 -to SRAM_DQ[5]
+set_location_assignment PIN_AF6 -to SRAM_DQ[4]
+set_location_assignment PIN_AH4 -to SRAM_DQ[3]
+set_location_assignment PIN_AG4 -to SRAM_DQ[2]
+set_location_assignment PIN_AF4 -to SRAM_DQ[1]
+set_location_assignment PIN_AH3 -to SRAM_DQ[0]
+set_location_assignment PIN_AD4 -to SRAM_LB_N
+set_location_assignment PIN_AD5 -to SRAM_OE_N
+set_location_assignment PIN_AC4 -to SRAM_UB_N
+set_location_assignment PIN_AE8 -to SRAM_WE_N
+set_location_assignment PIN_AB22 -to Phase_A
+set_location_assignment PIN_AC15 -to Phase_A_Neg
+set_location_assignment PIN_AB21 -to Phase_B
+set_location_assignment PIN_Y17 -to Phase_B_Neg
+set_location_assignment PIN_AC21 -to Phase_C
+set_location_assignment PIN_Y16 -to Phase_C_Neg
+set_location_assignment PIN_Y23 -to reset
+set_global_assignment -name FLOW_ENABLE_RTL_VIEWER ON
+set_global_assignment -name TIMEQUEST_MULTICORNER_ANALYSIS ON
+set_location_assignment PIN_M23 -to Push_0
+set_location_assignment PIN_M21 -to Push_1
+set_location_assignment PIN_N21 -to Push_2
+set_location_assignment PIN_R24 -to Push_3
+set_location_assignment PIN_AB28 -to SW0
+set_location_assignment PIN_AC28 -to SW1
+set_location_assignment PIN_AC27 -to SW2
+set_location_assignment PIN_AD27 -to SW3
+set_location_assignment PIN_AB26 -to SW7
+set_location_assignment PIN_AC25 -to SW8
+set_location_assignment PIN_AB25 -to SW9
+set_location_assignment PIN_AC24 -to SW10
+set_location_assignment PIN_AA22 -to SW15
+set_location_assignment PIN_Y24 -to SW16
+set_location_assignment PIN_AA23 -to SW14
+set_global_assignment -name ENABLE_SIGNALTAP OFF
+set_global_assignment -name USE_SIGNALTAP_FILE output_files/MemoryCheck_SignalTap.stp
+set_location_assignment PIN_AA24 -to SW13
+set_location_assignment PIN_AE24 -to ADC_clk_I
+set_location_assignment PIN_AF26 -to ADC_clk_V
+set_location_assignment PIN_AH26 -to CS_I
+set_location_assignment PIN_AG26 -to CS_V
+set_location_assignment PIN_AF16 -to PhaseA_DATA_In_V
+set_location_assignment PIN_AF15 -to PhaseB_DATA_In_V
+set_location_assignment PIN_AE21 -to PhaseC_DATA_In_V
+set_location_assignment PIN_AD22 -to PhaseA_DATA_In_I
+set_location_assignment PIN_AD25 -to PhaseB_DATA_In_I
+set_location_assignment PIN_AE25 -to PhaseC_DATA_In_I
+set_location_assignment PIN_AB27 -to SW4
+set_location_assignment PIN_AC26 -to SW5
+set_location_assignment PIN_AB23 -to SW12
+set_global_assignment -name VERILOG_FILE TLC549_Control_Logic.v
+set_global_assignment -name VERILOG_FILE Shift_Register.v
+set_global_assignment -name VERILOG_FILE D_flipflop.v
+set_global_assignment -name VERILOG_FILE MyNameROM.v
+set_global_assignment -name VHDL_FILE Generated_HDL/hdl_prj/hdlsrc/ThreeSines_DrSaher/Wrap_To_Zero_block2.vhd
+set_global_assignment -name VHDL_FILE Generated_HDL/hdl_prj/hdlsrc/ThreeSines_DrSaher/Wrap_To_Zero_block1.vhd
+set_global_assignment -name VHDL_FILE Generated_HDL/hdl_prj/hdlsrc/ThreeSines_DrSaher/Wrap_To_Zero_block.vhd
+set_global_assignment -name VHDL_FILE Generated_HDL/hdl_prj/hdlsrc/ThreeSines_DrSaher/Wrap_To_Zero.vhd
+set_global_assignment -name VHDL_FILE Generated_HDL/hdl_prj/hdlsrc/ThreeSines_DrSaher/Subsystem20_block2.vhd
+set_global_assignment -name VHDL_FILE Generated_HDL/hdl_prj/hdlsrc/ThreeSines_DrSaher/Subsystem20_block1.vhd
+set_global_assignment -name VHDL_FILE Generated_HDL/hdl_prj/hdlsrc/ThreeSines_DrSaher/Subsystem20_block.vhd
+set_global_assignment -name VHDL_FILE Generated_HDL/hdl_prj/hdlsrc/ThreeSines_DrSaher/Subsystem20.vhd
+set_global_assignment -name VHDL_FILE Generated_HDL/hdl_prj/hdlsrc/ThreeSines_DrSaher/Subsystem19_block2.vhd
+set_global_assignment -name VHDL_FILE Generated_HDL/hdl_prj/hdlsrc/ThreeSines_DrSaher/Subsystem19_block1.vhd
+set_global_assignment -name VHDL_FILE Generated_HDL/hdl_prj/hdlsrc/ThreeSines_DrSaher/Subsystem19_block.vhd
+set_global_assignment -name VHDL_FILE Generated_HDL/hdl_prj/hdlsrc/ThreeSines_DrSaher/Subsystem19.vhd
+set_global_assignment -name VHDL_FILE Generated_HDL/hdl_prj/hdlsrc/ThreeSines_DrSaher/Subsystem18_block2.vhd
+set_global_assignment -name VHDL_FILE Generated_HDL/hdl_prj/hdlsrc/ThreeSines_DrSaher/Subsystem18_block1.vhd
+set_global_assignment -name VHDL_FILE Generated_HDL/hdl_prj/hdlsrc/ThreeSines_DrSaher/Subsystem18_block.vhd
+set_global_assignment -name VHDL_FILE Generated_HDL/hdl_prj/hdlsrc/ThreeSines_DrSaher/Subsystem18.vhd
+set_global_assignment -name VHDL_FILE Generated_HDL/hdl_prj/hdlsrc/ThreeSines_DrSaher/Subsystem17_block2.vhd
+set_global_assignment -name VHDL_FILE Generated_HDL/hdl_prj/hdlsrc/ThreeSines_DrSaher/Subsystem17_block1.vhd
+set_global_assignment -name VHDL_FILE Generated_HDL/hdl_prj/hdlsrc/ThreeSines_DrSaher/Subsystem17_block.vhd
+set_global_assignment -name VHDL_FILE Generated_HDL/hdl_prj/hdlsrc/ThreeSines_DrSaher/Subsystem17.vhd
+set_global_assignment -name VHDL_FILE Generated_HDL/hdl_prj/hdlsrc/ThreeSines_DrSaher/Subsystem16_block2.vhd
+set_global_assignment -name VHDL_FILE Generated_HDL/hdl_prj/hdlsrc/ThreeSines_DrSaher/Subsystem16_block1.vhd
+set_global_assignment -name VHDL_FILE Generated_HDL/hdl_prj/hdlsrc/ThreeSines_DrSaher/Subsystem16_block.vhd
+set_global_assignment -name VHDL_FILE Generated_HDL/hdl_prj/hdlsrc/ThreeSines_DrSaher/Subsystem16.vhd
+set_global_assignment -name VHDL_FILE Generated_HDL/hdl_prj/hdlsrc/ThreeSines_DrSaher/Subsystem15_block2.vhd
+set_global_assignment -name VHDL_FILE Generated_HDL/hdl_prj/hdlsrc/ThreeSines_DrSaher/Subsystem15_block1.vhd
+set_global_assignment -name VHDL_FILE Generated_HDL/hdl_prj/hdlsrc/ThreeSines_DrSaher/Subsystem15_block.vhd
+set_global_assignment -name VHDL_FILE Generated_HDL/hdl_prj/hdlsrc/ThreeSines_DrSaher/Subsystem15.vhd
+set_global_assignment -name VHDL_FILE Generated_HDL/hdl_prj/hdlsrc/ThreeSines_DrSaher/Subsystem14_block2.vhd
+set_global_assignment -name VHDL_FILE Generated_HDL/hdl_prj/hdlsrc/ThreeSines_DrSaher/Subsystem14_block1.vhd
+set_global_assignment -name VHDL_FILE Generated_HDL/hdl_prj/hdlsrc/ThreeSines_DrSaher/Subsystem14_block.vhd
+set_global_assignment -name VHDL_FILE Generated_HDL/hdl_prj/hdlsrc/ThreeSines_DrSaher/Subsystem14.vhd
+set_global_assignment -name VHDL_FILE Generated_HDL/hdl_prj/hdlsrc/ThreeSines_DrSaher/Subsystem13_block3.vhd
+set_global_assignment -name VHDL_FILE Generated_HDL/hdl_prj/hdlsrc/ThreeSines_DrSaher/Subsystem13_block2.vhd
+set_global_assignment -name VHDL_FILE Generated_HDL/hdl_prj/hdlsrc/ThreeSines_DrSaher/Subsystem13_block1.vhd
+set_global_assignment -name VHDL_FILE Generated_HDL/hdl_prj/hdlsrc/ThreeSines_DrSaher/Subsystem13_block.vhd
+set_global_assignment -name VHDL_FILE Generated_HDL/hdl_prj/hdlsrc/ThreeSines_DrSaher/Subsystem13.vhd
+set_global_assignment -name VHDL_FILE Generated_HDL/hdl_prj/hdlsrc/ThreeSines_DrSaher/Subsystem12_block3.vhd
+set_global_assignment -name VHDL_FILE Generated_HDL/hdl_prj/hdlsrc/ThreeSines_DrSaher/Subsystem12_block2.vhd
+set_global_assignment -name VHDL_FILE Generated_HDL/hdl_prj/hdlsrc/ThreeSines_DrSaher/Subsystem12_block1.vhd
+set_global_assignment -name VHDL_FILE Generated_HDL/hdl_prj/hdlsrc/ThreeSines_DrSaher/Subsystem12_block.vhd
+set_global_assignment -name VHDL_FILE Generated_HDL/hdl_prj/hdlsrc/ThreeSines_DrSaher/Subsystem12.vhd
+set_global_assignment -name VHDL_FILE Generated_HDL/hdl_prj/hdlsrc/ThreeSines_DrSaher/Subsystem11_block3.vhd
+set_global_assignment -name VHDL_FILE Generated_HDL/hdl_prj/hdlsrc/ThreeSines_DrSaher/Subsystem11_block2.vhd
+set_global_assignment -name VHDL_FILE Generated_HDL/hdl_prj/hdlsrc/ThreeSines_DrSaher/Subsystem11_block1.vhd
+set_global_assignment -name VHDL_FILE Generated_HDL/hdl_prj/hdlsrc/ThreeSines_DrSaher/Subsystem11_block.vhd
+set_global_assignment -name VHDL_FILE Generated_HDL/hdl_prj/hdlsrc/ThreeSines_DrSaher/Subsystem11.vhd
+set_global_assignment -name VHDL_FILE Generated_HDL/hdl_prj/hdlsrc/ThreeSines_DrSaher/Subsystem10_block3.vhd
+set_global_assignment -name VHDL_FILE Generated_HDL/hdl_prj/hdlsrc/ThreeSines_DrSaher/Subsystem10_block2.vhd
+set_global_assignment -name VHDL_FILE Generated_HDL/hdl_prj/hdlsrc/ThreeSines_DrSaher/Subsystem10_block1.vhd
+set_global_assignment -name VHDL_FILE Generated_HDL/hdl_prj/hdlsrc/ThreeSines_DrSaher/Subsystem10_block.vhd
+set_global_assignment -name VHDL_FILE Generated_HDL/hdl_prj/hdlsrc/ThreeSines_DrSaher/Subsystem10.vhd
+set_global_assignment -name VHDL_FILE Generated_HDL/hdl_prj/hdlsrc/ThreeSines_DrSaher/Subsystem9_block3.vhd
+set_global_assignment -name VHDL_FILE Generated_HDL/hdl_prj/hdlsrc/ThreeSines_DrSaher/Subsystem9_block2.vhd
+set_global_assignment -name VHDL_FILE Generated_HDL/hdl_prj/hdlsrc/ThreeSines_DrSaher/Subsystem9_block1.vhd
+set_global_assignment -name VHDL_FILE Generated_HDL/hdl_prj/hdlsrc/ThreeSines_DrSaher/Subsystem9_block.vhd
+set_global_assignment -name VHDL_FILE Generated_HDL/hdl_prj/hdlsrc/ThreeSines_DrSaher/Subsystem9.vhd
+set_global_assignment -name VHDL_FILE Generated_HDL/hdl_prj/hdlsrc/ThreeSines_DrSaher/Subsystem8_block3.vhd
+set_global_assignment -name VHDL_FILE Generated_HDL/hdl_prj/hdlsrc/ThreeSines_DrSaher/Subsystem8_block2.vhd
+set_global_assignment -name VHDL_FILE Generated_HDL/hdl_prj/hdlsrc/ThreeSines_DrSaher/Subsystem8_block1.vhd
+set_global_assignment -name VHDL_FILE Generated_HDL/hdl_prj/hdlsrc/ThreeSines_DrSaher/Subsystem8_block.vhd
+set_global_assignment -name VHDL_FILE Generated_HDL/hdl_prj/hdlsrc/ThreeSines_DrSaher/Subsystem8.vhd
+set_global_assignment -name VHDL_FILE Generated_HDL/hdl_prj/hdlsrc/ThreeSines_DrSaher/Subsystem7_block3.vhd
+set_global_assignment -name VHDL_FILE Generated_HDL/hdl_prj/hdlsrc/ThreeSines_DrSaher/Subsystem7_block2.vhd
+set_global_assignment -name VHDL_FILE Generated_HDL/hdl_prj/hdlsrc/ThreeSines_DrSaher/Subsystem7_block1.vhd
+set_global_assignment -name VHDL_FILE Generated_HDL/hdl_prj/hdlsrc/ThreeSines_DrSaher/Subsystem7_block.vhd
+set_global_assignment -name VHDL_FILE Generated_HDL/hdl_prj/hdlsrc/ThreeSines_DrSaher/Subsystem7.vhd
+set_global_assignment -name VHDL_FILE Generated_HDL/hdl_prj/hdlsrc/ThreeSines_DrSaher/Subsystem6_block3.vhd
+set_global_assignment -name VHDL_FILE Generated_HDL/hdl_prj/hdlsrc/ThreeSines_DrSaher/Subsystem6_block2.vhd
+set_global_assignment -name VHDL_FILE Generated_HDL/hdl_prj/hdlsrc/ThreeSines_DrSaher/Subsystem6_block1.vhd
+set_global_assignment -name VHDL_FILE Generated_HDL/hdl_prj/hdlsrc/ThreeSines_DrSaher/Subsystem6_block.vhd
+set_global_assignment -name VHDL_FILE Generated_HDL/hdl_prj/hdlsrc/ThreeSines_DrSaher/Subsystem6.vhd
+set_global_assignment -name VHDL_FILE Generated_HDL/hdl_prj/hdlsrc/ThreeSines_DrSaher/Subsystem5_block3.vhd
+set_global_assignment -name VHDL_FILE Generated_HDL/hdl_prj/hdlsrc/ThreeSines_DrSaher/Subsystem5_block2.vhd
+set_global_assignment -name VHDL_FILE Generated_HDL/hdl_prj/hdlsrc/ThreeSines_DrSaher/Subsystem5_block1.vhd
+set_global_assignment -name VHDL_FILE Generated_HDL/hdl_prj/hdlsrc/ThreeSines_DrSaher/Subsystem5_block.vhd
+set_global_assignment -name VHDL_FILE Generated_HDL/hdl_prj/hdlsrc/ThreeSines_DrSaher/Subsystem5.vhd
+set_global_assignment -name VHDL_FILE Generated_HDL/hdl_prj/hdlsrc/ThreeSines_DrSaher/Subsystem4_block3.vhd
+set_global_assignment -name VHDL_FILE Generated_HDL/hdl_prj/hdlsrc/ThreeSines_DrSaher/Subsystem4_block2.vhd
+set_global_assignment -name VHDL_FILE Generated_HDL/hdl_prj/hdlsrc/ThreeSines_DrSaher/Subsystem4_block1.vhd
+set_global_assignment -name VHDL_FILE Generated_HDL/hdl_prj/hdlsrc/ThreeSines_DrSaher/Subsystem4_block.vhd
+set_global_assignment -name VHDL_FILE Generated_HDL/hdl_prj/hdlsrc/ThreeSines_DrSaher/Subsystem4.vhd
+set_global_assignment -name VHDL_FILE Generated_HDL/hdl_prj/hdlsrc/ThreeSines_DrSaher/Subsystem3_block3.vhd
+set_global_assignment -name VHDL_FILE Generated_HDL/hdl_prj/hdlsrc/ThreeSines_DrSaher/Subsystem3_block2.vhd
+set_global_assignment -name VHDL_FILE Generated_HDL/hdl_prj/hdlsrc/ThreeSines_DrSaher/Subsystem3_block1.vhd
+set_global_assignment -name VHDL_FILE Generated_HDL/hdl_prj/hdlsrc/ThreeSines_DrSaher/Subsystem3_block.vhd
+set_global_assignment -name VHDL_FILE Generated_HDL/hdl_prj/hdlsrc/ThreeSines_DrSaher/Subsystem3.vhd
+set_global_assignment -name VHDL_FILE Generated_HDL/hdl_prj/hdlsrc/ThreeSines_DrSaher/Subsystem2_block3.vhd
+set_global_assignment -name VHDL_FILE Generated_HDL/hdl_prj/hdlsrc/ThreeSines_DrSaher/Subsystem2_block2.vhd
+set_global_assignment -name VHDL_FILE Generated_HDL/hdl_prj/hdlsrc/ThreeSines_DrSaher/Subsystem2_block1.vhd
+set_global_assignment -name VHDL_FILE Generated_HDL/hdl_prj/hdlsrc/ThreeSines_DrSaher/Subsystem2_block.vhd
+set_global_assignment -name VHDL_FILE Generated_HDL/hdl_prj/hdlsrc/ThreeSines_DrSaher/Subsystem2.vhd
+set_global_assignment -name VHDL_FILE Generated_HDL/hdl_prj/hdlsrc/ThreeSines_DrSaher/Subsystem1.vhd
+set_global_assignment -name VHDL_FILE Generated_HDL/hdl_prj/hdlsrc/ThreeSines_DrSaher/Subsystem_block3.vhd
+set_global_assignment -name VHDL_FILE Generated_HDL/hdl_prj/hdlsrc/ThreeSines_DrSaher/Subsystem_block2.vhd
+set_global_assignment -name VHDL_FILE Generated_HDL/hdl_prj/hdlsrc/ThreeSines_DrSaher/Subsystem_block1.vhd
+set_global_assignment -name VHDL_FILE Generated_HDL/hdl_prj/hdlsrc/ThreeSines_DrSaher/Subsystem_block.vhd
+set_global_assignment -name VHDL_FILE Generated_HDL/hdl_prj/hdlsrc/ThreeSines_DrSaher/Subsystem.vhd
+set_global_assignment -name VHDL_FILE Generated_HDL/hdl_prj/hdlsrc/ThreeSines_DrSaher/Sines_topde2_clock_module.vhd
+set_global_assignment -name VHDL_FILE Generated_HDL/hdl_prj/hdlsrc/ThreeSines_DrSaher/Sines_topde2.vhd
+set_global_assignment -name VHDL_FILE Generated_HDL/hdl_prj/hdlsrc/ThreeSines_DrSaher/Sines_pkg.vhd
+set_global_assignment -name VHDL_FILE Generated_HDL/hdl_prj/hdlsrc/ThreeSines_DrSaher/Sines.vhd
+set_global_assignment -name VHDL_FILE Generated_HDL/hdl_prj/hdlsrc/ThreeSines_DrSaher/Sin15.vhd
+set_global_assignment -name VHDL_FILE Generated_HDL/hdl_prj/hdlsrc/ThreeSines_DrSaher/Sin14.vhd
+set_global_assignment -name VHDL_FILE Generated_HDL/hdl_prj/hdlsrc/ThreeSines_DrSaher/Sin13.vhd
+set_global_assignment -name VHDL_FILE Generated_HDL/hdl_prj/hdlsrc/ThreeSines_DrSaher/Sin12.vhd
+set_global_assignment -name VHDL_FILE Generated_HDL/hdl_prj/hdlsrc/ThreeSines_DrSaher/Sin11.vhd
+set_global_assignment -name VHDL_FILE Generated_HDL/hdl_prj/hdlsrc/ThreeSines_DrSaher/Sin10.vhd
+set_global_assignment -name VHDL_FILE Generated_HDL/hdl_prj/hdlsrc/ThreeSines_DrSaher/Sin9.vhd
+set_global_assignment -name VHDL_FILE Generated_HDL/hdl_prj/hdlsrc/ThreeSines_DrSaher/Sin8.vhd
+set_global_assignment -name VHDL_FILE Generated_HDL/hdl_prj/hdlsrc/ThreeSines_DrSaher/Sin7.vhd
+set_global_assignment -name VHDL_FILE Generated_HDL/hdl_prj/hdlsrc/ThreeSines_DrSaher/Sin6.vhd
+set_global_assignment -name VHDL_FILE Generated_HDL/hdl_prj/hdlsrc/ThreeSines_DrSaher/Sin5.vhd
+set_global_assignment -name VHDL_FILE Generated_HDL/hdl_prj/hdlsrc/ThreeSines_DrSaher/Sin4.vhd
+set_global_assignment -name VHDL_FILE Generated_HDL/hdl_prj/hdlsrc/ThreeSines_DrSaher/HEX3.vhd
+set_global_assignment -name VHDL_FILE Generated_HDL/hdl_prj/hdlsrc/ThreeSines_DrSaher/HEX2.vhd
+set_global_assignment -name VHDL_FILE Generated_HDL/hdl_prj/hdlsrc/ThreeSines_DrSaher/HEX1.vhd
+set_global_assignment -name VHDL_FILE Generated_HDL/hdl_prj/hdlsrc/ThreeSines_DrSaher/HEX0.vhd
+set_global_assignment -name VHDL_FILE Generated_HDL/hdl_prj/hdlsrc/ThreeSines_DrSaher/DAC_Control.vhd
+set_global_assignment -name VHDL_FILE Generated_HDL/hdl_prj/hdlsrc/ThreeSines_DrSaher/aPA_Save.vhd
+set_global_assignment -name QIP_FILE NiosII_Controlled_Section/synthesis/NiosII_Controlled_Section.qip
+set_global_assignment -name QIP_FILE PhaseA_PWM.qip
+set_global_assignment -name QIP_FILE PhaseB_PWM.qip
+set_global_assignment -name QIP_FILE PhaseC_PWM.qip
+set_global_assignment -name QIP_FILE Slider_DATA.qip
+set_global_assignment -name QIP_FILE Slider_Colormap.qip
+set_global_assignment -name QIP_FILE JUSTLOGO_DATA.qip
+set_global_assignment -name QIP_FILE JUSTLOGO_Colormap.qip
+set_global_assignment -name QIP_FILE Font_ROM.qip
+set_global_assignment -name QIP_FILE PhaseB_Analog.qip
+set_global_assignment -name QIP_FILE PhaseC_Tri_Analog.qip
+set_global_assignment -name QIP_FILE PhaseA.qip
+set_global_assignment -name VERILOG_FILE StringROM.v
+set_global_assignment -name VERILOG_FILE HarmonicROM.v
+set_global_assignment -name VERILOG_FILE DATA_Store.v
+set_global_assignment -name VERILOG_FILE GUI.v
+set_global_assignment -name VERILOG_FILE Top.v
+set_global_assignment -name QIP_FILE TimeBar_DATA.qip
+set_global_assignment -name QIP_FILE TimeBar_Colormap.qip
+set_global_assignment -name QIP_FILE PhaseC_PWM_Correction.qip
+set_global_assignment -name SIGNALTAP_FILE output_files/MemoryCheck_SignalTap.stp
+set_global_assignment -name VERILOG_FILE PWM_Jumps_ROM.v
+set_global_assignment -name VERILOG_FILE ADCs.v
+set_global_assignment -name QIP_FILE GUI_Nios_PhaseA_Voltage.qip
+set_global_assignment -name QIP_FILE GUI_Nios_PhaseB_Voltage.qip
+set_global_assignment -name QIP_FILE GUI_Nios_PhaseC_Voltage.qip
+set_global_assignment -name QIP_FILE GUI_Nios_PhaseA_Current.qip
+set_global_assignment -name QIP_FILE GUI_Nios_PhaseB_Current.qip
+set_global_assignment -name QIP_FILE GUI_Nios_PhaseC_Current.qip
+set_global_assignment -name QIP_FILE Title_DATA.qip
+set_global_assignment -name QIP_FILE Title_Colormap.qip
+set_global_assignment -name QIP_FILE Manual_DATA.qip
+set_global_assignment -name QIP_FILE Manual_Colormap.qip
+set_instance_assignment -name PARTITION_HIERARCHY root_partition -to | -section_id Top

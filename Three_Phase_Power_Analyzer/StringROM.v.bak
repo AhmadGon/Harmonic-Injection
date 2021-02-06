@@ -1,0 +1,12 @@
+module StringROM(
+	input VGA_CLK,
+	input [] address,
+	output reg [63:0] data
+);
+
+always @(posedge VGA_CLK)
+	begin
+	case()
+	endcase
+	end
+endmodule 

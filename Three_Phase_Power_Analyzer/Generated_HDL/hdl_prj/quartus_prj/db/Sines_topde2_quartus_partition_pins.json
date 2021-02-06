@@ -1,0 +1,369 @@
+{
+	"partitions" : [
+		{
+			"name" : "Top",
+			"pins" : [
+				{
+					"name" : "CLK_1",
+					"strict" : false
+				},
+				{
+					"name" : "Blank_n",
+					"strict" : false
+				},
+				{
+					"name" : "HEX0_O[0]",
+					"strict" : false
+				},
+				{
+					"name" : "HEX0_O[1]",
+					"strict" : false
+				},
+				{
+					"name" : "HEX0_O[2]",
+					"strict" : false
+				},
+				{
+					"name" : "HEX0_O[3]",
+					"strict" : false
+				},
+				{
+					"name" : "HEX0_O[4]",
+					"strict" : false
+				},
+				{
+					"name" : "HEX0_O[5]",
+					"strict" : false
+				},
+				{
+					"name" : "HEX0_O[6]",
+					"strict" : false
+				},
+				{
+					"name" : "HEX1_O[0]",
+					"strict" : false
+				},
+				{
+					"name" : "HEX1_O[1]",
+					"strict" : false
+				},
+				{
+					"name" : "HEX1_O[2]",
+					"strict" : false
+				},
+				{
+					"name" : "HEX1_O[3]",
+					"strict" : false
+				},
+				{
+					"name" : "HEX1_O[4]",
+					"strict" : false
+				},
+				{
+					"name" : "HEX1_O[5]",
+					"strict" : false
+				},
+				{
+					"name" : "HEX1_O[6]",
+					"strict" : false
+				},
+				{
+					"name" : "HEX2_O[0]",
+					"strict" : false
+				},
+				{
+					"name" : "HEX2_O[1]",
+					"strict" : false
+				},
+				{
+					"name" : "HEX2_O[2]",
+					"strict" : false
+				},
+				{
+					"name" : "HEX2_O[3]",
+					"strict" : false
+				},
+				{
+					"name" : "HEX2_O[4]",
+					"strict" : false
+				},
+				{
+					"name" : "HEX2_O[5]",
+					"strict" : false
+				},
+				{
+					"name" : "HEX2_O[6]",
+					"strict" : false
+				},
+				{
+					"name" : "HEX3_O[0]",
+					"strict" : false
+				},
+				{
+					"name" : "HEX3_O[1]",
+					"strict" : false
+				},
+				{
+					"name" : "HEX3_O[2]",
+					"strict" : false
+				},
+				{
+					"name" : "HEX3_O[3]",
+					"strict" : false
+				},
+				{
+					"name" : "HEX3_O[4]",
+					"strict" : false
+				},
+				{
+					"name" : "HEX3_O[5]",
+					"strict" : false
+				},
+				{
+					"name" : "HEX3_O[6]",
+					"strict" : false
+				},
+				{
+					"name" : "Phase_A",
+					"strict" : false
+				},
+				{
+					"name" : "Phase_A_1",
+					"strict" : false
+				},
+				{
+					"name" : "Phase_B",
+					"strict" : false
+				},
+				{
+					"name" : "Phase_B_1",
+					"strict" : false
+				},
+				{
+					"name" : "Phase_C",
+					"strict" : false
+				},
+				{
+					"name" : "Phase_C_1",
+					"strict" : false
+				},
+				{
+					"name" : "PhaseB_Analog[0]",
+					"strict" : false
+				},
+				{
+					"name" : "PhaseB_Analog[1]",
+					"strict" : false
+				},
+				{
+					"name" : "PhaseB_Analog[2]",
+					"strict" : false
+				},
+				{
+					"name" : "PhaseB_Analog[3]",
+					"strict" : false
+				},
+				{
+					"name" : "PhaseB_Analog[4]",
+					"strict" : false
+				},
+				{
+					"name" : "PhaseB_Analog[5]",
+					"strict" : false
+				},
+				{
+					"name" : "PhaseB_Analog[6]",
+					"strict" : false
+				},
+				{
+					"name" : "PhaseB_Analog[7]",
+					"strict" : false
+				},
+				{
+					"name" : "PhaseB_Analog[8]",
+					"strict" : false
+				},
+				{
+					"name" : "PhaseB_Analog[9]",
+					"strict" : false
+				},
+				{
+					"name" : "PhaseC_Tri_Analog[0]",
+					"strict" : false
+				},
+				{
+					"name" : "PhaseC_Tri_Analog[1]",
+					"strict" : false
+				},
+				{
+					"name" : "PhaseC_Tri_Analog[2]",
+					"strict" : false
+				},
+				{
+					"name" : "PhaseC_Tri_Analog[3]",
+					"strict" : false
+				},
+				{
+					"name" : "PhaseC_Tri_Analog[4]",
+					"strict" : false
+				},
+				{
+					"name" : "PhaseC_Tri_Analog[5]",
+					"strict" : false
+				},
+				{
+					"name" : "PhaseC_Tri_Analog[6]",
+					"strict" : false
+				},
+				{
+					"name" : "PhaseC_Tri_Analog[7]",
+					"strict" : false
+				},
+				{
+					"name" : "PhaseC_Tri_Analog[8]",
+					"strict" : false
+				},
+				{
+					"name" : "PhaseC_Tri_Analog[9]",
+					"strict" : false
+				},
+				{
+					"name" : "HEX4[0]",
+					"strict" : false
+				},
+				{
+					"name" : "HEX4[2]",
+					"strict" : false
+				},
+				{
+					"name" : "HEX4[3]",
+					"strict" : false
+				},
+				{
+					"name" : "HEX4[4]",
+					"strict" : false
+				},
+				{
+					"name" : "HEX4[5]",
+					"strict" : false
+				},
+				{
+					"name" : "HEX4[6]",
+					"strict" : false
+				},
+				{
+					"name" : "PhaseA_Analog[0]",
+					"strict" : false
+				},
+				{
+					"name" : "PhaseA_Analog[1]",
+					"strict" : false
+				},
+				{
+					"name" : "PhaseA_Analog[2]",
+					"strict" : false
+				},
+				{
+					"name" : "PhaseA_Analog[3]",
+					"strict" : false
+				},
+				{
+					"name" : "PhaseA_Analog[4]",
+					"strict" : false
+				},
+				{
+					"name" : "PhaseA_Analog[5]",
+					"strict" : false
+				},
+				{
+					"name" : "PhaseA_Analog[6]",
+					"strict" : false
+				},
+				{
+					"name" : "PhaseA_Analog[7]",
+					"strict" : false
+				},
+				{
+					"name" : "PhaseA_Analog[8]",
+					"strict" : false
+				},
+				{
+					"name" : "PhaseA_Analog[9]",
+					"strict" : false
+				},
+				{
+					"name" : "Sample_Pulse",
+					"strict" : false
+				},
+				{
+					"name" : "PhaseA_PWM",
+					"strict" : false
+				},
+				{
+					"name" : "PhaseB_PWM",
+					"strict" : false
+				},
+				{
+					"name" : "PhaseC_PWM",
+					"strict" : false
+				},
+				{
+					"name" : "Push_0",
+					"strict" : false
+				},
+				{
+					"name" : "Push_1",
+					"strict" : false
+				},
+				{
+					"name" : "Push_2",
+					"strict" : false
+				},
+				{
+					"name" : "Push_3",
+					"strict" : false
+				},
+				{
+					"name" : "SW1",
+					"strict" : false
+				},
+				{
+					"name" : "SW0",
+					"strict" : false
+				},
+				{
+					"name" : "SW2",
+					"strict" : false
+				},
+				{
+					"name" : "reset_1",
+					"strict" : false
+				},
+				{
+					"name" : "SW7",
+					"strict" : false
+				},
+				{
+					"name" : "Reload",
+					"strict" : false
+				},
+				{
+					"name" : "SW9",
+					"strict" : false
+				},
+				{
+					"name" : "SW10",
+					"strict" : false
+				},
+				{
+					"name" : "SW8",
+					"strict" : false
+				},
+				{
+					"name" : "SW15",
+					"strict" : false
+				}
+			]
+		}
+	]
+}

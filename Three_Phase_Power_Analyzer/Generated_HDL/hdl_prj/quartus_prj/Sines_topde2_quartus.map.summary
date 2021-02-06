@@ -1,0 +1,14 @@
+Analysis & Synthesis Status : Successful - Tue Feb 04 20:33:42 2020
+Quartus Prime Version : 17.0.0 Build 595 04/25/2017 SJ Lite Edition
+Revision Name : Sines_topde2_quartus
+Top-level Entity Name : Sines_topde2
+Family : Cyclone IV E
+Total logic elements : 14,588
+    Total combinational functions : 13,228
+    Dedicated logic registers : 7,904
+Total registers : 7904
+Total pins : 100
+Total virtual pins : 0
+Total memory bits : 3,620
+Embedded Multiplier 9-bit elements : 277
+Total PLLs : 1
