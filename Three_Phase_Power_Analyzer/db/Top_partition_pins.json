@@ -492,10 +492,6 @@
 					"strict" : false
 				},
 				{
-					"name" : "SW8",
-					"strict" : false
-				},
-				{
 					"name" : "SW2",
 					"strict" : false
 				},
@@ -508,6 +504,10 @@
 					"strict" : false
 				},
 				{
+					"name" : "SW7",
+					"strict" : false
+				},
+				{
 					"name" : "SW10",
 					"strict" : false
 				},
@@ -516,7 +516,7 @@
 					"strict" : false
 				},
 				{
-					"name" : "SW7",
+					"name" : "SW8",
 					"strict" : false
 				},
 				{

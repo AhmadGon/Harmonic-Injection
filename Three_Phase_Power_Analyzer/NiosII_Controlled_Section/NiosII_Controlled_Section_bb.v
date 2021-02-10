@@ -7,9 +7,8 @@ module NiosII_Controlled_Section (
 	channel5_analog_export,
 	channel6_analog_export,
 	clk_clk,
-	read_new_sample_export,
-	writing_finish_flag_export,
 	read_address_export,
+	read_new_sample_export,
 	reset_reset_n,
 	sram_DQ,
 	sram_ADDR,
@@ -25,7 +24,8 @@ module NiosII_Controlled_Section (
 	vga_SYNC,
 	vga_R,
 	vga_G,
-	vga_B);	
+	vga_B,
+	writing_finish_flag_export);	
 
 	input	[7:0]	channel1_analog_export;
 	input	[7:0]	channel2_analog_export;
@@ -34,9 +34,8 @@ module NiosII_Controlled_Section (
 	input	[7:0]	channel5_analog_export;
 	input	[7:0]	channel6_analog_export;
 	input		clk_clk;
-	input		read_new_sample_export;
-	input		writing_finish_flag_export;
 	output	[11:0]	read_address_export;
+	input		read_new_sample_export;
 	input		reset_reset_n;
 	inout	[15:0]	sram_DQ;
 	output	[19:0]	sram_ADDR;
@@ -53,4 +52,5 @@ module NiosII_Controlled_Section (
 	output	[7:0]	vga_R;
 	output	[7:0]	vga_G;
 	output	[7:0]	vga_B;
+	input		writing_finish_flag_export;
 endmodule

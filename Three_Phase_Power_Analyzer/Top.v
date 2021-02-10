@@ -116,8 +116,8 @@ assign Blue = myBlue;
 		.vga_VS                     (Vsync),                   //                    .VS
 		.vga_BLANK                  (Blank_n),                 //                    .BLANK
 		.vga_SYNC                   (Sync_n),                  //                    .SYNC
-		.H_counter						 (H_counter),
-		.V_counter						 (V_counter),
+		.H_Counter						 (H_counter),
+		.V_Counter						 (V_counter),
 		.vga_R                      (nios_Red),                //                    .R
 		.vga_G                      (nios_Green),              //                    .G
 		.vga_B                      (nios_Blue)                //                    .B

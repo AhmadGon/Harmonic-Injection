@@ -1,4 +1,6 @@
 eclipse.preferences.version=1
-newSoftwareExampleWizardPage.defaultLocation=T\:\\FPGA_Projects\\Qsys_Projects\\Three_Phase_Power_Analyzer\\software\\Nios_File_Streaming
-newSoftwareExampleWizardPage.sopcinfoFile=T\:\\FPGA_Projects\\Qsys_Projects\\Three_Phase_Power_Analyzer\\NiosII_Controlled_Section.sopcinfo
-newSoftwareExampleWizardPage2.newBspLocation=T\:\\FPGA_Projects\\Qsys_Projects\\Three_Phase_Power_Analyzer\\software\\Nios_File_Streaming_bsp
+newBspWizardPage.defaultLocation=D\:\\Harmonic_Injection\\Three_Phase_Power_Analyzer\\software\\Harmonic_Injection
+newBspWizardPage.sopcinfoFile=D\:\\Harmonic_Injection\\Three_Phase_Power_Analyzer\\NiosII_Controlled_Section.sopcinfo
+newSoftwareExampleWizardPage.defaultLocation=D\:\\Harmonic_Injection\\Three_Phase_Power_Analyzer\\software\\Harmonic
+newSoftwareExampleWizardPage.sopcinfoFile=D\:\\Harmonic_Injection\\Three_Phase_Power_Analyzer\\NiosII_Controlled_Section.sopcinfo
+newSoftwareExampleWizardPage2.newBspLocation=D\:\\Harmonic_Injection\\Three_Phase_Power_Analyzer\\software\\Harmonic_bsp

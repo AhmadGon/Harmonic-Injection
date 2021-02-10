@@ -6,9 +6,8 @@
 		.channel5_analog_export     (<connected-to-channel5_analog_export>),     //     channel5_analog.export
 		.channel6_analog_export     (<connected-to-channel6_analog_export>),     //     channel6_analog.export
 		.clk_clk                    (<connected-to-clk_clk>),                    //                 clk.clk
-		.read_new_sample_export     (<connected-to-read_new_sample_export>),     //     read_new_sample.export
-		.writing_finish_flag_export (<connected-to-writing_finish_flag_export>), // writing_finish_flag.export
 		.read_address_export        (<connected-to-read_address_export>),        //        read_address.export
+		.read_new_sample_export     (<connected-to-read_new_sample_export>),     //     read_new_sample.export
 		.reset_reset_n              (<connected-to-reset_reset_n>),              //               reset.reset_n
 		.sram_DQ                    (<connected-to-sram_DQ>),                    //                sram.DQ
 		.sram_ADDR                  (<connected-to-sram_ADDR>),                  //                    .ADDR
@@ -24,6 +23,7 @@
 		.vga_SYNC                   (<connected-to-vga_SYNC>),                   //                    .SYNC
 		.vga_R                      (<connected-to-vga_R>),                      //                    .R
 		.vga_G                      (<connected-to-vga_G>),                      //                    .G
-		.vga_B                      (<connected-to-vga_B>)                       //                    .B
+		.vga_B                      (<connected-to-vga_B>),                      //                    .B
+		.writing_finish_flag_export (<connected-to-writing_finish_flag_export>)  // writing_finish_flag.export
 	);
 

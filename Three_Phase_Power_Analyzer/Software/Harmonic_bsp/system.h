@@ -1,0 +1,597 @@
+/*
+ * system.h - SOPC Builder system and BSP software package information
+ *
+ * Machine generated for CPU 'NiosII' in SOPC Builder design 'NiosII_Controlled_Section'
+ * SOPC Builder design path: ../../NiosII_Controlled_Section.sopcinfo
+ *
+ * Generated: Wed Feb 10 22:37:00 EET 2021
+ */
+
+/*
+ * DO NOT MODIFY THIS FILE
+ *
+ * Changing this file will have subtle consequences
+ * which will almost certainly lead to a nonfunctioning
+ * system. If you do modify this file, be aware that your
+ * changes will be overwritten and lost when this file
+ * is generated again.
+ *
+ * DO NOT MODIFY THIS FILE
+ */
+
+/*
+ * License Agreement
+ *
+ * Copyright (c) 2008
+ * Altera Corporation, San Jose, California, USA.
+ * All rights reserved.
+ *
+ * Permission is hereby granted, free of charge, to any person obtaining a
+ * copy of this software and associated documentation files (the "Software"),
+ * to deal in the Software without restriction, including without limitation
+ * the rights to use, copy, modify, merge, publish, distribute, sublicense,
+ * and/or sell copies of the Software, and to permit persons to whom the
+ * Software is furnished to do so, subject to the following conditions:
+ *
+ * The above copyright notice and this permission notice shall be included in
+ * all copies or substantial portions of the Software.
+ *
+ * THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+ * IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+ * FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+ * AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+ * LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING
+ * FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER
+ * DEALINGS IN THE SOFTWARE.
+ *
+ * This agreement shall be governed in all respects by the laws of the State
+ * of California and by the laws of the United States of America.
+ */
+
+#ifndef __SYSTEM_H_
+#define __SYSTEM_H_
+
+/* Include definitions from linker script generator */
+#include "linker.h"
+
+
+/*
+ * CPU configuration
+ *
+ */
+
+#define ALT_CPU_ARCHITECTURE "altera_nios2_gen2"
+#define ALT_CPU_BIG_ENDIAN 0
+#define ALT_CPU_BREAK_ADDR 0x00242820
+#define ALT_CPU_CPU_ARCH_NIOS2_R1
+#define ALT_CPU_CPU_FREQ 50000000u
+#define ALT_CPU_CPU_ID_SIZE 1
+#define ALT_CPU_CPU_ID_VALUE 0x00000000
+#define ALT_CPU_CPU_IMPLEMENTATION "fast"
+#define ALT_CPU_DATA_ADDR_WIDTH 0x16
+#define ALT_CPU_DCACHE_BYPASS_MASK 0x80000000
+#define ALT_CPU_DCACHE_LINE_SIZE 32
+#define ALT_CPU_DCACHE_LINE_SIZE_LOG2 5
+#define ALT_CPU_DCACHE_SIZE 2048
+#define ALT_CPU_EXCEPTION_ADDR 0x00220020
+#define ALT_CPU_FLASH_ACCELERATOR_LINES 0
+#define ALT_CPU_FLASH_ACCELERATOR_LINE_SIZE 0
+#define ALT_CPU_FLUSHDA_SUPPORTED
+#define ALT_CPU_FREQ 50000000
+#define ALT_CPU_HARDWARE_DIVIDE_PRESENT 0
+#define ALT_CPU_HARDWARE_MULTIPLY_PRESENT 1
+#define ALT_CPU_HARDWARE_MULX_PRESENT 0
+#define ALT_CPU_HAS_DEBUG_CORE 1
+#define ALT_CPU_HAS_DEBUG_STUB
+#define ALT_CPU_HAS_EXTRA_EXCEPTION_INFO
+#define ALT_CPU_HAS_ILLEGAL_INSTRUCTION_EXCEPTION
+#define ALT_CPU_HAS_JMPI_INSTRUCTION
+#define ALT_CPU_ICACHE_LINE_SIZE 32
+#define ALT_CPU_ICACHE_LINE_SIZE_LOG2 5
+#define ALT_CPU_ICACHE_SIZE 2048
+#define ALT_CPU_INITDA_SUPPORTED
+#define ALT_CPU_INST_ADDR_WIDTH 0x16
+#define ALT_CPU_NAME "NiosII"
+#define ALT_CPU_NUM_OF_SHADOW_REG_SETS 0
+#define ALT_CPU_OCI_VERSION 1
+#define ALT_CPU_RESET_ADDR 0x00220000
+
+
+/*
+ * CPU configuration (with legacy prefix - don't use these anymore)
+ *
+ */
+
+#define NIOS2_BIG_ENDIAN 0
+#define NIOS2_BREAK_ADDR 0x00242820
+#define NIOS2_CPU_ARCH_NIOS2_R1
+#define NIOS2_CPU_FREQ 50000000u
+#define NIOS2_CPU_ID_SIZE 1
+#define NIOS2_CPU_ID_VALUE 0x00000000
+#define NIOS2_CPU_IMPLEMENTATION "fast"
+#define NIOS2_DATA_ADDR_WIDTH 0x16
+#define NIOS2_DCACHE_BYPASS_MASK 0x80000000
+#define NIOS2_DCACHE_LINE_SIZE 32
+#define NIOS2_DCACHE_LINE_SIZE_LOG2 5
+#define NIOS2_DCACHE_SIZE 2048
+#define NIOS2_EXCEPTION_ADDR 0x00220020
+#define NIOS2_FLASH_ACCELERATOR_LINES 0
+#define NIOS2_FLASH_ACCELERATOR_LINE_SIZE 0
+#define NIOS2_FLUSHDA_SUPPORTED
+#define NIOS2_HARDWARE_DIVIDE_PRESENT 0
+#define NIOS2_HARDWARE_MULTIPLY_PRESENT 1
+#define NIOS2_HARDWARE_MULX_PRESENT 0
+#define NIOS2_HAS_DEBUG_CORE 1
+#define NIOS2_HAS_DEBUG_STUB
+#define NIOS2_HAS_EXTRA_EXCEPTION_INFO
+#define NIOS2_HAS_ILLEGAL_INSTRUCTION_EXCEPTION
+#define NIOS2_HAS_JMPI_INSTRUCTION
+#define NIOS2_ICACHE_LINE_SIZE 32
+#define NIOS2_ICACHE_LINE_SIZE_LOG2 5
+#define NIOS2_ICACHE_SIZE 2048
+#define NIOS2_INITDA_SUPPORTED
+#define NIOS2_INST_ADDR_WIDTH 0x16
+#define NIOS2_NUM_OF_SHADOW_REG_SETS 0
+#define NIOS2_OCI_VERSION 1
+#define NIOS2_RESET_ADDR 0x00220000
+
+
+/*
+ * Channel1_Analog configuration
+ *
+ */
+
+#define ALT_MODULE_CLASS_Channel1_Analog altera_avalon_pio
+#define CHANNEL1_ANALOG_BASE 0x2430a0
+#define CHANNEL1_ANALOG_BIT_CLEARING_EDGE_REGISTER 0
+#define CHANNEL1_ANALOG_BIT_MODIFYING_OUTPUT_REGISTER 0
+#define CHANNEL1_ANALOG_CAPTURE 0
+#define CHANNEL1_ANALOG_DATA_WIDTH 8
+#define CHANNEL1_ANALOG_DO_TEST_BENCH_WIRING 0
+#define CHANNEL1_ANALOG_DRIVEN_SIM_VALUE 0
+#define CHANNEL1_ANALOG_EDGE_TYPE "NONE"
+#define CHANNEL1_ANALOG_FREQ 50000000
+#define CHANNEL1_ANALOG_HAS_IN 1
+#define CHANNEL1_ANALOG_HAS_OUT 0
+#define CHANNEL1_ANALOG_HAS_TRI 0
+#define CHANNEL1_ANALOG_IRQ -1
+#define CHANNEL1_ANALOG_IRQ_INTERRUPT_CONTROLLER_ID -1
+#define CHANNEL1_ANALOG_IRQ_TYPE "NONE"
+#define CHANNEL1_ANALOG_NAME "/dev/Channel1_Analog"
+#define CHANNEL1_ANALOG_RESET_VALUE 0
+#define CHANNEL1_ANALOG_SPAN 16
+#define CHANNEL1_ANALOG_TYPE "altera_avalon_pio"
+
+
+/*
+ * Channel2_Analog configuration
+ *
+ */
+
+#define ALT_MODULE_CLASS_Channel2_Analog altera_avalon_pio
+#define CHANNEL2_ANALOG_BASE 0x243090
+#define CHANNEL2_ANALOG_BIT_CLEARING_EDGE_REGISTER 0
+#define CHANNEL2_ANALOG_BIT_MODIFYING_OUTPUT_REGISTER 0
+#define CHANNEL2_ANALOG_CAPTURE 0
+#define CHANNEL2_ANALOG_DATA_WIDTH 8
+#define CHANNEL2_ANALOG_DO_TEST_BENCH_WIRING 0
+#define CHANNEL2_ANALOG_DRIVEN_SIM_VALUE 0
+#define CHANNEL2_ANALOG_EDGE_TYPE "NONE"
+#define CHANNEL2_ANALOG_FREQ 50000000
+#define CHANNEL2_ANALOG_HAS_IN 1
+#define CHANNEL2_ANALOG_HAS_OUT 0
+#define CHANNEL2_ANALOG_HAS_TRI 0
+#define CHANNEL2_ANALOG_IRQ -1
+#define CHANNEL2_ANALOG_IRQ_INTERRUPT_CONTROLLER_ID -1
+#define CHANNEL2_ANALOG_IRQ_TYPE "NONE"
+#define CHANNEL2_ANALOG_NAME "/dev/Channel2_Analog"
+#define CHANNEL2_ANALOG_RESET_VALUE 0
+#define CHANNEL2_ANALOG_SPAN 16
+#define CHANNEL2_ANALOG_TYPE "altera_avalon_pio"
+
+
+/*
+ * Channel3_Analog configuration
+ *
+ */
+
+#define ALT_MODULE_CLASS_Channel3_Analog altera_avalon_pio
+#define CHANNEL3_ANALOG_BASE 0x243080
+#define CHANNEL3_ANALOG_BIT_CLEARING_EDGE_REGISTER 0
+#define CHANNEL3_ANALOG_BIT_MODIFYING_OUTPUT_REGISTER 0
+#define CHANNEL3_ANALOG_CAPTURE 0
+#define CHANNEL3_ANALOG_DATA_WIDTH 8
+#define CHANNEL3_ANALOG_DO_TEST_BENCH_WIRING 0
+#define CHANNEL3_ANALOG_DRIVEN_SIM_VALUE 0
+#define CHANNEL3_ANALOG_EDGE_TYPE "NONE"
+#define CHANNEL3_ANALOG_FREQ 50000000
+#define CHANNEL3_ANALOG_HAS_IN 1
+#define CHANNEL3_ANALOG_HAS_OUT 0
+#define CHANNEL3_ANALOG_HAS_TRI 0
+#define CHANNEL3_ANALOG_IRQ -1
+#define CHANNEL3_ANALOG_IRQ_INTERRUPT_CONTROLLER_ID -1
+#define CHANNEL3_ANALOG_IRQ_TYPE "NONE"
+#define CHANNEL3_ANALOG_NAME "/dev/Channel3_Analog"
+#define CHANNEL3_ANALOG_RESET_VALUE 0
+#define CHANNEL3_ANALOG_SPAN 16
+#define CHANNEL3_ANALOG_TYPE "altera_avalon_pio"
+
+
+/*
+ * Channel4_Analog configuration
+ *
+ */
+
+#define ALT_MODULE_CLASS_Channel4_Analog altera_avalon_pio
+#define CHANNEL4_ANALOG_BASE 0x243070
+#define CHANNEL4_ANALOG_BIT_CLEARING_EDGE_REGISTER 0
+#define CHANNEL4_ANALOG_BIT_MODIFYING_OUTPUT_REGISTER 0
+#define CHANNEL4_ANALOG_CAPTURE 0
+#define CHANNEL4_ANALOG_DATA_WIDTH 8
+#define CHANNEL4_ANALOG_DO_TEST_BENCH_WIRING 0
+#define CHANNEL4_ANALOG_DRIVEN_SIM_VALUE 0
+#define CHANNEL4_ANALOG_EDGE_TYPE "NONE"
+#define CHANNEL4_ANALOG_FREQ 50000000
+#define CHANNEL4_ANALOG_HAS_IN 1
+#define CHANNEL4_ANALOG_HAS_OUT 0
+#define CHANNEL4_ANALOG_HAS_TRI 0
+#define CHANNEL4_ANALOG_IRQ -1
+#define CHANNEL4_ANALOG_IRQ_INTERRUPT_CONTROLLER_ID -1
+#define CHANNEL4_ANALOG_IRQ_TYPE "NONE"
+#define CHANNEL4_ANALOG_NAME "/dev/Channel4_Analog"
+#define CHANNEL4_ANALOG_RESET_VALUE 0
+#define CHANNEL4_ANALOG_SPAN 16
+#define CHANNEL4_ANALOG_TYPE "altera_avalon_pio"
+
+
+/*
+ * Channel5_Analog configuration
+ *
+ */
+
+#define ALT_MODULE_CLASS_Channel5_Analog altera_avalon_pio
+#define CHANNEL5_ANALOG_BASE 0x243060
+#define CHANNEL5_ANALOG_BIT_CLEARING_EDGE_REGISTER 0
+#define CHANNEL5_ANALOG_BIT_MODIFYING_OUTPUT_REGISTER 0
+#define CHANNEL5_ANALOG_CAPTURE 0
+#define CHANNEL5_ANALOG_DATA_WIDTH 8
+#define CHANNEL5_ANALOG_DO_TEST_BENCH_WIRING 0
+#define CHANNEL5_ANALOG_DRIVEN_SIM_VALUE 0
+#define CHANNEL5_ANALOG_EDGE_TYPE "NONE"
+#define CHANNEL5_ANALOG_FREQ 50000000
+#define CHANNEL5_ANALOG_HAS_IN 1
+#define CHANNEL5_ANALOG_HAS_OUT 0
+#define CHANNEL5_ANALOG_HAS_TRI 0
+#define CHANNEL5_ANALOG_IRQ -1
+#define CHANNEL5_ANALOG_IRQ_INTERRUPT_CONTROLLER_ID -1
+#define CHANNEL5_ANALOG_IRQ_TYPE "NONE"
+#define CHANNEL5_ANALOG_NAME "/dev/Channel5_Analog"
+#define CHANNEL5_ANALOG_RESET_VALUE 0
+#define CHANNEL5_ANALOG_SPAN 16
+#define CHANNEL5_ANALOG_TYPE "altera_avalon_pio"
+
+
+/*
+ * Channel6_Analog configuration
+ *
+ */
+
+#define ALT_MODULE_CLASS_Channel6_Analog altera_avalon_pio
+#define CHANNEL6_ANALOG_BASE 0x243050
+#define CHANNEL6_ANALOG_BIT_CLEARING_EDGE_REGISTER 0
+#define CHANNEL6_ANALOG_BIT_MODIFYING_OUTPUT_REGISTER 0
+#define CHANNEL6_ANALOG_CAPTURE 0
+#define CHANNEL6_ANALOG_DATA_WIDTH 8
+#define CHANNEL6_ANALOG_DO_TEST_BENCH_WIRING 0
+#define CHANNEL6_ANALOG_DRIVEN_SIM_VALUE 0
+#define CHANNEL6_ANALOG_EDGE_TYPE "NONE"
+#define CHANNEL6_ANALOG_FREQ 50000000
+#define CHANNEL6_ANALOG_HAS_IN 1
+#define CHANNEL6_ANALOG_HAS_OUT 0
+#define CHANNEL6_ANALOG_HAS_TRI 0
+#define CHANNEL6_ANALOG_IRQ -1
+#define CHANNEL6_ANALOG_IRQ_INTERRUPT_CONTROLLER_ID -1
+#define CHANNEL6_ANALOG_IRQ_TYPE "NONE"
+#define CHANNEL6_ANALOG_NAME "/dev/Channel6_Analog"
+#define CHANNEL6_ANALOG_RESET_VALUE 0
+#define CHANNEL6_ANALOG_SPAN 16
+#define CHANNEL6_ANALOG_TYPE "altera_avalon_pio"
+
+
+/*
+ * Character_Buffer_avalon_char_buffer_slave configuration
+ *
+ */
+
+#define ALT_MODULE_CLASS_Character_Buffer_avalon_char_buffer_slave altera_up_avalon_video_character_buffer_with_dma
+#define CHARACTER_BUFFER_AVALON_CHAR_BUFFER_SLAVE_BASE 0x240000
+#define CHARACTER_BUFFER_AVALON_CHAR_BUFFER_SLAVE_IRQ -1
+#define CHARACTER_BUFFER_AVALON_CHAR_BUFFER_SLAVE_IRQ_INTERRUPT_CONTROLLER_ID -1
+#define CHARACTER_BUFFER_AVALON_CHAR_BUFFER_SLAVE_NAME "/dev/Character_Buffer_avalon_char_buffer_slave"
+#define CHARACTER_BUFFER_AVALON_CHAR_BUFFER_SLAVE_SPAN 8192
+#define CHARACTER_BUFFER_AVALON_CHAR_BUFFER_SLAVE_TYPE "altera_up_avalon_video_character_buffer_with_dma"
+
+
+/*
+ * Character_Buffer_avalon_char_control_slave configuration
+ *
+ */
+
+#define ALT_MODULE_CLASS_Character_Buffer_avalon_char_control_slave altera_up_avalon_video_character_buffer_with_dma
+#define CHARACTER_BUFFER_AVALON_CHAR_CONTROL_SLAVE_BASE 0x2430d0
+#define CHARACTER_BUFFER_AVALON_CHAR_CONTROL_SLAVE_IRQ -1
+#define CHARACTER_BUFFER_AVALON_CHAR_CONTROL_SLAVE_IRQ_INTERRUPT_CONTROLLER_ID -1
+#define CHARACTER_BUFFER_AVALON_CHAR_CONTROL_SLAVE_NAME "/dev/Character_Buffer_avalon_char_control_slave"
+#define CHARACTER_BUFFER_AVALON_CHAR_CONTROL_SLAVE_SPAN 8
+#define CHARACTER_BUFFER_AVALON_CHAR_CONTROL_SLAVE_TYPE "altera_up_avalon_video_character_buffer_with_dma"
+
+
+/*
+ * Define for each module class mastered by the CPU
+ *
+ */
+
+#define __ALTERA_AVALON_JTAG_UART
+#define __ALTERA_AVALON_ONCHIP_MEMORY2
+#define __ALTERA_AVALON_PIO
+#define __ALTERA_AVALON_SYSID_QSYS
+#define __ALTERA_AVALON_TIMER
+#define __ALTERA_NIOS2_GEN2
+#define __ALTERA_UP_AVALON_SRAM
+#define __ALTERA_UP_AVALON_VIDEO_CHARACTER_BUFFER_WITH_DMA
+#define __ALTERA_UP_AVALON_VIDEO_PIXEL_BUFFER_DMA
+
+
+/*
+ * JTAG configuration
+ *
+ */
+
+#define ALT_MODULE_CLASS_JTAG altera_avalon_jtag_uart
+#define JTAG_BASE 0x2430c8
+#define JTAG_IRQ 0
+#define JTAG_IRQ_INTERRUPT_CONTROLLER_ID 0
+#define JTAG_NAME "/dev/JTAG"
+#define JTAG_READ_DEPTH 64
+#define JTAG_READ_THRESHOLD 8
+#define JTAG_SPAN 8
+#define JTAG_TYPE "altera_avalon_jtag_uart"
+#define JTAG_WRITE_DEPTH 64
+#define JTAG_WRITE_THRESHOLD 8
+
+
+/*
+ * OnChip_Memory configuration
+ *
+ */
+
+#define ALT_MODULE_CLASS_OnChip_Memory altera_avalon_onchip_memory2
+#define ONCHIP_MEMORY_ALLOW_IN_SYSTEM_MEMORY_CONTENT_EDITOR 0
+#define ONCHIP_MEMORY_ALLOW_MRAM_SIM_CONTENTS_ONLY_FILE 0
+#define ONCHIP_MEMORY_BASE 0x220000
+#define ONCHIP_MEMORY_CONTENTS_INFO ""
+#define ONCHIP_MEMORY_DUAL_PORT 0
+#define ONCHIP_MEMORY_GUI_RAM_BLOCK_TYPE "AUTO"
+#define ONCHIP_MEMORY_INIT_CONTENTS_FILE "NiosII_Controlled_Section_OnChip_Memory"
+#define ONCHIP_MEMORY_INIT_MEM_CONTENT 1
+#define ONCHIP_MEMORY_INSTANCE_ID "NONE"
+#define ONCHIP_MEMORY_IRQ -1
+#define ONCHIP_MEMORY_IRQ_INTERRUPT_CONTROLLER_ID -1
+#define ONCHIP_MEMORY_NAME "/dev/OnChip_Memory"
+#define ONCHIP_MEMORY_NON_DEFAULT_INIT_FILE_ENABLED 0
+#define ONCHIP_MEMORY_RAM_BLOCK_TYPE "AUTO"
+#define ONCHIP_MEMORY_READ_DURING_WRITE_MODE "DONT_CARE"
+#define ONCHIP_MEMORY_SINGLE_CLOCK_OP 0
+#define ONCHIP_MEMORY_SIZE_MULTIPLE 1
+#define ONCHIP_MEMORY_SIZE_VALUE 100000
+#define ONCHIP_MEMORY_SPAN 100000
+#define ONCHIP_MEMORY_TYPE "altera_avalon_onchip_memory2"
+#define ONCHIP_MEMORY_WRITABLE 1
+
+
+/*
+ * Pixel_Buffer configuration
+ *
+ */
+
+#define ALT_MODULE_CLASS_Pixel_Buffer altera_up_avalon_video_pixel_buffer_dma
+#define PIXEL_BUFFER_BASE 0x2430b0
+#define PIXEL_BUFFER_IRQ -1
+#define PIXEL_BUFFER_IRQ_INTERRUPT_CONTROLLER_ID -1
+#define PIXEL_BUFFER_NAME "/dev/Pixel_Buffer"
+#define PIXEL_BUFFER_SPAN 16
+#define PIXEL_BUFFER_TYPE "altera_up_avalon_video_pixel_buffer_dma"
+
+
+/*
+ * Read_Address configuration
+ *
+ */
+
+#define ALT_MODULE_CLASS_Read_Address altera_avalon_pio
+#define READ_ADDRESS_BASE 0x243020
+#define READ_ADDRESS_BIT_CLEARING_EDGE_REGISTER 0
+#define READ_ADDRESS_BIT_MODIFYING_OUTPUT_REGISTER 0
+#define READ_ADDRESS_CAPTURE 0
+#define READ_ADDRESS_DATA_WIDTH 12
+#define READ_ADDRESS_DO_TEST_BENCH_WIRING 0
+#define READ_ADDRESS_DRIVEN_SIM_VALUE 0
+#define READ_ADDRESS_EDGE_TYPE "NONE"
+#define READ_ADDRESS_FREQ 50000000
+#define READ_ADDRESS_HAS_IN 0
+#define READ_ADDRESS_HAS_OUT 1
+#define READ_ADDRESS_HAS_TRI 0
+#define READ_ADDRESS_IRQ -1
+#define READ_ADDRESS_IRQ_INTERRUPT_CONTROLLER_ID -1
+#define READ_ADDRESS_IRQ_TYPE "NONE"
+#define READ_ADDRESS_NAME "/dev/Read_Address"
+#define READ_ADDRESS_RESET_VALUE 0
+#define READ_ADDRESS_SPAN 16
+#define READ_ADDRESS_TYPE "altera_avalon_pio"
+
+
+/*
+ * Read_New_Sample configuration
+ *
+ */
+
+#define ALT_MODULE_CLASS_Read_New_Sample altera_avalon_pio
+#define READ_NEW_SAMPLE_BASE 0x243030
+#define READ_NEW_SAMPLE_BIT_CLEARING_EDGE_REGISTER 0
+#define READ_NEW_SAMPLE_BIT_MODIFYING_OUTPUT_REGISTER 0
+#define READ_NEW_SAMPLE_CAPTURE 0
+#define READ_NEW_SAMPLE_DATA_WIDTH 1
+#define READ_NEW_SAMPLE_DO_TEST_BENCH_WIRING 0
+#define READ_NEW_SAMPLE_DRIVEN_SIM_VALUE 0
+#define READ_NEW_SAMPLE_EDGE_TYPE "NONE"
+#define READ_NEW_SAMPLE_FREQ 50000000
+#define READ_NEW_SAMPLE_HAS_IN 1
+#define READ_NEW_SAMPLE_HAS_OUT 0
+#define READ_NEW_SAMPLE_HAS_TRI 0
+#define READ_NEW_SAMPLE_IRQ -1
+#define READ_NEW_SAMPLE_IRQ_INTERRUPT_CONTROLLER_ID -1
+#define READ_NEW_SAMPLE_IRQ_TYPE "NONE"
+#define READ_NEW_SAMPLE_NAME "/dev/Read_New_Sample"
+#define READ_NEW_SAMPLE_RESET_VALUE 0
+#define READ_NEW_SAMPLE_SPAN 16
+#define READ_NEW_SAMPLE_TYPE "altera_avalon_pio"
+
+
+/*
+ * SRAM configuration
+ *
+ */
+
+#define ALT_MODULE_CLASS_SRAM altera_up_avalon_sram
+#define SRAM_BASE 0x0
+#define SRAM_IRQ -1
+#define SRAM_IRQ_INTERRUPT_CONTROLLER_ID -1
+#define SRAM_NAME "/dev/SRAM"
+#define SRAM_SPAN 2097152
+#define SRAM_TYPE "altera_up_avalon_sram"
+
+
+/*
+ * System configuration
+ *
+ */
+
+#define ALT_DEVICE_FAMILY "Cyclone IV E"
+#define ALT_ENHANCED_INTERRUPT_API_PRESENT
+#define ALT_IRQ_BASE NULL
+#define ALT_LOG_PORT "/dev/null"
+#define ALT_LOG_PORT_BASE 0x0
+#define ALT_LOG_PORT_DEV null
+#define ALT_LOG_PORT_TYPE ""
+#define ALT_NUM_EXTERNAL_INTERRUPT_CONTROLLERS 0
+#define ALT_NUM_INTERNAL_INTERRUPT_CONTROLLERS 1
+#define ALT_NUM_INTERRUPT_CONTROLLERS 1
+#define ALT_STDERR "/dev/JTAG"
+#define ALT_STDERR_BASE 0x2430c8
+#define ALT_STDERR_DEV JTAG
+#define ALT_STDERR_IS_JTAG_UART
+#define ALT_STDERR_PRESENT
+#define ALT_STDERR_TYPE "altera_avalon_jtag_uart"
+#define ALT_STDIN "/dev/JTAG"
+#define ALT_STDIN_BASE 0x2430c8
+#define ALT_STDIN_DEV JTAG
+#define ALT_STDIN_IS_JTAG_UART
+#define ALT_STDIN_PRESENT
+#define ALT_STDIN_TYPE "altera_avalon_jtag_uart"
+#define ALT_STDOUT "/dev/JTAG"
+#define ALT_STDOUT_BASE 0x2430c8
+#define ALT_STDOUT_DEV JTAG
+#define ALT_STDOUT_IS_JTAG_UART
+#define ALT_STDOUT_PRESENT
+#define ALT_STDOUT_TYPE "altera_avalon_jtag_uart"
+#define ALT_SYSTEM_NAME "NiosII_Controlled_Section"
+
+
+/*
+ * System_ID configuration
+ *
+ */
+
+#define ALT_MODULE_CLASS_System_ID altera_avalon_sysid_qsys
+#define SYSTEM_ID_BASE 0x2430c0
+#define SYSTEM_ID_ID 0
+#define SYSTEM_ID_IRQ -1
+#define SYSTEM_ID_IRQ_INTERRUPT_CONTROLLER_ID -1
+#define SYSTEM_ID_NAME "/dev/System_ID"
+#define SYSTEM_ID_SPAN 8
+#define SYSTEM_ID_TIMESTAMP 1612810838
+#define SYSTEM_ID_TYPE "altera_avalon_sysid_qsys"
+
+
+/*
+ * Timer configuration
+ *
+ */
+
+#define ALT_MODULE_CLASS_Timer altera_avalon_timer
+#define TIMER_ALWAYS_RUN 0
+#define TIMER_BASE 0x243000
+#define TIMER_COUNTER_SIZE 32
+#define TIMER_FIXED_PERIOD 0
+#define TIMER_FREQ 50000000
+#define TIMER_IRQ 1
+#define TIMER_IRQ_INTERRUPT_CONTROLLER_ID 0
+#define TIMER_LOAD_VALUE 49999
+#define TIMER_MULT 0.001
+#define TIMER_NAME "/dev/Timer"
+#define TIMER_PERIOD 1
+#define TIMER_PERIOD_UNITS "ms"
+#define TIMER_RESET_OUTPUT 0
+#define TIMER_SNAPSHOT 1
+#define TIMER_SPAN 32
+#define TIMER_TICKS_PER_SEC 1000
+#define TIMER_TIMEOUT_PULSE_OUTPUT 0
+#define TIMER_TYPE "altera_avalon_timer"
+
+
+/*
+ * Writing_Finish_Flag configuration
+ *
+ */
+
+#define ALT_MODULE_CLASS_Writing_Finish_Flag altera_avalon_pio
+#define WRITING_FINISH_FLAG_BASE 0x243040
+#define WRITING_FINISH_FLAG_BIT_CLEARING_EDGE_REGISTER 0
+#define WRITING_FINISH_FLAG_BIT_MODIFYING_OUTPUT_REGISTER 0
+#define WRITING_FINISH_FLAG_CAPTURE 0
+#define WRITING_FINISH_FLAG_DATA_WIDTH 1
+#define WRITING_FINISH_FLAG_DO_TEST_BENCH_WIRING 0
+#define WRITING_FINISH_FLAG_DRIVEN_SIM_VALUE 0
+#define WRITING_FINISH_FLAG_EDGE_TYPE "NONE"
+#define WRITING_FINISH_FLAG_FREQ 50000000
+#define WRITING_FINISH_FLAG_HAS_IN 1
+#define WRITING_FINISH_FLAG_HAS_OUT 0
+#define WRITING_FINISH_FLAG_HAS_TRI 0
+#define WRITING_FINISH_FLAG_IRQ -1
+#define WRITING_FINISH_FLAG_IRQ_INTERRUPT_CONTROLLER_ID -1
+#define WRITING_FINISH_FLAG_IRQ_TYPE "NONE"
+#define WRITING_FINISH_FLAG_NAME "/dev/Writing_Finish_Flag"
+#define WRITING_FINISH_FLAG_RESET_VALUE 0
+#define WRITING_FINISH_FLAG_SPAN 16
+#define WRITING_FINISH_FLAG_TYPE "altera_avalon_pio"
+
+
+/*
+ * altera_hostfs configuration
+ *
+ */
+
+#define ALTERA_HOSTFS_NAME "/mnt/host"
+
+
+/*
+ * hal configuration
+ *
+ */
+
+#define ALT_INCLUDE_INSTRUCTION_RELATED_EXCEPTION_API
+#define ALT_MAX_FD 32
+#define ALT_SYS_CLK TIMER
+#define ALT_TIMESTAMP_CLK none
+
+#endif /* __SYSTEM_H_ */

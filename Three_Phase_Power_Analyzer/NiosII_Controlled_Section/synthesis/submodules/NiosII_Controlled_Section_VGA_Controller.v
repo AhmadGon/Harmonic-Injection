@@ -1,10 +1,10 @@
-// (C) 2001-2017 Intel Corporation. All rights reserved.
+// (C) 2001-2018 Intel Corporation. All rights reserved.
 // Your use of Intel Corporation's design tools, logic functions and other 
 // software and tools, and its AMPP partner logic functions, and any output 
-// files any of the foregoing (including device programming or simulation 
+// files from any of the foregoing (including device programming or simulation 
 // files), and any associated documentation or information are expressly subject 
 // to the terms and conditions of the Intel Program License Subscription 
-// Agreement, Intel MegaCore Function License Agreement, or other applicable 
+// Agreement, Intel FPGA IP License Agreement, or other applicable 
 // license agreement, including, without limitation, that your use is for the 
 // sole purpose of programming logic devices manufactured by Intel and sold by 
 // Intel or its authorized distributors.  Please refer to the applicable 
@@ -37,11 +37,10 @@ module NiosII_Controlled_Section_VGA_Controller (
 	valid,
 
 	// Bidirectionals
-
-	// Outputs
-	pixel_counter,
-	line_counter,
+	H_Counter,
+	V_Counter,
 	
+	// Outputs
 	ready,
 
 
@@ -103,11 +102,9 @@ input			[ 1: 0]	empty;
 input						valid;
 
 // Bidirectionals
-
+output 	[10: 1]  H_Counter;
+output 	[10: 1]  V_Counter;
 // Outputs
-output [10:1]			pixel_counter;
-output [10:1]			line_counter;
-
 output					ready;
 
 
@@ -250,12 +247,10 @@ altera_up_avalon_video_vga_timing VGA_Timing (
 //	.data_valid					(1'b1),
 
 	// Bidirectionals
-
+	.pixel_counter					(H_Counter),
+	.line_counter              (V_Counter),
 	// Outputs
-	.pixel_counter				(pixel_counter),
-	.line_counter				(line_counter),
-	
-	.read_enable				(read_enable),
+	.read_enable				(read_enable),	
 
 	.end_of_active_frame		(end_of_active_frame),
 	.end_of_frame				(), // (end_of_frame),

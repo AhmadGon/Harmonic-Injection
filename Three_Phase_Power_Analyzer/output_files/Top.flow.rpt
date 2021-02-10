@@ -1,5 +1,5 @@
 Flow report for Top
-Sat Feb 06 15:06:49 2021
+Mon Feb 08 21:54:24 2021
 Quartus Prime Version 18.0.0 Build 614 04/24/2018 SJ Lite Edition
 
 
@@ -40,20 +40,20 @@ refer to the applicable agreement for further details.
 +----------------------------------------------------------------------------------+
 ; Flow Summary                                                                     ;
 +------------------------------------+---------------------------------------------+
-; Flow Status                        ; Successful - Sat Feb 06 15:06:38 2021       ;
+; Flow Status                        ; Successful - Mon Feb 08 21:53:27 2021       ;
 ; Quartus Prime Version              ; 18.0.0 Build 614 04/24/2018 SJ Lite Edition ;
 ; Revision Name                      ; Top                                         ;
 ; Top-level Entity Name              ; Top                                         ;
 ; Family                             ; Cyclone IV E                                ;
 ; Device                             ; EP4CE115F29C7                               ;
 ; Timing Models                      ; Final                                       ;
-; Total logic elements               ; 20,488 / 114,480 ( 18 % )                   ;
-;     Total combinational functions  ; 19,573 / 114,480 ( 17 % )                   ;
-;     Dedicated logic registers      ; 10,036 / 114,480 ( 9 % )                    ;
-; Total registers                    ; 10036                                       ;
+; Total logic elements               ; 20,505 / 114,480 ( 18 % )                   ;
+;     Total combinational functions  ; 19,570 / 114,480 ( 17 % )                   ;
+;     Dedicated logic registers      ; 10,031 / 114,480 ( 9 % )                    ;
+; Total registers                    ; 10031                                       ;
 ; Total pins                         ; 152 / 529 ( 29 % )                          ;
 ; Total virtual pins                 ; 0                                           ;
-; Total memory bits                  ; 2,846,704 / 3,981,312 ( 72 % )              ;
+; Total memory bits                  ; 2,846,576 / 3,981,312 ( 71 % )              ;
 ; Embedded Multiplier 9-bit elements ; 279 / 532 ( 52 % )                          ;
 ; Total PLLs                         ; 2 / 4 ( 50 % )                              ;
 +------------------------------------+---------------------------------------------+
@@ -64,7 +64,7 @@ refer to the applicable agreement for further details.
 +-------------------+---------------------+
 ; Option            ; Setting             ;
 +-------------------+---------------------+
-; Start date & time ; 02/06/2021 15:02:40 ;
+; Start date & time ; 02/08/2021 21:37:58 ;
 ; Main task         ; Compilation         ;
 ; Revision Name     ; Top                 ;
 +-------------------+---------------------+
@@ -75,7 +75,7 @@ refer to the applicable agreement for further details.
 +-------------------------------------+------------------------------------------------------------------------------+---------------+---------------------------+------------+
 ; Assignment Name                     ; Value                                                                        ; Default Value ; Entity Name               ; Section Id ;
 +-------------------------------------+------------------------------------------------------------------------------+---------------+---------------------------+------------+
-; COMPILER_SIGNATURE_ID               ; 18121609262202.161261655906940                                               ; --            ; --                        ; --         ;
+; COMPILER_SIGNATURE_ID               ; 167403784555840.161281307615320                                              ; --            ; --                        ; --         ;
 ; ENABLE_SIGNALTAP                    ; Off                                                                          ; --            ; --                        ; --         ;
 ; FLOW_ENABLE_RTL_VIEWER              ; On                                                                           ; Off           ; --                        ; --         ;
 ; MAX_CORE_JUNCTION_TEMP              ; 85                                                                           ; --            ; --                        ; --         ;
@@ -139,7 +139,7 @@ refer to the applicable agreement for further details.
 ; PROJECT_OUTPUT_DIRECTORY            ; output_files                                                                 ; --            ; --                        ; --         ;
 ; SLD_FILE                            ; NiosII_Controlled_Section/synthesis/NiosII_Controlled_Section.regmap         ; --            ; --                        ; --         ;
 ; SLD_FILE                            ; NiosII_Controlled_Section/synthesis/NiosII_Controlled_Section.debuginfo      ; --            ; --                        ; --         ;
-; SLD_INFO                            ; QSYS_NAME NiosII_Controlled_Section HAS_SOPCINFO 1 GENERATION_ID 1582233463  ; --            ; NiosII_Controlled_Section ; --         ;
+; SLD_INFO                            ; QSYS_NAME NiosII_Controlled_Section HAS_SOPCINFO 1 GENERATION_ID 1612810838  ; --            ; NiosII_Controlled_Section ; --         ;
 ; SOPCINFO_FILE                       ; NiosII_Controlled_Section/synthesis/../../NiosII_Controlled_Section.sopcinfo ; --            ; --                        ; --         ;
 ; SYNTHESIS_ONLY_QIP                  ; On                                                                           ; --            ; --                        ; --         ;
 ; USE_SIGNALTAP_FILE                  ; output_files/MemoryCheck_SignalTap.stp                                       ; --            ; --                        ; --         ;
@@ -151,11 +151,11 @@ refer to the applicable agreement for further details.
 +----------------------+--------------+-------------------------+---------------------+------------------------------------+
 ; Module Name          ; Elapsed Time ; Average Processors Used ; Peak Virtual Memory ; Total CPU Time (on all processors) ;
 +----------------------+--------------+-------------------------+---------------------+------------------------------------+
-; Analysis & Synthesis ; 00:02:30     ; 1.0                     ; 5338 MB             ; 00:02:35                           ;
-; Fitter               ; 00:01:04     ; 1.1                     ; 6152 MB             ; 00:01:31                           ;
-; Assembler            ; 00:00:06     ; 1.0                     ; 4802 MB             ; 00:00:05                           ;
-; Timing Analyzer      ; 00:00:10     ; 1.3                     ; 5081 MB             ; 00:00:10                           ;
-; Total                ; 00:03:50     ; --                      ; --                  ; 00:04:21                           ;
+; Analysis & Synthesis ; 00:10:30     ; 1.0                     ; 5222 MB             ; 00:10:03                           ;
+; Fitter               ; 00:02:36     ; 1.0                     ; 5793 MB             ; 00:03:00                           ;
+; Assembler            ; 00:00:14     ; 1.0                     ; 4796 MB             ; 00:00:13                           ;
+; Timing Analyzer      ; 00:00:52     ; 1.2                     ; 5061 MB             ; 00:00:48                           ;
+; Total                ; 00:14:12     ; --                      ; --                  ; 00:14:04                           ;
 +----------------------+--------------+-------------------------+---------------------+------------------------------------+
 
 
@@ -164,10 +164,10 @@ refer to the applicable agreement for further details.
 +----------------------+------------------+------------+------------+----------------+
 ; Module Name          ; Machine Hostname ; OS Name    ; OS Version ; Processor type ;
 +----------------------+------------------+------------+------------+----------------+
-; Analysis & Synthesis ; Ibrahim-MainPC   ; Windows 10 ; 10.0       ; x86_64         ;
-; Fitter               ; Ibrahim-MainPC   ; Windows 10 ; 10.0       ; x86_64         ;
-; Assembler            ; Ibrahim-MainPC   ; Windows 10 ; 10.0       ; x86_64         ;
-; Timing Analyzer      ; Ibrahim-MainPC   ; Windows 10 ; 10.0       ; x86_64         ;
+; Analysis & Synthesis ; DESKTOP-50HFCLT  ; Windows 10 ; 10.0       ; x86_64         ;
+; Fitter               ; DESKTOP-50HFCLT  ; Windows 10 ; 10.0       ; x86_64         ;
+; Assembler            ; DESKTOP-50HFCLT  ; Windows 10 ; 10.0       ; x86_64         ;
+; Timing Analyzer      ; DESKTOP-50HFCLT  ; Windows 10 ; 10.0       ; x86_64         ;
 +----------------------+------------------+------------+------------+----------------+
 
 

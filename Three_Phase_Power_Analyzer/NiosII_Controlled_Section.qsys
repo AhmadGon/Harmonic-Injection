@@ -217,6 +217,14 @@
          type = "int";
       }
    }
+   element RGB_Resampler.avalon_rgb_slave
+   {
+      datum baseAddress
+      {
+         value = "2371800";
+         type = "String";
+      }
+   }
    element Read_Address
    {
       datum _sortIndex
@@ -418,7 +426,7 @@
  <module
    name="Alpha_Blender"
    kind="altera_up_avalon_video_alpha_blender"
-   version="17.0"
+   version="18.0"
    enabled="1">
   <parameter name="AUTO_CLK_CLOCK_RATE" value="50000000" />
   <parameter name="AUTO_DEVICE_FAMILY" value="Cyclone IV E" />
@@ -427,7 +435,7 @@
  <module
    name="Channel1_Analog"
    kind="altera_avalon_pio"
-   version="17.0"
+   version="18.0"
    enabled="1">
   <parameter name="bitClearingEdgeCapReg" value="false" />
   <parameter name="bitModifyingOutReg" value="false" />
@@ -445,7 +453,7 @@
  <module
    name="Channel2_Analog"
    kind="altera_avalon_pio"
-   version="17.0"
+   version="18.0"
    enabled="1">
   <parameter name="bitClearingEdgeCapReg" value="false" />
   <parameter name="bitModifyingOutReg" value="false" />
@@ -463,7 +471,7 @@
  <module
    name="Channel3_Analog"
    kind="altera_avalon_pio"
-   version="17.0"
+   version="18.0"
    enabled="1">
   <parameter name="bitClearingEdgeCapReg" value="false" />
   <parameter name="bitModifyingOutReg" value="false" />
@@ -481,7 +489,7 @@
  <module
    name="Channel4_Analog"
    kind="altera_avalon_pio"
-   version="17.0"
+   version="18.0"
    enabled="1">
   <parameter name="bitClearingEdgeCapReg" value="false" />
   <parameter name="bitModifyingOutReg" value="false" />
@@ -499,7 +507,7 @@
  <module
    name="Channel5_Analog"
    kind="altera_avalon_pio"
-   version="17.0"
+   version="18.0"
    enabled="1">
   <parameter name="bitClearingEdgeCapReg" value="false" />
   <parameter name="bitModifyingOutReg" value="false" />
@@ -517,7 +525,7 @@
  <module
    name="Channel6_Analog"
    kind="altera_avalon_pio"
-   version="17.0"
+   version="18.0"
    enabled="1">
   <parameter name="bitClearingEdgeCapReg" value="false" />
   <parameter name="bitModifyingOutReg" value="false" />
@@ -535,7 +543,7 @@
  <module
    name="Character_Buffer"
    kind="altera_up_avalon_video_character_buffer_with_dma"
-   version="17.0"
+   version="18.0"
    enabled="1">
   <parameter name="AUTO_CLK_CLOCK_RATE" value="50000000" />
   <parameter name="AUTO_DEVICE_FAMILY" value="Cyclone IV E" />
@@ -547,7 +555,7 @@
  <module
    name="FIFO"
    kind="altera_up_avalon_video_dual_clock_buffer"
-   version="17.0"
+   version="18.0"
    enabled="1">
   <parameter name="AUTO_CLOCK_STREAM_IN_CLOCK_RATE" value="50000000" />
   <parameter name="AUTO_CLOCK_STREAM_OUT_CLOCK_RATE" value="25000000" />
@@ -555,7 +563,7 @@
   <parameter name="color_bits" value="10" />
   <parameter name="color_planes" value="3" />
  </module>
- <module name="JTAG" kind="altera_avalon_jtag_uart" version="17.0" enabled="1">
+ <module name="JTAG" kind="altera_avalon_jtag_uart" version="18.0" enabled="1">
   <parameter name="allowMultipleConnections" value="false" />
   <parameter name="avalonSpec" value="2.0" />
   <parameter name="clkFreq" value="50000000" />
@@ -570,9 +578,9 @@
   <parameter name="writeBufferDepth" value="64" />
   <parameter name="writeIRQThreshold" value="8" />
  </module>
- <module name="NiosII" kind="altera_nios2_gen2" version="17.0" enabled="1">
-  <parameter name="AUTO_CLK_CLOCK_DOMAIN" value="1" />
-  <parameter name="AUTO_CLK_RESET_DOMAIN" value="1" />
+ <module name="NiosII" kind="altera_nios2_gen2" version="18.0" enabled="1">
+  <parameter name="AUTO_CLK_CLOCK_DOMAIN" value="2" />
+  <parameter name="AUTO_CLK_RESET_DOMAIN" value="2" />
   <parameter name="AUTO_DEVICE" value="EP4CE115F29C7" />
   <parameter name="AUTO_DEVICE_SPEEDGRADE" value="7" />
   <parameter name="bht_ramBlockType" value="Automatic" />
@@ -751,10 +759,10 @@
  <module
    name="OnChip_Memory"
    kind="altera_avalon_onchip_memory2"
-   version="17.0"
+   version="18.0"
    enabled="1">
   <parameter name="allowInSystemMemoryContentEditor" value="false" />
-  <parameter name="autoInitializationFileName">$${FILENAME}_OnChip_Memory</parameter>
+  <parameter name="autoInitializationFileName">NiosII_Controlled_Section_OnChip_Memory</parameter>
   <parameter name="blockType" value="AUTO" />
   <parameter name="copyInitFile" value="false" />
   <parameter name="dataWidth" value="32" />
@@ -783,7 +791,7 @@
  <module
    name="Pixel_Buffer"
    kind="altera_up_avalon_video_pixel_buffer_dma"
-   version="17.0"
+   version="18.0"
    enabled="1">
   <parameter name="AUTO_CLK_CLOCK_RATE" value="50000000" />
   <parameter name="AUTO_DEVICE_FAMILY" value="Cyclone IV E" />
@@ -797,7 +805,7 @@
  <module
    name="RGB_Resampler"
    kind="altera_up_avalon_video_rgb_resampler"
-   version="17.0"
+   version="18.0"
    enabled="1">
   <parameter name="AUTO_CLK_CLOCK_RATE" value="50000000" />
   <parameter name="AUTO_DEVICE_FAMILY" value="Cyclone IV E" />
@@ -808,7 +816,7 @@
  <module
    name="Read_Address"
    kind="altera_avalon_pio"
-   version="17.0"
+   version="18.0"
    enabled="1">
   <parameter name="bitClearingEdgeCapReg" value="false" />
   <parameter name="bitModifyingOutReg" value="false" />
@@ -826,7 +834,7 @@
  <module
    name="Read_New_Sample"
    kind="altera_avalon_pio"
-   version="17.0"
+   version="18.0"
    enabled="1">
   <parameter name="bitClearingEdgeCapReg" value="false" />
   <parameter name="bitModifyingOutReg" value="false" />
@@ -841,7 +849,7 @@
   <parameter name="simDrivenValue" value="0" />
   <parameter name="width" value="1" />
  </module>
- <module name="SRAM" kind="altera_up_avalon_sram" version="17.0" enabled="1">
+ <module name="SRAM" kind="altera_up_avalon_sram" version="18.0" enabled="1">
   <parameter name="AUTO_CLK_CLOCK_RATE" value="50000000" />
   <parameter name="AUTO_DEVICE_FAMILY" value="Cyclone IV E" />
   <parameter name="board" value="DE2-115" />
@@ -850,11 +858,11 @@
  <module
    name="System_ID"
    kind="altera_avalon_sysid_qsys"
-   version="17.0"
+   version="18.0"
    enabled="1">
   <parameter name="id" value="0" />
  </module>
- <module name="Timer" kind="altera_avalon_timer" version="17.0" enabled="1">
+ <module name="Timer" kind="altera_avalon_timer" version="18.0" enabled="1">
   <parameter name="alwaysRun" value="false" />
   <parameter name="counterSize" value="32" />
   <parameter name="fixedPeriod" value="false" />
@@ -869,7 +877,7 @@
  <module
    name="VGA_Controller"
    kind="altera_up_avalon_video_vga_controller"
-   version="17.0"
+   version="18.0"
    enabled="1">
   <parameter name="AUTO_CLK_CLOCK_RATE" value="25000000" />
   <parameter name="AUTO_DEVICE_FAMILY" value="Cyclone IV E" />
@@ -881,7 +889,7 @@
  <module
    name="VGA_PLL"
    kind="altera_up_avalon_video_pll"
-   version="17.0"
+   version="18.0"
    enabled="1">
   <parameter name="AUTO_DEVICE" value="EP4CE115F29C7" />
   <parameter name="AUTO_DEVICE_SPEEDGRADE" value="7" />
@@ -897,7 +905,7 @@
  <module
    name="Writing_Finish_Flag"
    kind="altera_avalon_pio"
-   version="17.0"
+   version="18.0"
    enabled="1">
   <parameter name="bitClearingEdgeCapReg" value="false" />
   <parameter name="bitModifyingOutReg" value="false" />
@@ -912,7 +920,7 @@
   <parameter name="simDrivenValue" value="0" />
   <parameter name="width" value="1" />
  </module>
- <module name="clk_0" kind="clock_source" version="17.0" enabled="1">
+ <module name="clk_0" kind="clock_source" version="18.0" enabled="1">
   <parameter name="clockFrequency" value="50000000" />
   <parameter name="clockFrequencyKnown" value="true" />
   <parameter name="inputClockFrequency" value="0" />
@@ -920,7 +928,7 @@
  </module>
  <connection
    kind="avalon"
-   version="17.0"
+   version="18.0"
    start="Pixel_Buffer.avalon_pixel_dma_master"
    end="SRAM.avalon_sram_slave">
   <parameter name="arbitrationPriority" value="1" />
@@ -929,7 +937,7 @@
  </connection>
  <connection
    kind="avalon"
-   version="17.0"
+   version="18.0"
    start="NiosII.data_master"
    end="Character_Buffer.avalon_char_buffer_slave">
   <parameter name="arbitrationPriority" value="1" />
@@ -938,7 +946,7 @@
  </connection>
  <connection
    kind="avalon"
-   version="17.0"
+   version="18.0"
    start="NiosII.data_master"
    end="Character_Buffer.avalon_char_control_slave">
   <parameter name="arbitrationPriority" value="1" />
@@ -947,7 +955,7 @@
  </connection>
  <connection
    kind="avalon"
-   version="17.0"
+   version="18.0"
    start="NiosII.data_master"
    end="Pixel_Buffer.avalon_control_slave">
   <parameter name="arbitrationPriority" value="1" />
@@ -956,7 +964,7 @@
  </connection>
  <connection
    kind="avalon"
-   version="17.0"
+   version="18.0"
    start="NiosII.data_master"
    end="JTAG.avalon_jtag_slave">
   <parameter name="arbitrationPriority" value="1" />
@@ -965,7 +973,7 @@
  </connection>
  <connection
    kind="avalon"
-   version="17.0"
+   version="18.0"
    start="NiosII.data_master"
    end="SRAM.avalon_sram_slave">
   <parameter name="arbitrationPriority" value="1" />
@@ -974,7 +982,7 @@
  </connection>
  <connection
    kind="avalon"
-   version="17.0"
+   version="18.0"
    start="NiosII.data_master"
    end="System_ID.control_slave">
   <parameter name="arbitrationPriority" value="1" />
@@ -983,7 +991,7 @@
  </connection>
  <connection
    kind="avalon"
-   version="17.0"
+   version="18.0"
    start="NiosII.data_master"
    end="NiosII.debug_mem_slave">
   <parameter name="arbitrationPriority" value="1" />
@@ -992,7 +1000,7 @@
  </connection>
  <connection
    kind="avalon"
-   version="17.0"
+   version="18.0"
    start="NiosII.data_master"
    end="OnChip_Memory.s1">
   <parameter name="arbitrationPriority" value="1" />
@@ -1001,7 +1009,7 @@
  </connection>
  <connection
    kind="avalon"
-   version="17.0"
+   version="18.0"
    start="NiosII.data_master"
    end="Timer.s1">
   <parameter name="arbitrationPriority" value="1" />
@@ -1010,7 +1018,7 @@
  </connection>
  <connection
    kind="avalon"
-   version="17.0"
+   version="18.0"
    start="NiosII.data_master"
    end="Channel1_Analog.s1">
   <parameter name="arbitrationPriority" value="1" />
@@ -1019,7 +1027,7 @@
  </connection>
  <connection
    kind="avalon"
-   version="17.0"
+   version="18.0"
    start="NiosII.data_master"
    end="Channel2_Analog.s1">
   <parameter name="arbitrationPriority" value="1" />
@@ -1028,7 +1036,7 @@
  </connection>
  <connection
    kind="avalon"
-   version="17.0"
+   version="18.0"
    start="NiosII.data_master"
    end="Channel3_Analog.s1">
   <parameter name="arbitrationPriority" value="1" />
@@ -1037,7 +1045,7 @@
  </connection>
  <connection
    kind="avalon"
-   version="17.0"
+   version="18.0"
    start="NiosII.data_master"
    end="Channel4_Analog.s1">
   <parameter name="arbitrationPriority" value="1" />
@@ -1046,7 +1054,7 @@
  </connection>
  <connection
    kind="avalon"
-   version="17.0"
+   version="18.0"
    start="NiosII.data_master"
    end="Channel5_Analog.s1">
   <parameter name="arbitrationPriority" value="1" />
@@ -1055,7 +1063,7 @@
  </connection>
  <connection
    kind="avalon"
-   version="17.0"
+   version="18.0"
    start="NiosII.data_master"
    end="Channel6_Analog.s1">
   <parameter name="arbitrationPriority" value="1" />
@@ -1064,7 +1072,7 @@
  </connection>
  <connection
    kind="avalon"
-   version="17.0"
+   version="18.0"
    start="NiosII.data_master"
    end="Writing_Finish_Flag.s1">
   <parameter name="arbitrationPriority" value="1" />
@@ -1073,7 +1081,7 @@
  </connection>
  <connection
    kind="avalon"
-   version="17.0"
+   version="18.0"
    start="NiosII.data_master"
    end="Read_New_Sample.s1">
   <parameter name="arbitrationPriority" value="1" />
@@ -1082,7 +1090,7 @@
  </connection>
  <connection
    kind="avalon"
-   version="17.0"
+   version="18.0"
    start="NiosII.data_master"
    end="Read_Address.s1">
   <parameter name="arbitrationPriority" value="1" />
@@ -1091,7 +1099,7 @@
  </connection>
  <connection
    kind="avalon"
-   version="17.0"
+   version="18.0"
    start="NiosII.instruction_master"
    end="NiosII.debug_mem_slave">
   <parameter name="arbitrationPriority" value="1" />
@@ -1100,7 +1108,7 @@
  </connection>
  <connection
    kind="avalon"
-   version="17.0"
+   version="18.0"
    start="NiosII.instruction_master"
    end="OnChip_Memory.s1">
   <parameter name="arbitrationPriority" value="1" />
@@ -1109,441 +1117,441 @@
  </connection>
  <connection
    kind="avalon_streaming"
-   version="17.0"
+   version="18.0"
    start="Alpha_Blender.avalon_blended_source"
    end="FIFO.avalon_dc_buffer_sink" />
  <connection
    kind="avalon_streaming"
-   version="17.0"
+   version="18.0"
    start="Character_Buffer.avalon_char_source"
    end="Alpha_Blender.avalon_foreground_sink" />
  <connection
    kind="avalon_streaming"
-   version="17.0"
+   version="18.0"
    start="FIFO.avalon_dc_buffer_source"
    end="VGA_Controller.avalon_vga_sink" />
  <connection
    kind="avalon_streaming"
-   version="17.0"
+   version="18.0"
    start="Pixel_Buffer.avalon_pixel_source"
    end="RGB_Resampler.avalon_rgb_sink" />
  <connection
    kind="avalon_streaming"
-   version="17.0"
+   version="18.0"
    start="RGB_Resampler.avalon_rgb_source"
    end="Alpha_Blender.avalon_background_sink" />
- <connection kind="clock" version="17.0" start="clk_0.clk" end="System_ID.clk" />
- <connection kind="clock" version="17.0" start="clk_0.clk" end="JTAG.clk" />
- <connection kind="clock" version="17.0" start="clk_0.clk" end="SRAM.clk" />
- <connection kind="clock" version="17.0" start="clk_0.clk" end="Timer.clk" />
+ <connection kind="clock" version="18.0" start="clk_0.clk" end="System_ID.clk" />
+ <connection kind="clock" version="18.0" start="clk_0.clk" end="JTAG.clk" />
+ <connection kind="clock" version="18.0" start="clk_0.clk" end="SRAM.clk" />
+ <connection kind="clock" version="18.0" start="clk_0.clk" end="Timer.clk" />
  <connection
    kind="clock"
-   version="17.0"
+   version="18.0"
    start="clk_0.clk"
    end="Character_Buffer.clk" />
- <connection kind="clock" version="17.0" start="clk_0.clk" end="Pixel_Buffer.clk" />
- <connection kind="clock" version="17.0" start="clk_0.clk" end="RGB_Resampler.clk" />
- <connection kind="clock" version="17.0" start="clk_0.clk" end="Alpha_Blender.clk" />
+ <connection kind="clock" version="18.0" start="clk_0.clk" end="Pixel_Buffer.clk" />
+ <connection kind="clock" version="18.0" start="clk_0.clk" end="RGB_Resampler.clk" />
+ <connection kind="clock" version="18.0" start="clk_0.clk" end="Alpha_Blender.clk" />
  <connection
    kind="clock"
-   version="17.0"
+   version="18.0"
    start="clk_0.clk"
    end="Channel1_Analog.clk" />
  <connection
    kind="clock"
-   version="17.0"
+   version="18.0"
    start="clk_0.clk"
    end="Channel2_Analog.clk" />
  <connection
    kind="clock"
-   version="17.0"
+   version="18.0"
    start="clk_0.clk"
    end="Channel3_Analog.clk" />
  <connection
    kind="clock"
-   version="17.0"
+   version="18.0"
    start="clk_0.clk"
    end="Channel4_Analog.clk" />
  <connection
    kind="clock"
-   version="17.0"
+   version="18.0"
    start="clk_0.clk"
    end="Channel5_Analog.clk" />
  <connection
    kind="clock"
-   version="17.0"
+   version="18.0"
    start="clk_0.clk"
    end="Channel6_Analog.clk" />
  <connection
    kind="clock"
-   version="17.0"
+   version="18.0"
    start="clk_0.clk"
    end="Writing_Finish_Flag.clk" />
  <connection
    kind="clock"
-   version="17.0"
+   version="18.0"
    start="clk_0.clk"
    end="Read_New_Sample.clk" />
- <connection kind="clock" version="17.0" start="clk_0.clk" end="NiosII.clk" />
- <connection kind="clock" version="17.0" start="clk_0.clk" end="Read_Address.clk" />
+ <connection kind="clock" version="18.0" start="clk_0.clk" end="NiosII.clk" />
+ <connection kind="clock" version="18.0" start="clk_0.clk" end="Read_Address.clk" />
  <connection
    kind="clock"
-   version="17.0"
+   version="18.0"
    start="clk_0.clk"
    end="OnChip_Memory.clk1" />
  <connection
    kind="clock"
-   version="17.0"
+   version="18.0"
    start="clk_0.clk"
    end="FIFO.clock_stream_in" />
- <connection kind="clock" version="17.0" start="clk_0.clk" end="VGA_PLL.ref_clk" />
+ <connection kind="clock" version="18.0" start="clk_0.clk" end="VGA_PLL.ref_clk" />
  <connection
    kind="clock"
-   version="17.0"
+   version="18.0"
    start="VGA_PLL.vga_clk"
    end="VGA_Controller.clk" />
  <connection
    kind="clock"
-   version="17.0"
+   version="18.0"
    start="VGA_PLL.vga_clk"
    end="FIFO.clock_stream_out" />
- <connection kind="interrupt" version="17.0" start="NiosII.irq" end="JTAG.irq">
+ <connection kind="interrupt" version="18.0" start="NiosII.irq" end="JTAG.irq">
   <parameter name="irqNumber" value="0" />
  </connection>
- <connection kind="interrupt" version="17.0" start="NiosII.irq" end="Timer.irq">
+ <connection kind="interrupt" version="18.0" start="NiosII.irq" end="Timer.irq">
   <parameter name="irqNumber" value="1" />
  </connection>
  <connection
    kind="reset"
-   version="17.0"
+   version="18.0"
    start="clk_0.clk_reset"
    end="VGA_PLL.ref_reset" />
  <connection
    kind="reset"
-   version="17.0"
+   version="18.0"
    start="clk_0.clk_reset"
    end="NiosII.reset" />
  <connection
    kind="reset"
-   version="17.0"
+   version="18.0"
    start="clk_0.clk_reset"
    end="System_ID.reset" />
- <connection kind="reset" version="17.0" start="clk_0.clk_reset" end="JTAG.reset" />
- <connection kind="reset" version="17.0" start="clk_0.clk_reset" end="SRAM.reset" />
- <connection kind="reset" version="17.0" start="clk_0.clk_reset" end="Timer.reset" />
+ <connection kind="reset" version="18.0" start="clk_0.clk_reset" end="JTAG.reset" />
+ <connection kind="reset" version="18.0" start="clk_0.clk_reset" end="SRAM.reset" />
+ <connection kind="reset" version="18.0" start="clk_0.clk_reset" end="Timer.reset" />
  <connection
    kind="reset"
-   version="17.0"
+   version="18.0"
    start="clk_0.clk_reset"
    end="Character_Buffer.reset" />
  <connection
    kind="reset"
-   version="17.0"
+   version="18.0"
    start="clk_0.clk_reset"
    end="Pixel_Buffer.reset" />
  <connection
    kind="reset"
-   version="17.0"
+   version="18.0"
    start="clk_0.clk_reset"
    end="RGB_Resampler.reset" />
  <connection
    kind="reset"
-   version="17.0"
+   version="18.0"
    start="clk_0.clk_reset"
    end="Alpha_Blender.reset" />
  <connection
    kind="reset"
-   version="17.0"
+   version="18.0"
    start="clk_0.clk_reset"
    end="VGA_Controller.reset" />
  <connection
    kind="reset"
-   version="17.0"
+   version="18.0"
    start="clk_0.clk_reset"
    end="Channel1_Analog.reset" />
  <connection
    kind="reset"
-   version="17.0"
+   version="18.0"
    start="clk_0.clk_reset"
    end="Channel2_Analog.reset" />
  <connection
    kind="reset"
-   version="17.0"
+   version="18.0"
    start="clk_0.clk_reset"
    end="Channel3_Analog.reset" />
  <connection
    kind="reset"
-   version="17.0"
+   version="18.0"
    start="clk_0.clk_reset"
    end="Channel4_Analog.reset" />
  <connection
    kind="reset"
-   version="17.0"
+   version="18.0"
    start="clk_0.clk_reset"
    end="Channel5_Analog.reset" />
  <connection
    kind="reset"
-   version="17.0"
+   version="18.0"
    start="clk_0.clk_reset"
    end="Channel6_Analog.reset" />
  <connection
    kind="reset"
-   version="17.0"
+   version="18.0"
    start="clk_0.clk_reset"
    end="Writing_Finish_Flag.reset" />
  <connection
    kind="reset"
-   version="17.0"
+   version="18.0"
    start="clk_0.clk_reset"
    end="Read_New_Sample.reset" />
  <connection
    kind="reset"
-   version="17.0"
+   version="18.0"
    start="clk_0.clk_reset"
    end="Read_Address.reset" />
  <connection
    kind="reset"
-   version="17.0"
+   version="18.0"
    start="clk_0.clk_reset"
    end="OnChip_Memory.reset1" />
  <connection
    kind="reset"
-   version="17.0"
+   version="18.0"
    start="clk_0.clk_reset"
    end="FIFO.reset_stream_in" />
  <connection
    kind="reset"
-   version="17.0"
+   version="18.0"
    start="clk_0.clk_reset"
    end="FIFO.reset_stream_out" />
  <connection
    kind="reset"
-   version="17.0"
+   version="18.0"
    start="NiosII.debug_reset_request"
    end="VGA_PLL.ref_reset" />
  <connection
    kind="reset"
-   version="17.0"
+   version="18.0"
    start="NiosII.debug_reset_request"
    end="NiosII.reset" />
  <connection
    kind="reset"
-   version="17.0"
+   version="18.0"
    start="NiosII.debug_reset_request"
    end="System_ID.reset" />
  <connection
    kind="reset"
-   version="17.0"
+   version="18.0"
    start="NiosII.debug_reset_request"
    end="JTAG.reset" />
  <connection
    kind="reset"
-   version="17.0"
+   version="18.0"
    start="NiosII.debug_reset_request"
    end="SRAM.reset" />
  <connection
    kind="reset"
-   version="17.0"
+   version="18.0"
    start="NiosII.debug_reset_request"
    end="Timer.reset" />
  <connection
    kind="reset"
-   version="17.0"
+   version="18.0"
    start="NiosII.debug_reset_request"
    end="Character_Buffer.reset" />
  <connection
    kind="reset"
-   version="17.0"
+   version="18.0"
    start="NiosII.debug_reset_request"
    end="Pixel_Buffer.reset" />
  <connection
    kind="reset"
-   version="17.0"
+   version="18.0"
    start="NiosII.debug_reset_request"
    end="RGB_Resampler.reset" />
  <connection
    kind="reset"
-   version="17.0"
+   version="18.0"
    start="NiosII.debug_reset_request"
    end="Alpha_Blender.reset" />
  <connection
    kind="reset"
-   version="17.0"
+   version="18.0"
    start="NiosII.debug_reset_request"
    end="VGA_Controller.reset" />
  <connection
    kind="reset"
-   version="17.0"
+   version="18.0"
    start="NiosII.debug_reset_request"
    end="Channel1_Analog.reset" />
  <connection
    kind="reset"
-   version="17.0"
+   version="18.0"
    start="NiosII.debug_reset_request"
    end="Channel2_Analog.reset" />
  <connection
    kind="reset"
-   version="17.0"
+   version="18.0"
    start="NiosII.debug_reset_request"
    end="Channel3_Analog.reset" />
  <connection
    kind="reset"
-   version="17.0"
+   version="18.0"
    start="NiosII.debug_reset_request"
    end="Channel4_Analog.reset" />
  <connection
    kind="reset"
-   version="17.0"
+   version="18.0"
    start="NiosII.debug_reset_request"
    end="Channel5_Analog.reset" />
  <connection
    kind="reset"
-   version="17.0"
+   version="18.0"
    start="NiosII.debug_reset_request"
    end="Channel6_Analog.reset" />
  <connection
    kind="reset"
-   version="17.0"
+   version="18.0"
    start="NiosII.debug_reset_request"
    end="Writing_Finish_Flag.reset" />
  <connection
    kind="reset"
-   version="17.0"
+   version="18.0"
    start="NiosII.debug_reset_request"
    end="Read_New_Sample.reset" />
  <connection
    kind="reset"
-   version="17.0"
+   version="18.0"
    start="NiosII.debug_reset_request"
    end="Read_Address.reset" />
  <connection
    kind="reset"
-   version="17.0"
+   version="18.0"
    start="NiosII.debug_reset_request"
    end="OnChip_Memory.reset1" />
  <connection
    kind="reset"
-   version="17.0"
+   version="18.0"
    start="NiosII.debug_reset_request"
    end="FIFO.reset_stream_in" />
  <connection
    kind="reset"
-   version="17.0"
+   version="18.0"
    start="NiosII.debug_reset_request"
    end="FIFO.reset_stream_out" />
  <connection
    kind="reset"
-   version="17.0"
+   version="18.0"
    start="VGA_PLL.reset_source"
    end="VGA_PLL.ref_reset" />
  <connection
    kind="reset"
-   version="17.0"
+   version="18.0"
    start="VGA_PLL.reset_source"
    end="NiosII.reset" />
  <connection
    kind="reset"
-   version="17.0"
+   version="18.0"
    start="VGA_PLL.reset_source"
    end="System_ID.reset" />
  <connection
    kind="reset"
-   version="17.0"
+   version="18.0"
    start="VGA_PLL.reset_source"
    end="JTAG.reset" />
  <connection
    kind="reset"
-   version="17.0"
+   version="18.0"
    start="VGA_PLL.reset_source"
    end="SRAM.reset" />
  <connection
    kind="reset"
-   version="17.0"
+   version="18.0"
    start="VGA_PLL.reset_source"
    end="Timer.reset" />
  <connection
    kind="reset"
-   version="17.0"
+   version="18.0"
    start="VGA_PLL.reset_source"
    end="Character_Buffer.reset" />
  <connection
    kind="reset"
-   version="17.0"
+   version="18.0"
    start="VGA_PLL.reset_source"
    end="Pixel_Buffer.reset" />
  <connection
    kind="reset"
-   version="17.0"
+   version="18.0"
    start="VGA_PLL.reset_source"
    end="RGB_Resampler.reset" />
  <connection
    kind="reset"
-   version="17.0"
+   version="18.0"
    start="VGA_PLL.reset_source"
    end="Alpha_Blender.reset" />
  <connection
    kind="reset"
-   version="17.0"
+   version="18.0"
    start="VGA_PLL.reset_source"
    end="VGA_Controller.reset" />
  <connection
    kind="reset"
-   version="17.0"
+   version="18.0"
    start="VGA_PLL.reset_source"
    end="Channel1_Analog.reset" />
  <connection
    kind="reset"
-   version="17.0"
+   version="18.0"
    start="VGA_PLL.reset_source"
    end="Channel2_Analog.reset" />
  <connection
    kind="reset"
-   version="17.0"
+   version="18.0"
    start="VGA_PLL.reset_source"
    end="Channel3_Analog.reset" />
  <connection
    kind="reset"
-   version="17.0"
+   version="18.0"
    start="VGA_PLL.reset_source"
    end="Channel4_Analog.reset" />
  <connection
    kind="reset"
-   version="17.0"
+   version="18.0"
    start="VGA_PLL.reset_source"
    end="Channel5_Analog.reset" />
  <connection
    kind="reset"
-   version="17.0"
+   version="18.0"
    start="VGA_PLL.reset_source"
    end="Channel6_Analog.reset" />
  <connection
    kind="reset"
-   version="17.0"
+   version="18.0"
    start="VGA_PLL.reset_source"
    end="Writing_Finish_Flag.reset" />
  <connection
    kind="reset"
-   version="17.0"
+   version="18.0"
    start="VGA_PLL.reset_source"
    end="Read_New_Sample.reset" />
  <connection
    kind="reset"
-   version="17.0"
+   version="18.0"
    start="VGA_PLL.reset_source"
    end="Read_Address.reset" />
  <connection
    kind="reset"
-   version="17.0"
+   version="18.0"
    start="VGA_PLL.reset_source"
    end="OnChip_Memory.reset1" />
  <connection
    kind="reset"
-   version="17.0"
+   version="18.0"
    start="VGA_PLL.reset_source"
    end="FIFO.reset_stream_in" />
  <connection
    kind="reset"
-   version="17.0"
+   version="18.0"
    start="VGA_PLL.reset_source"
    end="FIFO.reset_stream_out" />
  <interconnectRequirement for="$system" name="qsys_mm.clockCrossingAdapter" value="HANDSHAKE" />
