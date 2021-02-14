@@ -145,9 +145,9 @@ HEX3[2]                      : AB20      : output : 2.5 V             :         
 Phase_B                      : AB21      : output : 2.5 V             :         : 4         : Y              
 Phase_A                      : AB22      : output : 2.5 V             :         : 4         : Y              
 SW12                         : AB23      : input  : 2.5 V             :         : 5         : Y              
-RESERVED_INPUT_WITH_WEAK_PULLUP : AB24      :        :                   :         : 5         :                
-SW9                          : AB25      : input  : 2.5 V             :         : 5         : Y              
-SW7                          : AB26      : input  : 2.5 V             :         : 5         : Y              
+SW10                         : AB24      : input  : 2.5 V             :         : 5         : Y              
+SW8                          : AB25      : input  : 2.5 V             :         : 5         : Y              
+RESERVED_INPUT_WITH_WEAK_PULLUP : AB26      :        :                   :         : 5         :                
 SW4                          : AB27      : input  : 2.5 V             :         : 5         : Y              
 SW0                          : AB28      : input  : 2.5 V             :         : 5         : Y              
 RESERVED_INPUT_WITH_WEAK_PULLUP : AC1       :        :                   :         : 2         :                
@@ -173,8 +173,8 @@ GND                          : AC20      : gnd    :                   :         
 Phase_C                      : AC21      : output : 2.5 V             :         : 4         : Y              
 RESERVED_INPUT_WITH_WEAK_PULLUP : AC22      :        :                   :         : 4         :                
 GND                          : AC23      : gnd    :                   :         :           :                
-SW10                         : AC24      : input  : 2.5 V             :         : 5         : Y              
-SW8                          : AC25      : input  : 2.5 V             :         : 5         : Y              
+SW9                          : AC24      : input  : 2.5 V             :         : 5         : Y              
+SW7                          : AC25      : input  : 2.5 V             :         : 5         : Y              
 SW5                          : AC26      : input  : 2.5 V             :         : 5         : Y              
 SW2                          : AC27      : input  : 2.5 V             :         : 5         : Y              
 SW1                          : AC28      : input  : 2.5 V             :         : 5         : Y              

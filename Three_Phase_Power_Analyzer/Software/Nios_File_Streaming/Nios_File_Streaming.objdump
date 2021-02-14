@@ -31,53 +31,53 @@ Idx Name          Size      VMA       LMA       File off  Algn
                   ALLOC, SMALL_DATA
   6 .OnChip_Memory 00000000  00234968  00234968  00013c10  2**0
                   CONTENTS
-  7 .comment      00000023  00000000  00000000  00013c10  2**0
+  7 .comment      00000046  00000000  00000000  00013c10  2**0
                   CONTENTS, READONLY
-  8 .debug_aranges 00001028  00000000  00000000  00013c38  2**3
+  8 .debug_aranges 00001028  00000000  00000000  00013c58  2**3
                   CONTENTS, READONLY, DEBUGGING
-  9 .debug_info   00029083  00000000  00000000  00014c60  2**0
+  9 .debug_info   000290c5  00000000  00000000  00014c80  2**0
                   CONTENTS, READONLY, DEBUGGING
- 10 .debug_abbrev 0000a30c  00000000  00000000  0003dce3  2**0
+ 10 .debug_abbrev 0000a30c  00000000  00000000  0003dd45  2**0
                   CONTENTS, READONLY, DEBUGGING
- 11 .debug_line   0000ca13  00000000  00000000  00047fef  2**0
+ 11 .debug_line   0000c98c  00000000  00000000  00048051  2**0
                   CONTENTS, READONLY, DEBUGGING
- 12 .debug_frame  00002464  00000000  00000000  00054a04  2**2
+ 12 .debug_frame  00002464  00000000  00000000  000549e0  2**2
                   CONTENTS, READONLY, DEBUGGING
- 13 .debug_str    00003ddd  00000000  00000000  00056e68  2**0
+ 13 .debug_str    00003e64  00000000  00000000  00056e44  2**0
                   CONTENTS, READONLY, DEBUGGING
- 14 .debug_loc    00018550  00000000  00000000  0005ac45  2**0
+ 14 .debug_loc    00018550  00000000  00000000  0005aca8  2**0
                   CONTENTS, READONLY, DEBUGGING
- 15 .debug_alt_sim_info 00000030  00000000  00000000  00073198  2**2
+ 15 .debug_alt_sim_info 00000030  00000000  00000000  000731f8  2**2
                   CONTENTS, READONLY, DEBUGGING
- 16 .debug_ranges 000019b8  00000000  00000000  000731c8  2**3
+ 16 .debug_ranges 000019b8  00000000  00000000  00073228  2**3
                   CONTENTS, READONLY, DEBUGGING
- 17 .thread_model 00000003  00000000  00000000  00078162  2**0
+ 17 .thread_model 00000003  00000000  00000000  000781c2  2**0
                   CONTENTS, READONLY
- 18 .cpu          00000006  00000000  00000000  00078165  2**0
+ 18 .cpu          00000006  00000000  00000000  000781c5  2**0
                   CONTENTS, READONLY
- 19 .qsys         00000001  00000000  00000000  0007816b  2**0
+ 19 .qsys         00000001  00000000  00000000  000781cb  2**0
                   CONTENTS, READONLY
- 20 .simulation_enabled 00000001  00000000  00000000  0007816c  2**0
+ 20 .simulation_enabled 00000001  00000000  00000000  000781cc  2**0
                   CONTENTS, READONLY
- 21 .sysid_hash   00000004  00000000  00000000  0007816d  2**0
+ 21 .sysid_hash   00000004  00000000  00000000  000781cd  2**0
                   CONTENTS, READONLY
- 22 .sysid_base   00000004  00000000  00000000  00078171  2**0
+ 22 .sysid_base   00000004  00000000  00000000  000781d1  2**0
                   CONTENTS, READONLY
- 23 .sysid_time   00000004  00000000  00000000  00078175  2**0
+ 23 .sysid_time   00000004  00000000  00000000  000781d5  2**0
                   CONTENTS, READONLY
- 24 .stderr_dev   00000004  00000000  00000000  00078179  2**0
+ 24 .stderr_dev   00000004  00000000  00000000  000781d9  2**0
                   CONTENTS, READONLY
- 25 .stdin_dev    00000004  00000000  00000000  0007817d  2**0
+ 25 .stdin_dev    00000004  00000000  00000000  000781dd  2**0
                   CONTENTS, READONLY
- 26 .stdout_dev   00000004  00000000  00000000  00078181  2**0
+ 26 .stdout_dev   00000004  00000000  00000000  000781e1  2**0
                   CONTENTS, READONLY
- 27 .sopc_system_name 00000019  00000000  00000000  00078185  2**0
+ 27 .sopc_system_name 00000019  00000000  00000000  000781e5  2**0
                   CONTENTS, READONLY
- 28 .quartus_project_dir 00000039  00000000  00000000  0007819e  2**0
+ 28 .quartus_project_dir 0000004f  00000000  00000000  000781fe  2**0
                   CONTENTS, READONLY
- 29 .jdi          000051da  00000000  00000000  000781d7  2**0
+ 29 .jdi          00007919  00000000  00000000  0007824d  2**0
                   CONTENTS, READONLY
- 30 .sopcinfo     0009f4f9  00000000  00000000  0007d3b1  2**0
+ 30 .sopcinfo     000a1a61  00000000  00000000  0007fb66  2**0
                   CONTENTS, READONLY
 SYMBOL TABLE:
 00220000 l    d  .entry	00000000 .entry
@@ -540,7 +540,7 @@ Disassembly of section .entry:
   220014:	08409114 	ori	at,at,580
     jmp r1
   220018:	0800683a 	jmp	at
-  22001c:	00000000 	call	0 <__reset-0x220000>
+  22001c:	00000000 	call	0 <__alt_mem_OnChip_Memory-0x220000>
 
 Disassembly of section .exceptions:
 
@@ -10428,7 +10428,7 @@ HERE:	Writing_Finish_Flag = IORD(WRITING_FINISH_FLAG_BASE, 0);
   229054:	002299e8 	cmpgeui	zero,zero,35431
   229058:	002299e8 	cmpgeui	zero,zero,35431
   22905c:	00229924 	muli	zero,zero,-30108
-  229060:	00229940 	call	22994 <__reset-0x1fd66c>
+  229060:	00229940 	call	22994 <__alt_mem_OnChip_Memory-0x1fd66c>
   229064:	002299e8 	cmpgeui	zero,zero,35431
   229068:	00229228 	cmpgeui	zero,zero,35400
   22906c:	00229950 	cmplti	zero,zero,-30107
@@ -10453,7 +10453,7 @@ HERE:	Writing_Finish_Flag = IORD(WRITING_FINISH_FLAG_BASE, 0);
   2290b8:	002299e8 	cmpgeui	zero,zero,35431
   2290bc:	002299e8 	cmpgeui	zero,zero,35431
   2290c0:	002299e8 	cmpgeui	zero,zero,35431
-  2290c4:	00229780 	call	22978 <__reset-0x1fd688>
+  2290c4:	00229780 	call	22978 <__alt_mem_OnChip_Memory-0x1fd688>
   2290c8:	002299e8 	cmpgeui	zero,zero,35431
   2290cc:	002299e8 	cmpgeui	zero,zero,35431
   2290d0:	002299e8 	cmpgeui	zero,zero,35431
@@ -10473,7 +10473,7 @@ HERE:	Writing_Finish_Flag = IORD(WRITING_FINISH_FLAG_BASE, 0);
   229108:	00229810 	cmplti	zero,zero,-30112
   22910c:	002299e8 	cmpgeui	zero,zero,35431
   229110:	002299e8 	cmpgeui	zero,zero,35431
-  229114:	00229880 	call	22988 <__reset-0x1fd678>
+  229114:	00229880 	call	22988 <__alt_mem_OnChip_Memory-0x1fd678>
   229118:	002299e8 	cmpgeui	zero,zero,35431
   22911c:	002299e8 	cmpgeui	zero,zero,35431
   229120:	002299e8 	cmpgeui	zero,zero,35431
@@ -13506,7 +13506,7 @@ HERE:	Writing_Finish_Flag = IORD(WRITING_FINISH_FLAG_BASE, 0);
   22bfcc:	2089883a 	add	r4,r4,r2
   22bfd0:	20800017 	ldw	r2,0(r4)
   22bfd4:	1000683a 	jmp	r2
-  22bfd8:	0022c200 	call	22c20 <__reset-0x1fd3e0>
+  22bfd8:	0022c200 	call	22c20 <__alt_mem_OnChip_Memory-0x1fd3e0>
   22bfdc:	0022c050 	cmplti	zero,zero,-29951
   22bfe0:	0022c1f0 	cmpltui	zero,zero,35591
   22bfe4:	0022c044 	movi	zero,-29951
@@ -14238,13 +14238,13 @@ HERE:	Writing_Finish_Flag = IORD(WRITING_FINISH_FLAG_BASE, 0);
   22cb1c:	0022cb78 	rdprs	zero,zero,-29907
   22cb20:	0022cb78 	rdprs	zero,zero,-29907
   22cb24:	0022cb74 	movhi	zero,35629
-  22cb28:	0022cd40 	call	22cd4 <__reset-0x1fd32c>
-  22cb2c:	0022cd40 	call	22cd4 <__reset-0x1fd32c>
+  22cb28:	0022cd40 	call	22cd4 <__alt_mem_OnChip_Memory-0x1fd32c>
+  22cb2c:	0022cd40 	call	22cd4 <__alt_mem_OnChip_Memory-0x1fd32c>
   22cb30:	0022cd28 	cmpgeui	zero,zero,35636
   22cb34:	0022cb74 	movhi	zero,35629
-  22cb38:	0022cd40 	call	22cd4 <__reset-0x1fd32c>
+  22cb38:	0022cd40 	call	22cd4 <__alt_mem_OnChip_Memory-0x1fd32c>
   22cb3c:	0022cd28 	cmpgeui	zero,zero,35636
-  22cb40:	0022cd40 	call	22cd4 <__reset-0x1fd32c>
+  22cb40:	0022cd40 	call	22cd4 <__alt_mem_OnChip_Memory-0x1fd32c>
   22cb44:	0022cb74 	movhi	zero,35629
   22cb48:	0022cd50 	cmplti	zero,zero,-29899
   22cb4c:	0022cd50 	cmplti	zero,zero,-29899
@@ -15505,24 +15505,16 @@ static int alt_dev_null_write (alt_fd* fd, const char* ptr, int len)
   22ddd4:	f800283a 	ret
 
 0022ddd8 <alt_get_errno>:
-#undef errno
-
-extern int errno;
-
-static ALT_INLINE int* alt_get_errno(void)
-{
   22ddd8:	defffe04 	addi	sp,sp,-8
   22dddc:	dfc00115 	stw	ra,4(sp)
   22dde0:	df000015 	stw	fp,0(sp)
   22dde4:	d839883a 	mov	fp,sp
-  return ((alt_errno) ? alt_errno() : &errno);
   22dde8:	d0a00b17 	ldw	r2,-32724(gp)
   22ddec:	10000326 	beq	r2,zero,22ddfc <alt_get_errno+0x24>
   22ddf0:	d0a00b17 	ldw	r2,-32724(gp)
   22ddf4:	103ee83a 	callr	r2
   22ddf8:	00000106 	br	22de00 <alt_get_errno+0x28>
   22ddfc:	d0a72004 	addi	r2,gp,-25472
-}
   22de00:	e037883a 	mov	sp,fp
   22de04:	dfc00117 	ldw	ra,4(sp)
   22de08:	df000017 	ldw	fp,0(sp)
@@ -15530,75 +15522,42 @@ static ALT_INLINE int* alt_get_errno(void)
   22de10:	f800283a 	ret
 
 0022de14 <alt_dev_llist_insert>:
-/*
- *
- */
-
-int alt_dev_llist_insert (alt_dev_llist* dev, alt_llist* list)
-{
   22de14:	defffa04 	addi	sp,sp,-24
   22de18:	dfc00515 	stw	ra,20(sp)
   22de1c:	df000415 	stw	fp,16(sp)
   22de20:	df000404 	addi	fp,sp,16
   22de24:	e13ffe15 	stw	r4,-8(fp)
   22de28:	e17fff15 	stw	r5,-4(fp)
-  /*
-   * check that the device exists, and that it has a valid name.
-   */
-
-  if (!dev || !dev->name)
   22de2c:	e0bffe17 	ldw	r2,-8(fp)
   22de30:	10000326 	beq	r2,zero,22de40 <alt_dev_llist_insert+0x2c>
   22de34:	e0bffe17 	ldw	r2,-8(fp)
   22de38:	10800217 	ldw	r2,8(r2)
   22de3c:	1000061e 	bne	r2,zero,22de58 <alt_dev_llist_insert+0x44>
-  {
-    ALT_ERRNO = EINVAL;
   22de40:	022ddd80 	call	22ddd8 <alt_get_errno>
   22de44:	1007883a 	mov	r3,r2
   22de48:	00800584 	movi	r2,22
   22de4c:	18800015 	stw	r2,0(r3)
-    return -EINVAL;
   22de50:	00bffa84 	movi	r2,-22
   22de54:	00001306 	br	22dea4 <alt_dev_llist_insert+0x90>
-  
-  /*
-   * register the device.
-   */
-  
-  alt_llist_insert(list, &dev->llist);
   22de58:	e0bffe17 	ldw	r2,-8(fp)
   22de5c:	e0ffff17 	ldw	r3,-4(fp)
   22de60:	e0fffc15 	stw	r3,-16(fp)
   22de64:	e0bffd15 	stw	r2,-12(fp)
- */
-
-static ALT_INLINE void ALT_ALWAYS_INLINE alt_llist_insert(alt_llist* list, 
-                alt_llist* entry)
-{
-  entry->previous = list;
   22de68:	e0bffd17 	ldw	r2,-12(fp)
   22de6c:	e0fffc17 	ldw	r3,-16(fp)
   22de70:	10c00115 	stw	r3,4(r2)
-  entry->next     = list->next;
   22de74:	e0bffc17 	ldw	r2,-16(fp)
   22de78:	10c00017 	ldw	r3,0(r2)
   22de7c:	e0bffd17 	ldw	r2,-12(fp)
   22de80:	10c00015 	stw	r3,0(r2)
-
-  list->next->previous = entry;
   22de84:	e0bffc17 	ldw	r2,-16(fp)
   22de88:	10800017 	ldw	r2,0(r2)
   22de8c:	e0fffd17 	ldw	r3,-12(fp)
   22de90:	10c00115 	stw	r3,4(r2)
-  list->next           = entry;
   22de94:	e0bffc17 	ldw	r2,-16(fp)
   22de98:	e0fffd17 	ldw	r3,-12(fp)
   22de9c:	10c00015 	stw	r3,0(r2)
-
-  return 0;  
   22dea0:	0005883a 	mov	r2,zero
-}
   22dea4:	e037883a 	mov	sp,fp
   22dea8:	dfc00117 	ldw	ra,4(sp)
   22deac:	df000017 	ldw	fp,0(sp)
@@ -15883,27 +15842,16 @@ int ALT_ISATTY (int file)
   22e100:	f800283a 	ret
 
 0022e104 <alt_load_section>:
- */
-
-static void ALT_INLINE alt_load_section (alt_u32* from, 
-                                         alt_u32* to, 
-                                         alt_u32* end)
-{
   22e104:	defffc04 	addi	sp,sp,-16
   22e108:	df000315 	stw	fp,12(sp)
   22e10c:	df000304 	addi	fp,sp,12
   22e110:	e13ffd15 	stw	r4,-12(fp)
   22e114:	e17ffe15 	stw	r5,-8(fp)
   22e118:	e1bfff15 	stw	r6,-4(fp)
-  if (to != from)
   22e11c:	e0fffe17 	ldw	r3,-8(fp)
   22e120:	e0bffd17 	ldw	r2,-12(fp)
   22e124:	18800c26 	beq	r3,r2,22e158 <alt_load_section+0x54>
-  {
-    while( to != end )
   22e128:	00000806 	br	22e14c <alt_load_section+0x48>
-    {
-      *to++ = *from++;
   22e12c:	e0bffe17 	ldw	r2,-8(fp)
   22e130:	10c00104 	addi	r3,r2,4
   22e134:	e0fffe15 	stw	r3,-8(fp)
@@ -15912,20 +15860,9 @@ static void ALT_INLINE alt_load_section (alt_u32* from,
   22e140:	e13ffd15 	stw	r4,-12(fp)
   22e144:	18c00017 	ldw	r3,0(r3)
   22e148:	10c00015 	stw	r3,0(r2)
-                                         alt_u32* to, 
-                                         alt_u32* end)
-{
-  if (to != from)
-  {
-    while( to != end )
   22e14c:	e0fffe17 	ldw	r3,-8(fp)
   22e150:	e0bfff17 	ldw	r2,-4(fp)
   22e154:	18bff51e 	bne	r3,r2,22e12c <_gp+0xffff35a4>
-    {
-      *to++ = *from++;
-    }
-  }
-}
   22e158:	0001883a 	nop
   22e15c:	e037883a 	mov	sp,fp
   22e160:	df000017 	ldw	fp,0(sp)
@@ -15933,21 +15870,10 @@ static void ALT_INLINE alt_load_section (alt_u32* from,
   22e168:	f800283a 	ret
 
 0022e16c <alt_load>:
- * there is no bootloader, so this application is responsible for loading to
- * RAM any sections that are required.
- */  
-
-void alt_load (void)
-{
   22e16c:	defffe04 	addi	sp,sp,-8
   22e170:	dfc00115 	stw	ra,4(sp)
   22e174:	df000015 	stw	fp,0(sp)
   22e178:	d839883a 	mov	fp,sp
-  /* 
-   * Copy the .rwdata section. 
-   */
-
-  alt_load_section (&__flash_rwdata_start, 
   22e17c:	018008f4 	movhi	r6,35
   22e180:	318b0404 	addi	r6,r6,11280
   22e184:	014008f4 	movhi	r5,35
@@ -15955,12 +15881,6 @@ void alt_load (void)
   22e18c:	010008f4 	movhi	r4,35
   22e190:	210b0404 	addi	r4,r4,11280
   22e194:	022e1040 	call	22e104 <alt_load_section>
-
-  /*
-   * Copy the exception handler.
-   */
-
-  alt_load_section (&__flash_exceptions_start, 
   22e198:	018008b4 	movhi	r6,34
   22e19c:	31809104 	addi	r6,r6,580
   22e1a0:	014008b4 	movhi	r5,34
@@ -15968,12 +15888,6 @@ void alt_load (void)
   22e1a8:	010008b4 	movhi	r4,34
   22e1ac:	21000804 	addi	r4,r4,32
   22e1b0:	022e1040 	call	22e104 <alt_load_section>
-
-  /*
-   * Copy the .rodata section.
-   */
-
-  alt_load_section (&__flash_rodata_start, 
   22e1b4:	018008f4 	movhi	r6,35
   22e1b8:	31840604 	addi	r6,r6,4120
   22e1bc:	014008f4 	movhi	r5,35
@@ -15981,16 +15895,8 @@ void alt_load (void)
   22e1c4:	010008f4 	movhi	r4,35
   22e1c8:	2102d904 	addi	r4,r4,2916
   22e1cc:	022e1040 	call	22e104 <alt_load_section>
-  
-  /*
-   * Now ensure that the caches are in synch.
-   */
-  
-  alt_dcache_flush_all();
   22e1d0:	022fda80 	call	22fda8 <alt_dcache_flush_all>
-  alt_icache_flush_all();
   22e1d4:	02300ec0 	call	2300ec <alt_icache_flush_all>
-}
   22e1d8:	0001883a 	nop
   22e1dc:	e037883a 	mov	sp,fp
   22e1e0:	dfc00117 	ldw	ra,4(sp)
@@ -16205,17 +16111,10 @@ void alt_main (void)
   22e378:	02307e40 	call	2307e4 <exit>
 
 0022e37c <__malloc_lock>:
- * configuration is single threaded, so there is nothing to do here. Note that 
- * this requires that malloc is never called by an interrupt service routine.
- */
-
-void __malloc_lock ( struct _reent *_r )
-{
   22e37c:	defffe04 	addi	sp,sp,-8
   22e380:	df000115 	stw	fp,4(sp)
   22e384:	df000104 	addi	fp,sp,4
   22e388:	e13fff15 	stw	r4,-4(fp)
-}
   22e38c:	0001883a 	nop
   22e390:	e037883a 	mov	sp,fp
   22e394:	df000017 	ldw	fp,0(sp)
@@ -16223,17 +16122,10 @@ void __malloc_lock ( struct _reent *_r )
   22e39c:	f800283a 	ret
 
 0022e3a0 <__malloc_unlock>:
-/*
- *
- */
-
-void __malloc_unlock ( struct _reent *_r )
-{
   22e3a0:	defffe04 	addi	sp,sp,-8
   22e3a4:	df000115 	stw	fp,4(sp)
   22e3a8:	df000104 	addi	fp,sp,4
   22e3ac:	e13fff15 	stw	r4,-4(fp)
-}
   22e3b0:	0001883a 	nop
   22e3b4:	e037883a 	mov	sp,fp
   22e3b8:	df000017 	ldw	fp,0(sp)
@@ -19382,33 +19274,17 @@ void alt_dcache_flush_all (void)
   22fdec:	f800283a 	ret
 
 0022fdf0 <_do_ctors>:
-/*
- * Run the C++ static constructors.
- */
-
-void _do_ctors(void)
-{
   22fdf0:	defffd04 	addi	sp,sp,-12
   22fdf4:	dfc00215 	stw	ra,8(sp)
   22fdf8:	df000115 	stw	fp,4(sp)
   22fdfc:	df000104 	addi	fp,sp,4
-  constructor* ctor;
-
-  for (ctor = &__CTOR_END__[-1]; ctor >= __CTOR_LIST__; ctor--)
   22fe00:	008008f4 	movhi	r2,35
   22fe04:	1082d804 	addi	r2,r2,2912
   22fe08:	e0bfff15 	stw	r2,-4(fp)
   22fe0c:	00000606 	br	22fe28 <_do_ctors+0x38>
-        (*ctor) (); 
   22fe10:	e0bfff17 	ldw	r2,-4(fp)
   22fe14:	10800017 	ldw	r2,0(r2)
   22fe18:	103ee83a 	callr	r2
-
-void _do_ctors(void)
-{
-  constructor* ctor;
-
-  for (ctor = &__CTOR_END__[-1]; ctor >= __CTOR_LIST__; ctor--)
   22fe1c:	e0bfff17 	ldw	r2,-4(fp)
   22fe20:	10bfff04 	addi	r2,r2,-4
   22fe24:	e0bfff15 	stw	r2,-4(fp)
@@ -19416,8 +19292,6 @@ void _do_ctors(void)
   22fe2c:	008008f4 	movhi	r2,35
   22fe30:	1082d904 	addi	r2,r2,2916
   22fe34:	18bff62e 	bgeu	r3,r2,22fe10 <_gp+0xffff5288>
-        (*ctor) (); 
-}
   22fe38:	0001883a 	nop
   22fe3c:	e037883a 	mov	sp,fp
   22fe40:	dfc00117 	ldw	ra,4(sp)
@@ -19426,33 +19300,17 @@ void _do_ctors(void)
   22fe4c:	f800283a 	ret
 
 0022fe50 <_do_dtors>:
-/*
- * Run the C++ static destructors.
- */
-
-void _do_dtors(void)
-{
   22fe50:	defffd04 	addi	sp,sp,-12
   22fe54:	dfc00215 	stw	ra,8(sp)
   22fe58:	df000115 	stw	fp,4(sp)
   22fe5c:	df000104 	addi	fp,sp,4
-  destructor* dtor;
-
-  for (dtor = &__DTOR_END__[-1]; dtor >= __DTOR_LIST__; dtor--)
   22fe60:	008008f4 	movhi	r2,35
   22fe64:	1082d804 	addi	r2,r2,2912
   22fe68:	e0bfff15 	stw	r2,-4(fp)
   22fe6c:	00000606 	br	22fe88 <_do_dtors+0x38>
-        (*dtor) (); 
   22fe70:	e0bfff17 	ldw	r2,-4(fp)
   22fe74:	10800017 	ldw	r2,0(r2)
   22fe78:	103ee83a 	callr	r2
-
-void _do_dtors(void)
-{
-  destructor* dtor;
-
-  for (dtor = &__DTOR_END__[-1]; dtor >= __DTOR_LIST__; dtor--)
   22fe7c:	e0bfff17 	ldw	r2,-4(fp)
   22fe80:	10bfff04 	addi	r2,r2,-4
   22fe84:	e0bfff15 	stw	r2,-4(fp)
@@ -19460,8 +19318,6 @@ void _do_dtors(void)
   22fe8c:	008008f4 	movhi	r2,35
   22fe90:	1082d904 	addi	r2,r2,2916
   22fe94:	18bff62e 	bgeu	r3,r2,22fe70 <_gp+0xffff52e8>
-        (*dtor) (); 
-}
   22fe98:	0001883a 	nop
   22fe9c:	e037883a 	mov	sp,fp
   22fea0:	dfc00117 	ldw	ra,4(sp)
@@ -20657,7 +20513,7 @@ alt_exception_cause_generated_bad_addr(alt_exception_cause cause)
   230914:	d9400015 	stw	r5,0(sp)
   230918:	d9800115 	stw	r6,4(sp)
   23091c:	d9c00215 	stw	r7,8(sp)
-  230920:	00000000 	call	0 <__reset-0x220000>
+  230920:	00000000 	call	0 <__alt_mem_OnChip_Memory-0x220000>
   230924:	d9400017 	ldw	r5,0(sp)
   230928:	d9800117 	ldw	r6,4(sp)
   23092c:	d9c00217 	ldw	r7,8(sp)
@@ -20741,7 +20597,7 @@ alt_exception_cause_generated_bad_addr(alt_exception_cause cause)
   230a5c:	10003226 	beq	r2,zero,230b28 <__call_exitprocs+0x178>
   230a60:	a009883a 	mov	r4,r20
   230a64:	98800015 	stw	r2,0(r19)
-  230a68:	00000000 	call	0 <__reset-0x220000>
+  230a68:	00000000 	call	0 <__alt_mem_OnChip_Memory-0x220000>
   230a6c:	9d000017 	ldw	r20,0(r19)
   230a70:	a03fe41e 	bne	r20,zero,230a04 <_gp+0xffff5e7c>
   230a74:	dfc00a17 	ldw	ra,40(sp)

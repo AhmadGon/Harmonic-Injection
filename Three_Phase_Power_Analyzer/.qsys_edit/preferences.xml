@@ -5,10 +5,11 @@
   <columns>
    <connections preferredWidth="271" />
    <irq preferredWidth="34" />
+   <inputclock preferredWidth="134" />
   </columns>
  </systemtable>
- <library
-   expandedCategories="Project,Library/University Program/Bridges,Library,Library/University Program/Audio &amp; Video/Video,Library/University Program/Audio &amp; Video,Library/University Program" />
+ <library expandedCategories="Library,Project" />
  <window width="1920" height="1040" x="0" y="0" />
  <hdlexample language="VHDL" />
+ <generation path="NiosII_Controlled_Section" />
 </preferences>

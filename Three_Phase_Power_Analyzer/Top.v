@@ -87,12 +87,65 @@ wire [7:0] PhaseB_Current_Nios_Out, PhaseB_Current_GUI_Out;
 //Phase C current (Nios & GUI)
 wire [7:0] PhaseC_Current_Nios_Out, PhaseC_Current_GUI_Out;
 
+wire DeSW0, DeSW1, DeSW2, DeSW3, DeSW4, DeSW5, DeSW6, DeSW7, DeSW8, DeSW9, DeSW10, DeSW12, DeSW13, DeSW14, DeSW15, DeSW16;
+wire DePush_0, DePush_1, DePush_2, DePush_3;
+wire DeReset;
+
 assign Red = myRed;
 assign Green = myGreen;
 assign Blue = myBlue;
 
+Debouncer Debouncer_inst(
+	.clk(clk),
+	//input switches
+	.SW0(SW0),
+	.SW1(SW1),
+	.SW2(SW2),
+	.SW3(SW3),
+	.SW4(SW4),
+	.SW5(SW5),
+	.SW6(SW6),
+	.SW7(SW7),
+	.SW8(SW8),
+	.SW9(SW9),
+	.SW10(SW10),
+	.SW12(SW12),
+	.SW13(SW13),
+	.SW14(SW14),
+	.SW15(SW15),
+	.SW16(SW16),
+	.reset(reset),
+	//input push buttons
+	.Push_0(Push_0),
+	.Push_1(Push_1),
+	.Push_2(Push_2),
+	.Push_3(Push_3),
+	//output debounced switches
+	.DeSW0(DeSW0),
+	.DeSW1(DeSW1),
+	.DeSW2(DeSW2),
+	.DeSW3(DeSW3),
+	.DeSW4(DeSW4),
+	.DeSW5(DeSW5),
+	.DeSW6(DeSW6),
+	.DeSW7(DeSW7),
+	.DeSW8(DeSW8),
+	.DeSW9(DeSW9),
+	.DeSW10(DeSW10),
+	.DeSW12(DeSW12),
+	.DeSW13(DeSW13),
+	.DeSW14(DeSW14),
+	.DeSW15(DeSW15),
+	.DeSW16(DeSW16),
+	.DeReset(DeReset),
+	//output debounced push buttons
+	.DePush_0(DePush_0),
+	.DePush_1(DePush_1),
+	.DePush_2(DePush_2),
+	.DePush_3(DePush_3)
+);
 
-	NiosII_Controlled_Section u0 (
+NiosII_Controlled_SectionBAK u0 (
 		.channel1_analog_export     (PhaseA_Voltage_Nios_Out), //     channel1_analog.export
 		.channel2_analog_export     (PhaseB_Voltage_Nios_Out), //     channel2_analog.export
 		.channel3_analog_export     (PhaseC_Voltage_Nios_Out), //     channel3_analog.export
@@ -100,10 +153,10 @@ assign Blue = myBlue;
 		.channel5_analog_export     (PhaseB_Current_Nios_Out), //     channel5_analog.export
 		.channel6_analog_export     (PhaseC_Current_Nios_Out), //     channel6_analog.export
 		.clk_clk                    (clk),                     //                 clk.clk
-		.read_new_sample_export     (SW5),     					 //     read_new_sample.export
+		.read_new_sample_export     (DeSW5),     					 //     read_new_sample.export
 		.writing_finish_flag_export (Writing_Finish_Flag),     //     writing_finish_flag.export
 		.read_address_export        (Nios_Read_Address),       //        read_address.export
-		.reset_reset_n              (reset),              		 //               reset.reset_n
+		.reset_reset_n              (DeReset),            		 //               reset.reset_n
 		.sram_DQ                    (SRAM_DQ),                 //                sram.DQ
 		.sram_ADDR                  (SRAM_Address),            //                    .ADDR
 		.sram_LB_N                  (SRAM_LB_N),               //                    .LB_N
@@ -123,23 +176,22 @@ assign Blue = myBlue;
 		.vga_B                      (nios_Blue)                //                    .B
 	);
 
-
 Sines_topde2 Sines_topde2_inst(
 	.CLKIN(clk),
-	.reset_1(reset),
+	.reset_1(DeReset),
 	//controls 
-	.Push_3(Push_3),
-	.Push_2(Push_2),
-	.Push_0(Push_0),
-	.SW1(SW1),
-	.SW0(SW0),
-	.Push_1(Push_1),
-	.SW2(SW2),
-	.Reload(SW3),
-	.SW7(SW7),
-	.SW8(SW8),
-	.SW9(SW9),
-	.SW10(SW10),
+	.Push_3(DePush_3),
+	.Push_2(DePush_2),
+	.Push_0(DePush_0),
+	.SW1(DeSW1),
+	.SW0(DeSW0),
+	.Push_1(DePush_1),
+	.SW2(DeSW2),
+	.Reload(DeSW3),
+	.SW7(DeSW7),
+	.SW8(DeSW8),
+	.SW9(DeSW9),
+	.SW10(DeSW10),
 	//Harmonic number HEXs
 	.HEX0_O(HEX0),
 	.HEX1_O(HEX1),
@@ -165,16 +217,15 @@ Sines_topde2 Sines_topde2_inst(
 	.Sample_Pulse(Sample_Pulse)
 );
 
-
 DATA_Store DATA_Store_inst(
-   .clk(clk),
+	.clk(clk),
 	.VGA_CLK(VGA_CLK),
-	.reset(reset),
+	.reset(DeReset),
 	//Get new value signals
-	.Push_0(Push_0),
-	.Push_1(Push_1),
-	.Push_2(Push_2),
-	.Push_3(Push_3),
+	.Push_0(DePush_0),
+	.Push_1(DePush_1),
+	.Push_2(DePush_2),
+	.Push_3(DePush_3),
 	//DATA input signals
 	.Sample_Pulse(Sample_Pulse),
 	.PhaseA_Analog(PhaseA_Analog),
@@ -205,10 +256,10 @@ DATA_Store DATA_Store_inst(
 	.HEX1(HEX1),
 	.HEX2(HEX2),
 	.HEX3(HEX3),
-	.SW0(SW0),
-	.SW1(SW1),
-	.SW2(SW2),
-	.SW3(SW3),
+	.SW0(DeSW0),
+	.SW1(DeSW1),
+	.SW2(DeSW2),
+	.SW3(DeSW3),
 	//Exporting harmonic values after data processing
 	.Original_Signal(Original_Signal),
 	.Third_Harmonic(Third_Harmonic),
@@ -227,7 +278,7 @@ DATA_Store DATA_Store_inst(
 	.CS_I(CS_I),
 	//Nios read address
 	.Nios_Read_Address(Nios_Read_Address),
-	.User_Take_Sample(SW4),
+	.User_Take_Sample(DeSW4),
 	//Writing Finish Flag, finish writing a whole sample from load circuit
 	.Writing_Finish_Flag(Writing_Finish_Flag),
 	//Phase A voltage (Nios & GUI)
@@ -253,22 +304,22 @@ DATA_Store DATA_Store_inst(
 
 GUI GUI_inst(
 	.VGA_CLK(VGA_CLK),
-	.reset(reset),
+	.reset(DeReset),
 	.Hsync(Hsync),
 	//Harmonic counter
-	.SW0(SW0),
-	.SW1(SW1),
-	.SW2(SW2),
+	.SW0(DeSW0),
+	.SW1(DeSW1),
+	.SW2(DeSW2),
 	//Harmonic negation
-	.SW7(SW7),
-	.SW8(SW8),
-	.SW9(SW9),
-	.SW10(SW10),
+	.SW7(DeSW7),
+	.SW8(DeSW8),
+	.SW9(DeSW9),
+	.SW10(DeSW10),
 	//Page control
-	.SW12(SW12), //This decides whether to display voltage or current from load circuit
-	.SW14(SW14),
-	.SW15(SW15),
-	.SW16(SW16),
+	.SW12(DeSW12), //This decides whether to display voltage or current from load circuit
+	.SW14(DeSW14),
+	.SW15(DeSW15),
+	.SW16(DeSW16),
 	//Input counters
 	.H_counter(H_counter),
 	.V_counter(V_counter),
@@ -285,7 +336,7 @@ GUI GUI_inst(
 	.PhaseA_PWM_Correction_Stored(PhaseA_PWM_Correction_Stored),
 	.PhaseB_PWM_Correction_Stored(PhaseB_PWM_Correction_Stored),
 	.PhaseC_PWM_Correction_Stored(PhaseC_PWM_Correction_Stored),
-	.PWM_Correction_Enable_Switch(SW13),
+	.PWM_Correction_Enable_Switch(DeSW13),
 	//Reading output enable signals going to DATA_Store module
 	.PhaseA_Analog_Read_Enable(PhaseA_Analog_Read_Enable),
 	.PhaseB_Analog_Read_Enable(PhaseB_Analog_Read_Enable),
@@ -311,7 +362,7 @@ GUI GUI_inst(
 
 ADCs ADCs_Inst(
 	.clk(clk),
-	.reset(reset),
+	.reset(DeReset),
 	//ADC clks and CSs
 	/********************/
 	//Voltages clks and CSs

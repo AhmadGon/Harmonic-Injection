@@ -28,7 +28,7 @@ module GUI(
 	input [7:0] PhaseA_Voltage_GUI, PhaseB_Voltage_GUI, PhaseC_Voltage_GUI, PhaseA_Current_GUI, PhaseB_Current_GUI, PhaseC_Current_GUI
 );
 
-wire[1:0] Page_counter; //0: Analog page, 1: Digital page, 2: FFT page, 3: Manual page
+wire[1:0] Page_counter; //0: Analog page, 1: Digital page, 2: Load Monitor page, 3: Manual page
 assign Page_counter = SW14 + SW15 + SW16;
 
 wire[1:0] Harmonic_counter;

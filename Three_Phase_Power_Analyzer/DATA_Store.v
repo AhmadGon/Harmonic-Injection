@@ -51,7 +51,6 @@ wire CLOCKS;
 wire[8:0] PhaseA_Analog_Addresses;
 wire[8:0] PhaseB_Analog_Addresses;
 wire[8:0] PhaseC_Tri_Analog_Addresses;
-//
 
 assign CLOCKS = (write_read_Switch)? Sample_Pulse : VGA_CLK;
 
@@ -59,20 +58,45 @@ assign CLOCKS = (write_read_Switch)? Sample_Pulse : VGA_CLK;
 assign PhaseA_Analog_Addresses = (write_read_Switch)? write_address : PhaseA_Analog_Read_Address;
 assign PhaseB_Analog_Addresses = (write_read_Switch)? write_address : PhaseB_Analog_Read_Address;
 assign PhaseC_Tri_Analog_Addresses = (write_read_Switch)? write_address : PhaseC_Tri_Analog_Read_Address;
+
+// Synchronizing incoming harmonic data
+reg[9:0] PhaseA_Analog_Sync, PhaseB_Analog_Sync, PhaseC_Tri_Analog_Sync;
+reg PhaseA_PWM_Sync, PhaseB_PWM_Sync, PhaseC_PWM_Sync;
+always @(posedge clk)
+	begin
+	PhaseA_Analog_Sync <= PhaseA_Analog;
+	PhaseB_Analog_Sync <= PhaseB_Analog;
+	PhaseC_Tri_Analog_Sync <= PhaseC_Tri_Analog;
+	PhaseA_PWM_Sync <= PhaseA_PWM;
+	PhaseB_PWM_Sync <= PhaseB_PWM;
+	PhaseC_PWM_Sync <= PhaseC_PWM;
+	end
+// Synchronizing incoming load data	
+reg[7:0] PhaseA_DATA_Out_V_Sync, PhaseB_DATA_Out_V_Sync, PhaseC_DATA_Out_V_Sync;
+reg[7:0] PhaseA_DATA_Out_I_Sync, PhaseB_DATA_Out_I_Sync, PhaseC_DATA_Out_I_Sync;
+always @(posedge VGA_CLK)
+	begin
+	PhaseA_DATA_Out_V_Sync <= PhaseA_DATA_Out_V;
+	PhaseB_DATA_Out_V_Sync <= PhaseB_DATA_Out_V;
+	PhaseC_DATA_Out_V_Sync <= PhaseC_DATA_Out_V;
+	PhaseA_DATA_Out_I_Sync <= PhaseA_DATA_Out_I;
+	PhaseB_DATA_Out_I_Sync <= PhaseB_DATA_Out_I;
+	PhaseC_DATA_Out_I_Sync <= PhaseC_DATA_Out_I;
+	end
 //========================================================================================
 /*****************FPGA Generated Signals***********************/
 // Phase A
 PhaseA	PhaseA_inst (
 	.address ( PhaseA_Analog_Addresses ),
 	.clock ( CLOCKS ),
-	.data ( PhaseA_Analog ),
+	.data ( PhaseA_Analog_Sync ),
 	.wren ( write_read_Switch ),
 	.q ( PhaseA_Analog_Stored )
 	);
 PhaseA_PWM	PhaseA_PWM_inst (
 	.address ( PhaseA_Analog_Addresses ),
 	.clock ( CLOCKS ),
-	.data ( PhaseA_PWM ),
+	.data ( PhaseA_PWM_Sync ),
 	.wren ( write_read_Switch ),
 	.q ( PhaseA_PWM_Stored )
 	);
@@ -80,14 +104,14 @@ PhaseA_PWM	PhaseA_PWM_inst (
 PhaseB_Analog	PhaseB_Analog_inst (
 	.address ( PhaseB_Analog_Addresses ),
 	.clock ( CLOCKS ),
-	.data ( PhaseB_Analog ),
+	.data ( PhaseB_Analog_Sync ),
 	.wren ( write_read_Switch ),
 	.q ( PhaseB_Analog_Stored )
 	);
 PhaseB_PWM	PhaseB_PWM_inst (
 	.address ( PhaseB_Analog_Addresses ),
 	.clock ( CLOCKS ),
-	.data ( PhaseB_PWM ),
+	.data ( PhaseB_PWM_Sync ),
 	.wren ( write_read_Switch ),
 	.q ( PhaseB_PWM_Stored )
 	);
@@ -96,14 +120,14 @@ PhaseB_PWM	PhaseB_PWM_inst (
 PhaseC_Tri_Analog	PhaseC_Tri_Analog_inst (
 	.address ( PhaseC_Tri_Analog_Addresses ),
 	.clock ( CLOCKS ),
-	.data ( PhaseC_Tri_Analog ),
+	.data ( PhaseC_Tri_Analog_Sync ),
 	.wren ( write_read_Switch ),
 	.q ( PhaseC_Tri_Analog_Stored )
 	);
 PhaseC_PWM	PhaseC_PWM_inst (
 	.address ( PhaseC_Tri_Analog_Addresses ),
 	.clock ( CLOCKS ),
-	.data ( PhaseC_PWM ),
+	.data ( PhaseC_PWM_Sync ),
 	.wren ( write_read_Switch ),
 	.q ( PhaseC_PWM_Stored )
 	);
@@ -114,8 +138,8 @@ GUI_Nios_PhaseA_Voltage	GUI_Nios_PhaseA_Voltage_inst (
 	.address_b ( GUI_Read_Write ),
 	.clock_a ( VGA_CLK ),
 	.clock_b ( VGA_CLK ),
-	.data_a ( PhaseA_DATA_Out_V ), //Data input to FPGA
-	.data_b ( PhaseA_DATA_Out_V ), //Data input to FPGA
+	.data_a ( PhaseA_DATA_Out_V_Sync ), //Data input to FPGA
+	.data_b ( PhaseA_DATA_Out_V_Sync ), //Data input to FPGA
 	.wren_a ( Write_Read_Enable ),
 	.wren_b ( Write_Read_Enable ),
 	.q_a ( PhaseA_Voltage_Nios_Out ),
@@ -127,8 +151,8 @@ GUI_Nios_PhaseB_Voltage	GUI_Nios_PhaseB_Voltage_inst (
 	.address_b ( GUI_Read_Write ),
 	.clock_a ( VGA_CLK ),
 	.clock_b ( VGA_CLK ),
-	.data_a ( PhaseB_DATA_Out_V ),
-	.data_b ( PhaseB_DATA_Out_V ),
+	.data_a ( PhaseB_DATA_Out_V_Sync ),
+	.data_b ( PhaseB_DATA_Out_V_Sync ),
 	.wren_a ( Write_Read_Enable ),
 	.wren_b ( Write_Read_Enable ),
 	.q_a ( PhaseB_Voltage_Nios_Out ),
@@ -140,8 +164,8 @@ GUI_Nios_PhaseC_Voltage	GUI_Nios_PhaseC_Voltage_inst (
 	.address_b ( GUI_Read_Write ),
 	.clock_a ( VGA_CLK ),
 	.clock_b ( VGA_CLK ),
-	.data_a ( PhaseC_DATA_Out_V ),
-	.data_b ( PhaseC_DATA_Out_V ),
+	.data_a ( PhaseC_DATA_Out_V_Sync ),
+	.data_b ( PhaseC_DATA_Out_V_Sync ),
 	.wren_a ( Write_Read_Enable ),
 	.wren_b ( Write_Read_Enable ),
 	.q_a ( PhaseC_Voltage_Nios_Out ),
@@ -153,8 +177,8 @@ GUI_Nios_PhaseA_Current	GUI_Nios_PhaseA_Current_inst (
 	.address_b ( GUI_Read_Write ),
 	.clock_a ( VGA_CLK ),
 	.clock_b ( VGA_CLK ),
-	.data_a ( PhaseA_DATA_Out_I ),
-	.data_b ( PhaseA_DATA_Out_I ),
+	.data_a ( PhaseA_DATA_Out_I_Sync ),
+	.data_b ( PhaseA_DATA_Out_I_Sync ),
 	.wren_a ( Write_Read_Enable ),
 	.wren_b ( Write_Read_Enable ),
 	.q_a ( PhaseA_Current_Nios_Out ),
@@ -166,8 +190,8 @@ GUI_Nios_PhaseB_Current	GUI_Nios_PhaseB_Current_inst (
 	.address_b ( GUI_Read_Write ),
 	.clock_a ( VGA_CLK ),
 	.clock_b ( VGA_CLK ),
-	.data_a ( PhaseB_DATA_Out_I ),
-	.data_b ( PhaseB_DATA_Out_I ),
+	.data_a ( PhaseB_DATA_Out_I_Sync ),
+	.data_b ( PhaseB_DATA_Out_I_Sync ),
 	.wren_a ( Write_Read_Enable ),
 	.wren_b ( Write_Read_Enable ),
 	.q_a ( PhaseB_Current_Nios_Out ),
@@ -179,8 +203,8 @@ GUI_Nios_PhaseC_Current	GUI_Nios_PhaseC_Current_inst (
 	.address_b ( GUI_Read_Write ),
 	.clock_a ( VGA_CLK ),
 	.clock_b ( VGA_CLK ),
-	.data_a ( PhaseC_DATA_Out_I ),
-	.data_b ( PhaseC_DATA_Out_I ),
+	.data_a ( PhaseC_DATA_Out_I_Sync ),
+	.data_b ( PhaseC_DATA_Out_I_Sync ),
 	.wren_a ( Write_Read_Enable ),
 	.wren_b ( Write_Read_Enable ),
 	.q_a ( PhaseC_Current_Nios_Out ),

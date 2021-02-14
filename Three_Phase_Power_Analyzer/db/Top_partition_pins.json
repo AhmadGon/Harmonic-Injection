@@ -452,6 +452,10 @@
 					"strict" : false
 				},
 				{
+					"name" : "clk",
+					"strict" : false
+				},
+				{
 					"name" : "Push_0",
 					"strict" : false
 				},
@@ -465,10 +469,6 @@
 				},
 				{
 					"name" : "Push_3",
-					"strict" : false
-				},
-				{
-					"name" : "clk",
 					"strict" : false
 				},
 				{
@@ -492,10 +492,6 @@
 					"strict" : false
 				},
 				{
-					"name" : "SW8",
-					"strict" : false
-				},
-				{
 					"name" : "SW2",
 					"strict" : false
 				},
@@ -505,6 +501,10 @@
 				},
 				{
 					"name" : "SW1",
+					"strict" : false
+				},
+				{
+					"name" : "SW8",
 					"strict" : false
 				},
 				{

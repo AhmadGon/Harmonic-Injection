@@ -2,9 +2,9 @@
 <sch:Settings xmlns:sch="http://www.altera.com/embeddedsw/bsp/schema">
         <BspType>hal</BspType>
         <BspVersion>default</BspVersion>
-        <BspGeneratedTimeStamp>Feb 22, 2020 10:49:48 PM</BspGeneratedTimeStamp>
-        <BspGeneratedUnixTimeStamp>1582404588007</BspGeneratedUnixTimeStamp>
-        <BspGeneratedLocation>T:\FPGA_Projects\Qsys_Projects\Three_Phase_Power_Analyzer\Software\Nios_File_Streaming_bsp</BspGeneratedLocation>
+        <BspGeneratedTimeStamp>Feb 13, 2021 10:49:43 PM</BspGeneratedTimeStamp>
+        <BspGeneratedUnixTimeStamp>1613249383622</BspGeneratedUnixTimeStamp>
+        <BspGeneratedLocation>E:\LearningC++\Harmonic_Injection\Harmonic-Injection\Three_Phase_Power_Analyzer\Software\Nios_File_Streaming_bsp</BspGeneratedLocation>
         <BspSettingsFile>settings.bsp</BspSettingsFile>
         <SopcDesignFile>..\..\NiosII_Controlled_Section.sopcinfo</SopcDesignFile>
         <JdiFile>default</JdiFile>

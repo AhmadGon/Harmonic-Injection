@@ -4,7 +4,7 @@
  * Machine generated for CPU 'NiosII' in SOPC Builder design 'NiosII_Controlled_Section'
  * SOPC Builder design path: ../../NiosII_Controlled_Section.sopcinfo
  *
- * Generated: Sat Feb 22 22:37:26 EET 2020
+ * Generated: Sat Feb 13 21:08:32 EET 2021
  */
 
 /*
@@ -476,7 +476,7 @@
  *
  */
 
-#define ALT_DEVICE_FAMILY "Cyclone IV E"
+#define ALT_DEVICE_FAMILY "Cyclone V"
 #define ALT_ENHANCED_INTERRUPT_API_PRESENT
 #define ALT_IRQ_BASE NULL
 #define ALT_LOG_PORT "/dev/null"
@@ -519,7 +519,7 @@
 #define SYSTEM_ID_IRQ_INTERRUPT_CONTROLLER_ID -1
 #define SYSTEM_ID_NAME "/dev/System_ID"
 #define SYSTEM_ID_SPAN 8
-#define SYSTEM_ID_TIMESTAMP 1582233463
+#define SYSTEM_ID_TIMESTAMP 1613240005
 #define SYSTEM_ID_TYPE "altera_avalon_sysid_qsys"
 
 

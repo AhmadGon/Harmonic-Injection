@@ -1,5 +1,5 @@
 Flow report for Top
-Sat Feb 06 15:06:49 2021
+Sun Feb 14 20:23:47 2021
 Quartus Prime Version 18.0.0 Build 614 04/24/2018 SJ Lite Edition
 
 
@@ -40,20 +40,20 @@ refer to the applicable agreement for further details.
 +----------------------------------------------------------------------------------+
 ; Flow Summary                                                                     ;
 +------------------------------------+---------------------------------------------+
-; Flow Status                        ; Successful - Sat Feb 06 15:06:38 2021       ;
+; Flow Status                        ; Successful - Sun Feb 14 20:23:36 2021       ;
 ; Quartus Prime Version              ; 18.0.0 Build 614 04/24/2018 SJ Lite Edition ;
 ; Revision Name                      ; Top                                         ;
 ; Top-level Entity Name              ; Top                                         ;
 ; Family                             ; Cyclone IV E                                ;
 ; Device                             ; EP4CE115F29C7                               ;
 ; Timing Models                      ; Final                                       ;
-; Total logic elements               ; 20,488 / 114,480 ( 18 % )                   ;
-;     Total combinational functions  ; 19,573 / 114,480 ( 17 % )                   ;
-;     Dedicated logic registers      ; 10,036 / 114,480 ( 9 % )                    ;
-; Total registers                    ; 10036                                       ;
+; Total logic elements               ; 21,135 / 114,480 ( 18 % )                   ;
+;     Total combinational functions  ; 20,137 / 114,480 ( 18 % )                   ;
+;     Dedicated logic registers      ; 10,529 / 114,480 ( 9 % )                    ;
+; Total registers                    ; 10529                                       ;
 ; Total pins                         ; 152 / 529 ( 29 % )                          ;
 ; Total virtual pins                 ; 0                                           ;
-; Total memory bits                  ; 2,846,704 / 3,981,312 ( 72 % )              ;
+; Total memory bits                  ; 2,846,567 / 3,981,312 ( 71 % )              ;
 ; Embedded Multiplier 9-bit elements ; 279 / 532 ( 52 % )                          ;
 ; Total PLLs                         ; 2 / 4 ( 50 % )                              ;
 +------------------------------------+---------------------------------------------+
@@ -64,86 +64,87 @@ refer to the applicable agreement for further details.
 +-------------------+---------------------+
 ; Option            ; Setting             ;
 +-------------------+---------------------+
-; Start date & time ; 02/06/2021 15:02:40 ;
+; Start date & time ; 02/14/2021 20:19:51 ;
 ; Main task         ; Compilation         ;
 ; Revision Name     ; Top                 ;
 +-------------------+---------------------+
 
 
-+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Flow Non-Default Global Settings                                                                                                                                            ;
-+-------------------------------------+------------------------------------------------------------------------------+---------------+---------------------------+------------+
-; Assignment Name                     ; Value                                                                        ; Default Value ; Entity Name               ; Section Id ;
-+-------------------------------------+------------------------------------------------------------------------------+---------------+---------------------------+------------+
-; COMPILER_SIGNATURE_ID               ; 18121609262202.161261655906940                                               ; --            ; --                        ; --         ;
-; ENABLE_SIGNALTAP                    ; Off                                                                          ; --            ; --                        ; --         ;
-; FLOW_ENABLE_RTL_VIEWER              ; On                                                                           ; Off           ; --                        ; --         ;
-; MAX_CORE_JUNCTION_TEMP              ; 85                                                                           ; --            ; --                        ; --         ;
-; MIN_CORE_JUNCTION_TEMP              ; 0                                                                            ; --            ; --                        ; --         ;
-; MISC_FILE                           ; NiosII_Controlled_Section/synthesis/../NiosII_Controlled_Section.cmp         ; --            ; --                        ; --         ;
-; MISC_FILE                           ; NiosII_Controlled_Section/synthesis/../../NiosII_Controlled_Section.qsys     ; --            ; --                        ; --         ;
-; MISC_FILE                           ; PhaseA_PWM_inst.v                                                            ; --            ; --                        ; --         ;
-; MISC_FILE                           ; PhaseA_PWM_bb.v                                                              ; --            ; --                        ; --         ;
-; MISC_FILE                           ; PhaseB_PWM_inst.v                                                            ; --            ; --                        ; --         ;
-; MISC_FILE                           ; PhaseB_PWM_bb.v                                                              ; --            ; --                        ; --         ;
-; MISC_FILE                           ; PhaseC_PWM_inst.v                                                            ; --            ; --                        ; --         ;
-; MISC_FILE                           ; PhaseC_PWM_bb.v                                                              ; --            ; --                        ; --         ;
-; MISC_FILE                           ; Slider_DATA_inst.v                                                           ; --            ; --                        ; --         ;
-; MISC_FILE                           ; Slider_DATA_bb.v                                                             ; --            ; --                        ; --         ;
-; MISC_FILE                           ; Slider_Colormap_inst.v                                                       ; --            ; --                        ; --         ;
-; MISC_FILE                           ; Slider_Colormap_bb.v                                                         ; --            ; --                        ; --         ;
-; MISC_FILE                           ; JUSTLOGO_DATA_inst.v                                                         ; --            ; --                        ; --         ;
-; MISC_FILE                           ; JUSTLOGO_DATA_bb.v                                                           ; --            ; --                        ; --         ;
-; MISC_FILE                           ; JUSTLOGO_Colormap_inst.v                                                     ; --            ; --                        ; --         ;
-; MISC_FILE                           ; JUSTLOGO_Colormap_bb.v                                                       ; --            ; --                        ; --         ;
-; MISC_FILE                           ; Font_ROM_inst.v                                                              ; --            ; --                        ; --         ;
-; MISC_FILE                           ; Font_ROM_bb.v                                                                ; --            ; --                        ; --         ;
-; MISC_FILE                           ; PhaseB_Analog_inst.v                                                         ; --            ; --                        ; --         ;
-; MISC_FILE                           ; PhaseB_Analog_bb.v                                                           ; --            ; --                        ; --         ;
-; MISC_FILE                           ; PhaseC_Tri_Analog_inst.v                                                     ; --            ; --                        ; --         ;
-; MISC_FILE                           ; PhaseC_Tri_Analog_bb.v                                                       ; --            ; --                        ; --         ;
-; MISC_FILE                           ; PhaseA_inst.v                                                                ; --            ; --                        ; --         ;
-; MISC_FILE                           ; PhaseA_bb.v                                                                  ; --            ; --                        ; --         ;
-; MISC_FILE                           ; TimeBar_DATA_inst.v                                                          ; --            ; --                        ; --         ;
-; MISC_FILE                           ; TimeBar_DATA_bb.v                                                            ; --            ; --                        ; --         ;
-; MISC_FILE                           ; TimeBar_Colormap_inst.v                                                      ; --            ; --                        ; --         ;
-; MISC_FILE                           ; TimeBar_Colormap_bb.v                                                        ; --            ; --                        ; --         ;
-; MISC_FILE                           ; PhaseC_PWM_Correction_inst.v                                                 ; --            ; --                        ; --         ;
-; MISC_FILE                           ; PhaseC_PWM_Correction_bb.v                                                   ; --            ; --                        ; --         ;
-; MISC_FILE                           ; GUI_Nios_PhaseA_Voltage_inst.v                                               ; --            ; --                        ; --         ;
-; MISC_FILE                           ; GUI_Nios_PhaseA_Voltage_bb.v                                                 ; --            ; --                        ; --         ;
-; MISC_FILE                           ; GUI_Nios_PhaseB_Voltage_inst.v                                               ; --            ; --                        ; --         ;
-; MISC_FILE                           ; GUI_Nios_PhaseB_Voltage_bb.v                                                 ; --            ; --                        ; --         ;
-; MISC_FILE                           ; GUI_Nios_PhaseC_Voltage_inst.v                                               ; --            ; --                        ; --         ;
-; MISC_FILE                           ; GUI_Nios_PhaseC_Voltage_bb.v                                                 ; --            ; --                        ; --         ;
-; MISC_FILE                           ; GUI_Nios_PhaseA_Current_inst.v                                               ; --            ; --                        ; --         ;
-; MISC_FILE                           ; GUI_Nios_PhaseA_Current_bb.v                                                 ; --            ; --                        ; --         ;
-; MISC_FILE                           ; GUI_Nios_PhaseB_Current_inst.v                                               ; --            ; --                        ; --         ;
-; MISC_FILE                           ; GUI_Nios_PhaseB_Current_bb.v                                                 ; --            ; --                        ; --         ;
-; MISC_FILE                           ; GUI_Nios_PhaseC_Current_inst.v                                               ; --            ; --                        ; --         ;
-; MISC_FILE                           ; GUI_Nios_PhaseC_Current_bb.v                                                 ; --            ; --                        ; --         ;
-; MISC_FILE                           ; Title_DATA_inst.v                                                            ; --            ; --                        ; --         ;
-; MISC_FILE                           ; Title_DATA_bb.v                                                              ; --            ; --                        ; --         ;
-; MISC_FILE                           ; Title_Colormap_inst.v                                                        ; --            ; --                        ; --         ;
-; MISC_FILE                           ; Title_Colormap_bb.v                                                          ; --            ; --                        ; --         ;
-; MISC_FILE                           ; Manual_DATA_inst.v                                                           ; --            ; --                        ; --         ;
-; MISC_FILE                           ; Manual_DATA_bb.v                                                             ; --            ; --                        ; --         ;
-; MISC_FILE                           ; Manual_Colormap_inst.v                                                       ; --            ; --                        ; --         ;
-; MISC_FILE                           ; Manual_Colormap_bb.v                                                         ; --            ; --                        ; --         ;
-; NOMINAL_CORE_SUPPLY_VOLTAGE         ; 1.2V                                                                         ; --            ; --                        ; --         ;
-; PARTITION_COLOR                     ; -- (Not supported for targeted family)                                       ; --            ; --                        ; --         ;
-; PARTITION_FITTER_PRESERVATION_LEVEL ; -- (Not supported for targeted family)                                       ; --            ; --                        ; --         ;
-; PARTITION_NETLIST_TYPE              ; -- (Not supported for targeted family)                                       ; --            ; --                        ; --         ;
-; POWER_BOARD_THERMAL_MODEL           ; None (CONSERVATIVE)                                                          ; --            ; --                        ; --         ;
-; POWER_PRESET_COOLING_SOLUTION       ; 23 MM HEAT SINK WITH 200 LFPM AIRFLOW                                        ; --            ; --                        ; --         ;
-; PROJECT_OUTPUT_DIRECTORY            ; output_files                                                                 ; --            ; --                        ; --         ;
-; SLD_FILE                            ; NiosII_Controlled_Section/synthesis/NiosII_Controlled_Section.regmap         ; --            ; --                        ; --         ;
-; SLD_FILE                            ; NiosII_Controlled_Section/synthesis/NiosII_Controlled_Section.debuginfo      ; --            ; --                        ; --         ;
-; SLD_INFO                            ; QSYS_NAME NiosII_Controlled_Section HAS_SOPCINFO 1 GENERATION_ID 1582233463  ; --            ; NiosII_Controlled_Section ; --         ;
-; SOPCINFO_FILE                       ; NiosII_Controlled_Section/synthesis/../../NiosII_Controlled_Section.sopcinfo ; --            ; --                        ; --         ;
-; SYNTHESIS_ONLY_QIP                  ; On                                                                           ; --            ; --                        ; --         ;
-; USE_SIGNALTAP_FILE                  ; output_files/MemoryCheck_SignalTap.stp                                       ; --            ; --                        ; --         ;
-+-------------------------------------+------------------------------------------------------------------------------+---------------+---------------------------+------------+
++-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Flow Non-Default Global Settings                                                                                                                                                  ;
++-------------------------------------+---------------------------------------------------------------------------------+---------------+------------------------------+------------+
+; Assignment Name                     ; Value                                                                           ; Default Value ; Entity Name                  ; Section Id ;
++-------------------------------------+---------------------------------------------------------------------------------+---------------+------------------------------+------------+
+; COMPILER_SIGNATURE_ID               ; 18121609262202.161332679112404                                                  ; --            ; --                           ; --         ;
+; ENABLE_SIGNALTAP                    ; Off                                                                             ; --            ; --                           ; --         ;
+; FLOW_ENABLE_RTL_VIEWER              ; On                                                                              ; Off           ; --                           ; --         ;
+; MAX_CORE_JUNCTION_TEMP              ; 85                                                                              ; --            ; --                           ; --         ;
+; MIN_CORE_JUNCTION_TEMP              ; 0                                                                               ; --            ; --                           ; --         ;
+; MISC_FILE                           ; NiosII_Controlled_Section/synthesis/../NiosII_Controlled_SectionBAK.cmp         ; --            ; --                           ; --         ;
+; MISC_FILE                           ; NiosII_Controlled_Section/synthesis/../../NiosII_Controlled_SectionBAK.qsys     ; --            ; --                           ; --         ;
+; MISC_FILE                           ; PhaseA_PWM_inst.v                                                               ; --            ; --                           ; --         ;
+; MISC_FILE                           ; PhaseA_PWM_bb.v                                                                 ; --            ; --                           ; --         ;
+; MISC_FILE                           ; PhaseB_PWM_inst.v                                                               ; --            ; --                           ; --         ;
+; MISC_FILE                           ; PhaseB_PWM_bb.v                                                                 ; --            ; --                           ; --         ;
+; MISC_FILE                           ; PhaseC_PWM_inst.v                                                               ; --            ; --                           ; --         ;
+; MISC_FILE                           ; PhaseC_PWM_bb.v                                                                 ; --            ; --                           ; --         ;
+; MISC_FILE                           ; Slider_DATA_inst.v                                                              ; --            ; --                           ; --         ;
+; MISC_FILE                           ; Slider_DATA_bb.v                                                                ; --            ; --                           ; --         ;
+; MISC_FILE                           ; Slider_Colormap_inst.v                                                          ; --            ; --                           ; --         ;
+; MISC_FILE                           ; Slider_Colormap_bb.v                                                            ; --            ; --                           ; --         ;
+; MISC_FILE                           ; JUSTLOGO_DATA_inst.v                                                            ; --            ; --                           ; --         ;
+; MISC_FILE                           ; JUSTLOGO_DATA_bb.v                                                              ; --            ; --                           ; --         ;
+; MISC_FILE                           ; JUSTLOGO_Colormap_inst.v                                                        ; --            ; --                           ; --         ;
+; MISC_FILE                           ; JUSTLOGO_Colormap_bb.v                                                          ; --            ; --                           ; --         ;
+; MISC_FILE                           ; Font_ROM_inst.v                                                                 ; --            ; --                           ; --         ;
+; MISC_FILE                           ; Font_ROM_bb.v                                                                   ; --            ; --                           ; --         ;
+; MISC_FILE                           ; PhaseB_Analog_inst.v                                                            ; --            ; --                           ; --         ;
+; MISC_FILE                           ; PhaseB_Analog_bb.v                                                              ; --            ; --                           ; --         ;
+; MISC_FILE                           ; PhaseC_Tri_Analog_inst.v                                                        ; --            ; --                           ; --         ;
+; MISC_FILE                           ; PhaseC_Tri_Analog_bb.v                                                          ; --            ; --                           ; --         ;
+; MISC_FILE                           ; PhaseA_inst.v                                                                   ; --            ; --                           ; --         ;
+; MISC_FILE                           ; PhaseA_bb.v                                                                     ; --            ; --                           ; --         ;
+; MISC_FILE                           ; TimeBar_DATA_inst.v                                                             ; --            ; --                           ; --         ;
+; MISC_FILE                           ; TimeBar_DATA_bb.v                                                               ; --            ; --                           ; --         ;
+; MISC_FILE                           ; TimeBar_Colormap_inst.v                                                         ; --            ; --                           ; --         ;
+; MISC_FILE                           ; TimeBar_Colormap_bb.v                                                           ; --            ; --                           ; --         ;
+; MISC_FILE                           ; PhaseC_PWM_Correction_inst.v                                                    ; --            ; --                           ; --         ;
+; MISC_FILE                           ; PhaseC_PWM_Correction_bb.v                                                      ; --            ; --                           ; --         ;
+; MISC_FILE                           ; GUI_Nios_PhaseA_Voltage_inst.v                                                  ; --            ; --                           ; --         ;
+; MISC_FILE                           ; GUI_Nios_PhaseA_Voltage_bb.v                                                    ; --            ; --                           ; --         ;
+; MISC_FILE                           ; GUI_Nios_PhaseB_Voltage_inst.v                                                  ; --            ; --                           ; --         ;
+; MISC_FILE                           ; GUI_Nios_PhaseB_Voltage_bb.v                                                    ; --            ; --                           ; --         ;
+; MISC_FILE                           ; GUI_Nios_PhaseC_Voltage_inst.v                                                  ; --            ; --                           ; --         ;
+; MISC_FILE                           ; GUI_Nios_PhaseC_Voltage_bb.v                                                    ; --            ; --                           ; --         ;
+; MISC_FILE                           ; GUI_Nios_PhaseA_Current_inst.v                                                  ; --            ; --                           ; --         ;
+; MISC_FILE                           ; GUI_Nios_PhaseA_Current_bb.v                                                    ; --            ; --                           ; --         ;
+; MISC_FILE                           ; GUI_Nios_PhaseB_Current_inst.v                                                  ; --            ; --                           ; --         ;
+; MISC_FILE                           ; GUI_Nios_PhaseB_Current_bb.v                                                    ; --            ; --                           ; --         ;
+; MISC_FILE                           ; GUI_Nios_PhaseC_Current_inst.v                                                  ; --            ; --                           ; --         ;
+; MISC_FILE                           ; GUI_Nios_PhaseC_Current_bb.v                                                    ; --            ; --                           ; --         ;
+; MISC_FILE                           ; Title_DATA_inst.v                                                               ; --            ; --                           ; --         ;
+; MISC_FILE                           ; Title_DATA_bb.v                                                                 ; --            ; --                           ; --         ;
+; MISC_FILE                           ; Title_Colormap_inst.v                                                           ; --            ; --                           ; --         ;
+; MISC_FILE                           ; Title_Colormap_bb.v                                                             ; --            ; --                           ; --         ;
+; MISC_FILE                           ; Manual_DATA_inst.v                                                              ; --            ; --                           ; --         ;
+; MISC_FILE                           ; Manual_DATA_bb.v                                                                ; --            ; --                           ; --         ;
+; MISC_FILE                           ; Manual_Colormap_inst.v                                                          ; --            ; --                           ; --         ;
+; MISC_FILE                           ; Manual_Colormap_bb.v                                                            ; --            ; --                           ; --         ;
+; MISC_FILE                           ; Harmonic_Testing_ROM_inst.v                                                     ; --            ; --                           ; --         ;
+; MISC_FILE                           ; Harmonic_Testing_ROM_bb.v                                                       ; --            ; --                           ; --         ;
+; PARTITION_COLOR                     ; -- (Not supported for targeted family)                                          ; --            ; --                           ; --         ;
+; PARTITION_FITTER_PRESERVATION_LEVEL ; -- (Not supported for targeted family)                                          ; --            ; --                           ; --         ;
+; PARTITION_NETLIST_TYPE              ; -- (Not supported for targeted family)                                          ; --            ; --                           ; --         ;
+; POWER_BOARD_THERMAL_MODEL           ; None (CONSERVATIVE)                                                             ; --            ; --                           ; --         ;
+; POWER_PRESET_COOLING_SOLUTION       ; 23 MM HEAT SINK WITH 200 LFPM AIRFLOW                                           ; --            ; --                           ; --         ;
+; PROJECT_OUTPUT_DIRECTORY            ; output_files                                                                    ; --            ; --                           ; --         ;
+; SLD_FILE                            ; NiosII_Controlled_Section/synthesis/NiosII_Controlled_SectionBAK.regmap         ; --            ; --                           ; --         ;
+; SLD_FILE                            ; NiosII_Controlled_Section/synthesis/NiosII_Controlled_SectionBAK.debuginfo      ; --            ; --                           ; --         ;
+; SLD_INFO                            ; QSYS_NAME NiosII_Controlled_SectionBAK HAS_SOPCINFO 1 GENERATION_ID 1613326620  ; --            ; NiosII_Controlled_SectionBAK ; --         ;
+; SOPCINFO_FILE                       ; NiosII_Controlled_Section/synthesis/../../NiosII_Controlled_SectionBAK.sopcinfo ; --            ; --                           ; --         ;
+; SYNTHESIS_ONLY_QIP                  ; On                                                                              ; --            ; --                           ; --         ;
+; USE_SIGNALTAP_FILE                  ; DebuggingVGA.stp                                                                ; --            ; --                           ; --         ;
++-------------------------------------+---------------------------------------------------------------------------------+---------------+------------------------------+------------+
 
 
 +--------------------------------------------------------------------------------------------------------------------------+
@@ -151,11 +152,11 @@ refer to the applicable agreement for further details.
 +----------------------+--------------+-------------------------+---------------------+------------------------------------+
 ; Module Name          ; Elapsed Time ; Average Processors Used ; Peak Virtual Memory ; Total CPU Time (on all processors) ;
 +----------------------+--------------+-------------------------+---------------------+------------------------------------+
-; Analysis & Synthesis ; 00:02:30     ; 1.0                     ; 5338 MB             ; 00:02:35                           ;
-; Fitter               ; 00:01:04     ; 1.1                     ; 6152 MB             ; 00:01:31                           ;
-; Assembler            ; 00:00:06     ; 1.0                     ; 4802 MB             ; 00:00:05                           ;
-; Timing Analyzer      ; 00:00:10     ; 1.3                     ; 5081 MB             ; 00:00:10                           ;
-; Total                ; 00:03:50     ; --                      ; --                  ; 00:04:21                           ;
+; Analysis & Synthesis ; 00:02:18     ; 1.0                     ; 5330 MB             ; 00:02:33                           ;
+; Fitter               ; 00:01:05     ; 1.1                     ; 6160 MB             ; 00:01:35                           ;
+; Assembler            ; 00:00:05     ; 1.0                     ; 4798 MB             ; 00:00:05                           ;
+; Timing Analyzer      ; 00:00:10     ; 1.3                     ; 5085 MB             ; 00:00:11                           ;
+; Total                ; 00:03:38     ; --                      ; --                  ; 00:04:24                           ;
 +----------------------+--------------+-------------------------+---------------------+------------------------------------+
 
 

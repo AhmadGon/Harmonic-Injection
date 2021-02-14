@@ -1,9 +1,9 @@
-21:36:31 **** Incremental Build of configuration Nios II for project Nios_File_Streaming ****
+22:50:03 **** Incremental Build of configuration Nios II for project Nios_File_Streaming ****
 make all 
 Info: Building ../Nios_File_Streaming_bsp/
-C:/intelFPGA_lite/17.0/nios2eds/bin/gnu/H-x86_64-mingw32/bin/make --no-print-directory -C ../Nios_File_Streaming_bsp/
+F:/Quartus_18/nios2eds/bin/gnu/H-x86_64-mingw32/bin/make --no-print-directory -C ../Nios_File_Streaming_bsp/
 [BSP build complete]
 [Nios_File_Streaming build complete]
 
-21:36:32 Build Finished (took 654ms)
+22:50:04 Build Finished (took 755ms)
 

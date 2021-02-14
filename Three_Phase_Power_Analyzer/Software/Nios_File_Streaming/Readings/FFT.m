@@ -12,9 +12,9 @@ FilePhaseA_Current = fopen('PhaseA_Current.txt','r');
 FilePhaseB_Current = fopen('PhaseB_Current.txt','r');
 FilePhaseC_Current = fopen('PhaseC_Current.txt','r');
 
-PhaseA_VoltageVector = fscanf(FilePhaseA_Voltage,'%d') * 100 / 255 * 5;
-PhaseB_VoltageVector = fscanf(FilePhaseB_Voltage,'%d') * 100 / 255 * 5;
-PhaseC_VoltageVector = fscanf(FilePhaseC_Voltage,'%d') * 100 / 255 * 5;
+PhaseA_VoltageVector = fscanf(FilePhaseA_Voltage,'%d') * 0.235 - 30;
+PhaseB_VoltageVector = fscanf(FilePhaseB_Voltage,'%d') * 0.235 - 30;
+PhaseC_VoltageVector = fscanf(FilePhaseC_Voltage,'%d') * 0.235 - 30;
 % Important Note:
     % According to LV-25P voltage sensor the primary current should be 10mA
     % so secondary 25mA and with 100ohm measuring resistance we have 2.5V
@@ -23,9 +23,9 @@ PhaseC_VoltageVector = fscanf(FilePhaseC_Voltage,'%d') * 100 / 255 * 5;
     % possible accuracy for this sensor, Check datasheet for more info
     
 %=========================================================================%
-PhaseA_CurrentVector = ((fscanf(FilePhaseA_Current,'%d') * 5 / 255) - 2.5) / 0.025;
-PhaseB_CurrentVector = ((fscanf(FilePhaseB_Current,'%d') * 5 / 255) - 2.5) / 0.025;
-PhaseC_CurrentVector = ((fscanf(FilePhaseC_Current,'%d') * 5 / 255) - 2.5) / 0.025;
+PhaseA_CurrentVector = fscanf(FilePhaseA_Current,'%d') * 0.189 - 24.1;
+PhaseB_CurrentVector = fscanf(FilePhaseB_Current,'%d') * 0.189 - 24.1;
+PhaseC_CurrentVector = fscanf(FilePhaseC_Current,'%d') * 0.189 - 24.1;
 % Important Note:
     % According to LTS 25-NP current sensor and with the first connection
     % we can calculate the sensor function from the last page of the 
@@ -41,6 +41,14 @@ PhaseA_CurrentFFT = abs(fft(PhaseA_CurrentVector,4096));
 PhaseB_CurrentFFT = abs(fft(PhaseB_CurrentVector,4096));
 PhaseC_CurrentFFT = abs(fft(PhaseC_CurrentVector,4096));
 
+PhaseA_VoltageTHD = thd(PhaseA_VoltageVector);
+PhaseB_VoltageTHD = thd(PhaseB_VoltageVector);
+PhaseC_VoltageTHD = thd(PhaseC_VoltageVector);
+
+PhaseA_CurrentTHD = thd(PhaseA_CurrentVector);
+PhaseB_CurrentTHD = thd(PhaseB_CurrentVector);
+PhaseC_CurrentTHD = thd(PhaseC_CurrentVector);
+
 FrequencyRepresentation = 30000 * (0:4095)/4096;
 TimeRepresentation = (0:4095) / 30000;
 %=========================================================================%
@@ -49,13 +57,13 @@ subplot(3,4,1);
 plot(TimeRepresentation, PhaseA_VoltageVector,'b');
 xlabel('Time(s)');
 ylabel('Voltage(V)');
-title('Phase A Voltage');
+title({'Phase A Voltage'; ['THD(dB):', num2str(PhaseA_VoltageTHD)]});
 
 subplot(3,4,2);
 plot(TimeRepresentation, PhaseA_CurrentVector,'b');
 xlabel('Time(s)');
 ylabel('Current(A)');
-title('Phase A Current');
+title({'Phase A Current'; ['THD(dB):' num2str(PhaseA_CurrentTHD)]});
 
 subplot(3,4,3);
 plot(FrequencyRepresentation, PhaseA_VoltageFFT,'b');
@@ -72,13 +80,13 @@ subplot(3,4,5);
 plot(TimeRepresentation, PhaseB_VoltageVector,'b');
 xlabel('Time(s)');
 ylabel('Voltage(V)');
-title('Phase B Voltage');
+title({'Phase B Voltage'; ['THD(dB):' num2str(PhaseB_VoltageTHD)]});
 
 subplot(3,4,6);
 plot(TimeRepresentation, PhaseB_CurrentVector,'b');
 xlabel('Time(s)');
 ylabel('Current(A)');
-title('Phase B Current');
+title({'Phase B Current'; ['THD(dB):' num2str(PhaseB_CurrentTHD)]});
 
 subplot(3,4,7);
 plot(FrequencyRepresentation, PhaseB_VoltageFFT,'b');
@@ -94,13 +102,13 @@ subplot(3,4,9);
 plot(TimeRepresentation, PhaseC_VoltageVector,'b');
 xlabel('Time(s)');
 ylabel('Voltage(V)');
-title('Phase C Voltage');
+title({'Phase C Voltage'; ['THD(dB):' num2str(PhaseC_VoltageTHD)]});
 
 subplot(3,4,10);
 plot(TimeRepresentation, PhaseC_CurrentVector,'b');
 xlabel('Time(s)');
 ylabel('Current(A)');
-title('Phase C Current');
+title({'Phase C Current'; ['THD(dB):' num2str(PhaseC_CurrentTHD)]});
 
 subplot(3,4,11);
 plot(FrequencyRepresentation, PhaseC_VoltageFFT,'b');
