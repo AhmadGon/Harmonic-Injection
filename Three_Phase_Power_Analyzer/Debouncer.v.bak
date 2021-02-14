@@ -1,0 +1,87 @@
+module Debouncer(
+	input CLK,
+	/** User inputs */
+	input SW0, SW1, SW2, SW3, SW4, SW5, SW6, SW7, SW8, SW9, SW10, SW12, SW13, SW14, SW15, SW16,
+	input Push_0, Push_1, Push_2, Push_3,
+	/** Debounced outputs */
+	output DeSW0, DeSW1, DeSW2, DeSW3, DeSW4, DeSW5, DeSW6, DeSW7, DeSW8, DeSW9, DeSW10, DeSW12, DeSW13, DeSW14, DeSW15, DeSW16,
+	output DePush_0, DePush_1, DePush_2, DePush_3
+);
+/** Debounce counters */
+reg[14:0] Push_0_Debounce_Counter;
+reg[14:0] SW3_Debounce_Counter;
+
+/** Debounce state registers */
+reg[1:0] Push_0_State_Register;
+reg[1:0] SW3_State_Register;
+
+/** Intermediate registers */
+reg Push_0_Debounce_Counter_Ignition, Push_0_State_Address, Push_0_Activated;
+reg SW3_Debounce_Counter_Ignition, SW3_State_Address, SW3_Activated;
+
+assign DePush_0 = Push_0_Activated;
+assign DeSW3 = SW3_Activated;
+
+//=======================================================
+// Push_0
+always @(posedge CLK)
+	begin
+	if (!Push_0_Debounce_Counter_Ignition)
+		begin
+		Push_0_State_Register[Push_0_State_Address] <= Push_0;
+		Push_0_State_Address <= Push_0_State_Address + 1; 
+		end
+	end
+always @(posedge CLK)
+	begin
+	if (Push_0_State_Register[0] != Push_0_State_Register[1]) 
+		begin
+		Push_0_Debounce_Counter_Ignition <= 1;
+		end
+	if (Push_0_Debounce_Counter == 14999) Push_0_Debounce_Counter_Ignition <= 0; 
+	end
+always @(posedge CLK)
+	begin
+	if (Push_0_Debounce_Counter_Ignition)
+		begin
+		Push_0_Debounce_Counter <= Push_0_Debounce_Counter + 1;
+		if (Push_0_Debounce_Counter == 14999) 
+			begin
+			Push_0_Debounce_Counter <= 0;
+			Push_0_Activated <= Push_0;
+			end
+		end
+	else Push_0_Debounce_Counter <= 0;
+	end
+//=======================================================
+// SW3
+always @(posedge CLK)
+	begin
+	if (!SW3_Debounce_Counter_Ignition)
+		begin
+		SW3_State_Register[SW3_State_Address] <= SW3;
+		SW3_State_Address <= SW3_State_Address + 1; 
+		end
+	end
+always @(posedge CLK)
+	begin
+	if (SW3_State_Register[0] != SW3_State_Register[1]) 
+		begin
+		SW3_Debounce_Counter_Ignition <= 1;
+		end
+	if (SW3_Debounce_Counter == 14999) SW3_Debounce_Counter_Ignition <= 0; 
+	end
+always @(posedge CLK)
+	begin
+	if (SW3_Debounce_Counter_Ignition)
+		begin
+		SW3_Debounce_Counter <= SW3_Debounce_Counter + 1;
+		if (SW3_Debounce_Counter == 14999) 
+			begin
+			SW3_Debounce_Counter <= 0;
+			SW3_Activated <= SW3;
+			end
+		end
+	else SW3_Debounce_Counter <= 0;
+	end	
+endmodule 
