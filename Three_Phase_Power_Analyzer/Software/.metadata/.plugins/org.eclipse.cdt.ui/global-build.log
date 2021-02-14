@@ -154,3 +154,15 @@ Info: Building ../Harmonic_bsp/
 C:/intelFPGA_lite/18.0.0/nios2eds/bin/gnu/H-x86_64-mingw32/bin/make --no-print-directory -C ../Harmonic_bsp/
 [BSP build complete]
 [Harmonic build complete]
+11:18:24 **** Build of configuration Nios II for project Harmonic ****
+make all 
+Info: Building ../Harmonic_bsp/
+C:/intelFPGA_lite/18.0.0/nios2eds/bin/gnu/H-x86_64-mingw32/bin/make --no-print-directory -C ../Harmonic_bsp/
+[BSP build complete]
+[Harmonic build complete]
+11:18:29 **** Incremental Build of configuration Nios II for project Harmonic ****
+make all 
+Info: Building ../Harmonic_bsp/
+C:/intelFPGA_lite/18.0.0/nios2eds/bin/gnu/H-x86_64-mingw32/bin/make --no-print-directory -C ../Harmonic_bsp/
+[BSP build complete]
+[Harmonic build complete]
