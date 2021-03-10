@@ -46,7 +46,7 @@
           <tags>persp.newWizSC:com.altera.sbtgui.ui.newLibrary</tags>
           <tags>persp.perspSC:com.altera.sbtgui.ui.debugPerspective</tags>
           <tags>persp.viewSC:com.altera.sbtgui.launch.hardware.ByteStreamConsoleView</tags>
-          <children xsi:type="basic:PartSashContainer" xmi:id="_e8FyxVWtEeq9nKcOQolGsQ" selectedElement="_e8Fyy1WtEeq9nKcOQolGsQ" horizontal="true">
+          <children xsi:type="basic:PartSashContainer" xmi:id="_e8FyxVWtEeq9nKcOQolGsQ" selectedElement="_e8FyxlWtEeq9nKcOQolGsQ" horizontal="true">
             <children xsi:type="basic:PartStack" xmi:id="_e8FyxlWtEeq9nKcOQolGsQ" elementId="topLeft" containerData="2500" selectedElement="_e8Fyx1WtEeq9nKcOQolGsQ">
               <tags>newtablook</tags>
               <tags>active</tags>
@@ -55,7 +55,7 @@
               <children xsi:type="advanced:Placeholder" xmi:id="_e8FyyVWtEeq9nKcOQolGsQ" elementId="org.eclipse.ui.views.ResourceNavigator" toBeRendered="false" ref="_e8Gay1WtEeq9nKcOQolGsQ"/>
               <children xsi:type="advanced:Placeholder" xmi:id="_e8FyylWtEeq9nKcOQolGsQ" elementId="org.eclipse.ui.views.BookmarkView" toBeRendered="false" ref="_e8GazFWtEeq9nKcOQolGsQ"/>
             </children>
-            <children xsi:type="basic:PartSashContainer" xmi:id="_e8Fyy1WtEeq9nKcOQolGsQ" containerData="7500" selectedElement="_e8Fy0FWtEeq9nKcOQolGsQ">
+            <children xsi:type="basic:PartSashContainer" xmi:id="_e8Fyy1WtEeq9nKcOQolGsQ" containerData="7500" selectedElement="_e8FyzFWtEeq9nKcOQolGsQ">
               <children xsi:type="basic:PartSashContainer" xmi:id="_e8FyzFWtEeq9nKcOQolGsQ" containerData="7500" selectedElement="_e8FyzVWtEeq9nKcOQolGsQ" horizontal="true">
                 <children xsi:type="advanced:Placeholder" xmi:id="_e8FyzVWtEeq9nKcOQolGsQ" elementId="org.eclipse.ui.editorss" containerData="7500" ref="_e8GaYFWtEeq9nKcOQolGsQ"/>
                 <children xsi:type="basic:PartStack" xmi:id="_e8FyzlWtEeq9nKcOQolGsQ" elementId="topRight" containerData="2500" selectedElement="_e8Fyz1WtEeq9nKcOQolGsQ">
@@ -532,7 +532,7 @@
       </children>
       <children xsi:type="menu:ToolBar" xmi:id="_e8HBWVWtEeq9nKcOQolGsQ" elementId="org.eclipse.ui.workbench.file">
         <tags>Draggable</tags>
-        <children xsi:type="menu:HandledToolItem" xmi:id="_LbIz8H58EeuoNfJSJgwXVw" elementId="print" iconURI="platform:/plugin/org.eclipse.ui/icons/full/etool16/print_edit.png" tooltip="Print" enabled="false" command="_e8L6EFWtEeq9nKcOQolGsQ"/>
+        <children xsi:type="menu:HandledToolItem" xmi:id="_vHYQQIHlEeuxIJtUUVrQ2g" elementId="print" iconURI="platform:/plugin/org.eclipse.ui/icons/full/etool16/print_edit.png" tooltip="Print" enabled="false" command="_e8L6EFWtEeq9nKcOQolGsQ"/>
       </children>
       <children xsi:type="menu:ToolBar" xmi:id="_e8HBZ1WtEeq9nKcOQolGsQ" elementId="additions" toBeRendered="false">
         <tags>toolbarSeparator</tags>
@@ -559,7 +559,7 @@
       </children>
       <children xsi:type="menu:ToolBar" xmi:id="_e8HBrFWtEeq9nKcOQolGsQ" elementId="org.eclipse.ui.workbench.navigate">
         <tags>Draggable</tags>
-        <children xsi:type="menu:HandledToolItem" xmi:id="_LbLQMH58EeuoNfJSJgwXVw" elementId="org.eclipse.ui.window.pinEditor" visible="false" iconURI="platform:/plugin/org.eclipse.ui/icons/full/etool16/pin_editor.png" tooltip="Pin Editor" type="Check" command="_e8L5ilWtEeq9nKcOQolGsQ"/>
+        <children xsi:type="menu:HandledToolItem" xmi:id="_vHasgIHlEeuxIJtUUVrQ2g" elementId="org.eclipse.ui.window.pinEditor" visible="false" iconURI="platform:/plugin/org.eclipse.ui/icons/full/etool16/pin_editor.png" tooltip="Pin Editor" type="Check" command="_e8L5ilWtEeq9nKcOQolGsQ"/>
       </children>
       <children xsi:type="menu:ToolBar" xmi:id="_e8HBuFWtEeq9nKcOQolGsQ" elementId="group.editor" toBeRendered="false">
         <tags>toolbarSeparator</tags>

@@ -1,5 +1,5 @@
 Flow report for Top
-Sun Feb 14 20:23:47 2021
+Wed Mar 10 23:11:06 2021
 Quartus Prime Version 18.0.0 Build 614 04/24/2018 SJ Lite Edition
 
 
@@ -40,21 +40,21 @@ refer to the applicable agreement for further details.
 +----------------------------------------------------------------------------------+
 ; Flow Summary                                                                     ;
 +------------------------------------+---------------------------------------------+
-; Flow Status                        ; Successful - Sun Feb 14 20:23:36 2021       ;
+; Flow Status                        ; Successful - Wed Mar 10 23:10:57 2021       ;
 ; Quartus Prime Version              ; 18.0.0 Build 614 04/24/2018 SJ Lite Edition ;
 ; Revision Name                      ; Top                                         ;
 ; Top-level Entity Name              ; Top                                         ;
 ; Family                             ; Cyclone IV E                                ;
 ; Device                             ; EP4CE115F29C7                               ;
 ; Timing Models                      ; Final                                       ;
-; Total logic elements               ; 21,135 / 114,480 ( 18 % )                   ;
-;     Total combinational functions  ; 20,137 / 114,480 ( 18 % )                   ;
-;     Dedicated logic registers      ; 10,529 / 114,480 ( 9 % )                    ;
-; Total registers                    ; 10529                                       ;
+; Total logic elements               ; 10,939 / 114,480 ( 10 % )                   ;
+;     Total combinational functions  ; 10,186 / 114,480 ( 9 % )                    ;
+;     Dedicated logic registers      ; 4,813 / 114,480 ( 4 % )                     ;
+; Total registers                    ; 4813                                        ;
 ; Total pins                         ; 152 / 529 ( 29 % )                          ;
 ; Total virtual pins                 ; 0                                           ;
-; Total memory bits                  ; 2,846,567 / 3,981,312 ( 71 % )              ;
-; Embedded Multiplier 9-bit elements ; 279 / 532 ( 52 % )                          ;
+; Total memory bits                  ; 2,844,645 / 3,981,312 ( 71 % )              ;
+; Embedded Multiplier 9-bit elements ; 107 / 532 ( 20 % )                          ;
 ; Total PLLs                         ; 2 / 4 ( 50 % )                              ;
 +------------------------------------+---------------------------------------------+
 
@@ -64,7 +64,7 @@ refer to the applicable agreement for further details.
 +-------------------+---------------------+
 ; Option            ; Setting             ;
 +-------------------+---------------------+
-; Start date & time ; 02/14/2021 20:19:51 ;
+; Start date & time ; 03/10/2021 23:07:59 ;
 ; Main task         ; Compilation         ;
 ; Revision Name     ; Top                 ;
 +-------------------+---------------------+
@@ -75,7 +75,7 @@ refer to the applicable agreement for further details.
 +-------------------------------------+---------------------------------------------------------------------------------+---------------+------------------------------+------------+
 ; Assignment Name                     ; Value                                                                           ; Default Value ; Entity Name                  ; Section Id ;
 +-------------------------------------+---------------------------------------------------------------------------------+---------------+------------------------------+------------+
-; COMPILER_SIGNATURE_ID               ; 18121609262202.161332679112404                                                  ; --            ; --                           ; --         ;
+; COMPILER_SIGNATURE_ID               ; 18121609262202.161541047916004                                                  ; --            ; --                           ; --         ;
 ; ENABLE_SIGNALTAP                    ; Off                                                                             ; --            ; --                           ; --         ;
 ; FLOW_ENABLE_RTL_VIEWER              ; On                                                                              ; Off           ; --                           ; --         ;
 ; MAX_CORE_JUNCTION_TEMP              ; 85                                                                              ; --            ; --                           ; --         ;
@@ -132,6 +132,9 @@ refer to the applicable agreement for further details.
 ; MISC_FILE                           ; Manual_Colormap_bb.v                                                            ; --            ; --                           ; --         ;
 ; MISC_FILE                           ; Harmonic_Testing_ROM_inst.v                                                     ; --            ; --                           ; --         ;
 ; MISC_FILE                           ; Harmonic_Testing_ROM_bb.v                                                       ; --            ; --                           ; --         ;
+; MISC_FILE                           ; HDLCLK_inst.v                                                                   ; --            ; --                           ; --         ;
+; MISC_FILE                           ; HDLCLK_bb.v                                                                     ; --            ; --                           ; --         ;
+; MISC_FILE                           ; HDLCLK.ppf                                                                      ; --            ; --                           ; --         ;
 ; PARTITION_COLOR                     ; -- (Not supported for targeted family)                                          ; --            ; --                           ; --         ;
 ; PARTITION_FITTER_PRESERVATION_LEVEL ; -- (Not supported for targeted family)                                          ; --            ; --                           ; --         ;
 ; PARTITION_NETLIST_TYPE              ; -- (Not supported for targeted family)                                          ; --            ; --                           ; --         ;
@@ -152,11 +155,11 @@ refer to the applicable agreement for further details.
 +----------------------+--------------+-------------------------+---------------------+------------------------------------+
 ; Module Name          ; Elapsed Time ; Average Processors Used ; Peak Virtual Memory ; Total CPU Time (on all processors) ;
 +----------------------+--------------+-------------------------+---------------------+------------------------------------+
-; Analysis & Synthesis ; 00:02:18     ; 1.0                     ; 5330 MB             ; 00:02:33                           ;
-; Fitter               ; 00:01:05     ; 1.1                     ; 6160 MB             ; 00:01:35                           ;
-; Assembler            ; 00:00:05     ; 1.0                     ; 4798 MB             ; 00:00:05                           ;
-; Timing Analyzer      ; 00:00:10     ; 1.3                     ; 5085 MB             ; 00:00:11                           ;
-; Total                ; 00:03:38     ; --                      ; --                  ; 00:04:24                           ;
+; Analysis & Synthesis ; 00:01:56     ; 1.0                     ; 5226 MB             ; 00:02:15                           ;
+; Fitter               ; 00:00:41     ; 1.1                     ; 5970 MB             ; 00:01:01                           ;
+; Assembler            ; 00:00:05     ; 1.0                     ; 4753 MB             ; 00:00:05                           ;
+; Timing Analyzer      ; 00:00:08     ; 1.3                     ; 4994 MB             ; 00:00:08                           ;
+; Total                ; 00:02:50     ; --                      ; --                  ; 00:03:29                           ;
 +----------------------+--------------+-------------------------+---------------------+------------------------------------+
 
 

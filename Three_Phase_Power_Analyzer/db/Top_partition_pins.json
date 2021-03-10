@@ -472,6 +472,10 @@
 					"strict" : false
 				},
 				{
+					"name" : "reset",
+					"strict" : false
+				},
+				{
 					"name" : "SW12",
 					"strict" : false
 				},
@@ -504,10 +508,6 @@
 					"strict" : false
 				},
 				{
-					"name" : "SW8",
-					"strict" : false
-				},
-				{
 					"name" : "SW10",
 					"strict" : false
 				},
@@ -516,11 +516,11 @@
 					"strict" : false
 				},
 				{
-					"name" : "SW7",
+					"name" : "SW8",
 					"strict" : false
 				},
 				{
-					"name" : "reset",
+					"name" : "SW7",
 					"strict" : false
 				},
 				{

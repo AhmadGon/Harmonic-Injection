@@ -4,7 +4,7 @@
  * Machine generated for CPU 'NiosII' in SOPC Builder design 'NiosII_Controlled_Section'
  * SOPC Builder design path: ../../NiosII_Controlled_Section.sopcinfo
  *
- * Generated: Sat Feb 13 21:08:32 EET 2021
+ * Generated: Wed Mar 10 23:15:59 EET 2021
  */
 
 /*

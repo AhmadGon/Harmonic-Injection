@@ -91,9 +91,18 @@ wire DeSW0, DeSW1, DeSW2, DeSW3, DeSW4, DeSW5, DeSW6, DeSW7, DeSW8, DeSW9, DeSW1
 wire DePush_0, DePush_1, DePush_2, DePush_3;
 wire DeReset;
 
+//45MHz clock
+wire CLK_45M;
+
 assign Red = myRed;
 assign Green = myGreen;
 assign Blue = myBlue;
+
+
+HDLCLK	HDLCLK_inst (
+	.inclk0 (clk),
+	.c0 (CLK_45M)
+	);
 
 Debouncer Debouncer_inst(
 	.clk(clk),
@@ -175,9 +184,11 @@ NiosII_Controlled_SectionBAK u0 (
 		.vga_G                      (nios_Green),              //                    .G
 		.vga_B                      (nios_Blue)                //                    .B
 	);
-
-Sines_topde2 Sines_topde2_inst(
-	.CLKIN(clk),
+	
+Sines Sines_inst(
+	.clk(CLK_45M),
+	.clk_enable(1),
+	.reset(DeReset),
 	.reset_1(DeReset),
 	//controls 
 	.Push_3(DePush_3),
@@ -192,6 +203,7 @@ Sines_topde2 Sines_topde2_inst(
 	.SW8(DeSW8),
 	.SW9(DeSW9),
 	.SW10(DeSW10),
+	.SW15(DeSW15),
 	//Harmonic number HEXs
 	.HEX0_O(HEX0),
 	.HEX1_O(HEX1),
@@ -207,6 +219,10 @@ Sines_topde2 Sines_topde2_inst(
 	//Harmonic indicator
 	.HEX5(HEX5),
 	.HEX4(HEX4),
+	//LEDG
+	.LEDG0(LEDG[0]),
+	.LEDG1(LEDG[1]),
+	.LEDG2(LEDG[2]),
 	//Signals coming from trunk line 
 	.PhaseA_Analog(PhaseA_Analog),
 	.PhaseB_Analog(PhaseB_Analog),
